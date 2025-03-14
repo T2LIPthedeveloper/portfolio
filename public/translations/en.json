@@ -1,0 +1,290 @@
+{
+  "general": {
+    "name": "Atul Parida",
+    "headline": "Software Engineer | Data Scientist | AI/ML Enthusiast",
+    "about": [
+      "Hey there!👋",
+      " I'm Atul Parida, a passionate software engineer and data scientist graduating from SUTD in May 2025.",
+      "I specialize in developing scalable data pipelines, AI-driven applications, and full-stack solutions. My work spans fintech, AI/ML, and automation, driven by a commitment to create impactful technology.",
+      "Outside of work, I enjoy mentoring fellow tech enthusiasts and exploring the latest trends in AI and software development."
+    ],
+    "socials": {
+      "email": "atul.parida@outlook.com",
+      "linkedin": "https://www.linkedin.com/in/atulparida/",
+      "github": "https://github.com/T2LIPthedeveloper",
+      "medium": "https://medium.com/@atulparida"
+    }
+  },
+  "experiences": [
+    {
+      "title": "Data Science Intern",
+      "company": "QuantumStreet AI",
+      "href": "https://quantumstreetai.com/",
+      "startDate": "05/2024",
+      "endDate": "09/2024",
+      "description": "Developed scalable ETL pipelines and predictive models, improving forecasting accuracy by 40% and driving data-driven insights.",
+      "logo": "/logos/quantumstreet-white.png",
+      "skills": [
+        "Python",
+        "Data Engineering",
+        "ML",
+        "ETL"
+      ]
+    },
+    {
+      "title": "Undergraduate Researcher",
+      "company": "SUTD",
+      "href": "https://www.malikameghjani.com/copy-of-home",
+      "startDate": "01/2024",
+      "endDate": "05/2024",
+      "description": "Conducted research on computer vision and deep learning for analyzing marine ecosystems, collaborating closely with faculty and peers.",
+      "logo": "/logos/sutd-white.png",
+      "skills": [
+        "Computer Vision",
+        "Python",
+        "Deep Learning"
+      ]
+    },
+    {
+      "title": "Software Developer",
+      "company": "TwoKey Inc.",
+      "href": "https://www.twokey.net/",
+      "startDate": "11/2023",
+      "endDate": "01/2024",
+      "description": "Designed AI-driven tools for content summarization and developed front-end components using React and Redux.",
+      "logo": "/logos/twokey-purple.png",
+      "skills": [
+        "JavaScript",
+        "React",
+        "Redux",
+        "AI Tools"
+      ]
+    },
+    {
+      "title": "Software System Test Engineer Intern",
+      "company": "Continental AG",
+      "href": "https://www.continental.com/en/",
+      "startDate": "08/2023",
+      "endDate": "12/2023",
+      "description": "Conducted system testing and performance analysis for automotive analytics and infotainment systems.",
+      "logo": "/logos/continental-yellow.png",
+      "skills": [
+        "Testing",
+        "QA",
+        "Automation",
+        "SQL"
+      ]
+    },
+    {
+      "title": "Operations Intern",
+      "company": "Write Brothers Inc",
+      "href": "https://www.linkedin.com/company/write-brothers/posts/?feedView=all",
+      "startDate": "09/2022",
+      "endDate": "10/2022",
+      "description": "Improved robot scripting to reduce plotter energy overhead by 30%, and improve plotting speeds through automation scripting by up to 50%.",
+      "logo": "/logos/write_brothers_logo.jpeg",
+      "skills": [
+        "Python",
+        "ROS",
+        "Design Research",
+        "Algorithm Development"
+      ]
+    },
+    {
+      "title": "UI/UX Designer Intern",
+      "company": "Copods Inc",
+      "href": "https://www.copods.co/about-us",
+      "startDate": "12/2019",
+      "endDate": "01/2020",
+      "description": "Conducted UX research, interviewed stakeholders and designed interfaces for vehicle management applications using Sketch and Figma.",
+      "logo": "/logos/copods-grey.png",
+      "skills": [
+        "UI/UX",
+        "Design Research",
+        "Sketch",
+        "Figma",
+        "Stakeholder Analysis"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "subject": "Computer Science, Minor in AI",
+      "degree": "Bachelor of Engineering",
+      "university": "Singapore University of Technology and Design (SUTD)",
+      "href": "https://www.sutd.edu.sg/",
+      "startDate": "09/2021",
+      "endDate": "05/2025",
+      "description": "Focus tracks in Software Engineering and Financial Technologies, expected to graduate with Honors with Merit."
+    }
+  ],
+  "volunteering": [
+    {
+      "position": "President & Treasurer",
+      "event": "Swift Coding Interest Group",
+      "organisation": "SUTD",
+      "href": "",
+      "startDate": "05/2022",
+      "endDate": "05/2024",
+      "description": "Led a 150-member club focused on iOS/macOS app development and organized coding events and workshops."
+    },
+    {
+      "position": "President",
+      "event": "SUTD Photographic Circle",
+      "organisation": "SUTD",
+      "href": "",
+      "startDate": "05/2022",
+      "endDate": "03/2023",
+      "description": "Managed events and workshops promoting photography and creative expression."
+    }
+  ],
+  "projects": [
+    {
+      "name": "50.040-NLP-Final-Project",
+      "framework": "Jupyter Notebook",
+      "description": "Final project for 50.040 Natural Language Processing course taken in Fall 2024, built with Ansh Oswal and Elvern Neylman Tanny.",
+      "href": "https://github.com/T2LIPthedeveloper/50.040-NLP-Final-Project",
+      "stars": "1"
+    },
+    {
+      "name": "50.043-Project-Labs",
+      "framework": "Java",
+      "description": "Project for 50.043 Database Systems and Big Data, in collaboration with Jignesh Motwani and Akash Chandrasekar.",
+      "href": "https://github.com/T2LIPthedeveloper/50.043-Project-Labs",
+      "stars": "0"
+    },
+    {
+      "name": "AI-Enhanced-CRM",
+      "framework": "JavaScript",
+      "description": "CRM application built using Django, React and Axios for TikTok TechJam 2024.",
+      "href": "https://github.com/T2LIPthedeveloper/AI-Enhanced-CRM",
+      "stars": "0"
+    },
+    {
+      "name": "BaseChatbot",
+      "framework": "Swift",
+      "description": "Repository for chatbot application for Swift workshop.",
+      "href": "https://github.com/T2LIPthedeveloper/BaseChatbot",
+      "stars": "0"
+    },
+    {
+      "name": "binarybros.github.io",
+      "framework": "JavaScript",
+      "description": "Submission for the SIA App Challenge 2023 hackathon with a 4-person team",
+      "href": "https://github.com/T2LIPthedeveloper/binarybros.github.io",
+      "stars": "0"
+    },
+    {
+      "name": "bizinc-assessment",
+      "framework": "JavaScript",
+      "description": "Technical assessment for Bizinc Software Developer Internship.",
+      "href": "https://github.com/T2LIPthedeveloper/bizinc-assessment",
+      "stars": "0"
+    },
+    {
+      "name": "ddw_mini_projects",
+      "framework": "Python",
+      "description": "No description available.",
+      "href": "https://github.com/T2LIPthedeveloper/ddw_mini_projects",
+      "stars": "0"
+    },
+    {
+      "name": "GPT-Summarizer-Demo",
+      "framework": "N/A",
+      "description": "Just something for API testing purposes. Meant to demonstrate how to work with the OpenAI GPT-3 API, should be similar for other GPT-3.5/GPT-4 APIs as well.",
+      "href": "https://github.com/T2LIPthedeveloper/GPT-Summarizer-Demo",
+      "stars": "0"
+    },
+    {
+      "name": "Leetcode-Solutions",
+      "framework": "Python",
+      "description": "My personal Leetcode solutions.",
+      "href": "https://github.com/T2LIPthedeveloper/Leetcode-Solutions",
+      "stars": "0"
+    },
+    {
+      "name": "Malloc-Melee",
+      "framework": "C",
+      "description": "Roguelike game built in C for SUTD 50.051 Programming Language Concepts course by Atul Parida & Jignesh Motwani.",
+      "href": "https://github.com/T2LIPthedeveloper/Malloc-Melee",
+      "stars": "0"
+    },
+    {
+      "name": "ML-and-AI-Projects",
+      "framework": "Jupyter Notebook",
+      "description": "My projects involving machine learning and AI, with datasets typically obtained from Kaggle and other quoted sources.",
+      "href": "https://github.com/T2LIPthedeveloper/ML-and-AI-Projects",
+      "stars": "0"
+    },
+    {
+      "name": "Monte-Carlo-Pricing-Engine",
+      "framework": "C++",
+      "description": "No description available.",
+      "href": "https://github.com/T2LIPthedeveloper/Monte-Carlo-Pricing-Engine",
+      "stars": "0"
+    },
+    {
+      "name": "Plane-Spotting-Telegram-Bot",
+      "framework": "Jupyter Notebook",
+      "description": "Telegram bot for plane spotting with custom CV models built using Python.",
+      "href": "https://github.com/T2LIPthedeveloper/Plane-Spotting-Telegram-Bot",
+      "stars": "0"
+    },
+    {
+      "name": "RedditOS",
+      "framework": "N/A",
+      "description": "The product name is Curiosity, a SwiftUI Reddit client for macOS Big Sur",
+      "href": "https://github.com/T2LIPthedeveloper/RedditOS",
+      "stars": "0"
+    },
+    {
+      "name": "Sign-Language-Translator",
+      "framework": "Python",
+      "description": "Project for 50.021 Artificial Intelligence with Marcus Ng, Ryan Ng and Jignesh Motwani.",
+      "href": "https://github.com/T2LIPthedeveloper/Sign-Language-Translator",
+      "stars": "0"
+    },
+    {
+      "name": "Spacemate",
+      "framework": "Java",
+      "description": "App repository for Spacemate (50.001 Information Systems & Programming project).",
+      "href": "https://github.com/T2LIPthedeveloper/Spacemate",
+      "stars": "0"
+    },
+    {
+      "name": "StarterChatbot",
+      "framework": "Swift",
+      "description": "Welcome to your starter chatbot! You just need to clone this repository and you'll have all of the files that you need to begin your project!",
+      "href": "https://github.com/T2LIPthedeveloper/StarterChatbot",
+      "stars": "0"
+    },
+    {
+      "name": "T2LIPthedeveloper",
+      "framework": "N/A",
+      "description": "Profile page on GitHub.",
+      "href": "https://github.com/T2LIPthedeveloper/T2LIPthedeveloper",
+      "stars": "0"
+    },
+    {
+      "name": "t2lipthedeveloper.github.io",
+      "framework": "CSS",
+      "description": "Personal portfolio website built in JS & CSS and hosted on GitHub Pages.",
+      "href": "https://github.com/T2LIPthedeveloper/t2lipthedeveloper.github.io",
+      "stars": "0"
+    },
+    {
+      "name": "unbind",
+      "framework": "JavaScript",
+      "description": "A book tracking website designed to help you track your reading list, discuss books with other people, and get your next book recommendation.",
+      "href": "https://github.com/T2LIPthedeveloper/unbind",
+      "stars": "0"
+    },
+    {
+      "name": "wisdom-tree",
+      "framework": "N/A",
+      "description": "Wisdom Tree is a concentration app i am working on. ",
+      "href": "https://github.com/T2LIPthedeveloper/wisdom-tree",
+      "stars": "0"
+    }
+  ]
+}
