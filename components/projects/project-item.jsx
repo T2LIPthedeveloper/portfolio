@@ -11,7 +11,7 @@ function ProjectItem(props) {
           {props.lib}
         </div>
       </div>
-      <h1 className="mb-4 text-xl subpixel-antialiased">{props.name}</h1>
+      <h1 className="mb-4 text-xl subpixel-antialiased break-words hyphens-auto overflow-wrap-anywhere">{props.name}</h1>
       <div className="text-surface-600 text-xs">{props.description}</div>
     </a>
   );

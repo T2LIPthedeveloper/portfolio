@@ -1,15 +1,87 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Image from 'next/image';
 
 const Socials = (props) => {
+    const [country, setCountry] = useState("US"); // Default to US
+    const [isOpen, setIsOpen] = useState(false);
+
+    useEffect(() => {
+        const fetchCountry = async () => {
+            try {
+                const res = await fetch("https://ipapi.co/json/");
+                const data = await res.json();
+                const countryCode = data.country_code;
+                
+                const SEA_COUNTRIES = ["SG", "MY", "ID", "TH", "PH", "VN", "BN", "KH", "MM", "LA"];
+                if (SEA_COUNTRIES.includes(countryCode)) {
+                    setCountry("SG");
+                }
+            } catch (error) {
+                console.error("Error fetching country data:", error);
+            }
+        };
+
+        fetchCountry();
+    }, []);
+
+    const resumeLinks = {
+        US: {
+            SWE: "resumes/us_swe.pdf",
+            Data: "resumes/us_data.pdf"
+        },
+        SG: {
+            SWE: "resumes/sg_swe.pdf",
+            Data: "resumes/sg_data.pdf"
+        }
+    };
+
     return (
-        <div className='flex flex-1 flex-row items-center'>
-            <a href={`mailto:${props.data.email}`} className='mr-4 transition-all border border-surface-300 hover:bg-primary-300 hover:bg-opacity-30 text-on-background py-2 px-4 rounded flex flex-1 justify-center items-center'>
+        <div className='flex flex-1 flex-row items-center relative'>
+            <a href={`mailto:${props.data.email}`} className='mr-2 transition-all border border-surface-300 hover:bg-primary-300 hover:bg-opacity-30 text-on-background py-2 px-2 rounded flex flex-1 justify-center items-center'>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
                 </svg>
                 <span className='pl-2'>Get in touch</span>
             </a>
+            
+            {/* Resume Dropdown Button */}
+            <div className="relative">
+                <button 
+                    onClick={() => setIsOpen(!isOpen)} 
+                    className='mr-4 transition-all border border-surface-300 hover:bg-primary-300 hover:bg-opacity-30 text-on-background py-2 px-2 rounded flex justify-center items-center'
+                >
+                    <Image 
+                        src="/logos/download_icon.svg"
+                        alt="Download Icon"
+                        width={24}
+                        height={24}
+                        className="w-6 h-6"
+                        style={{ filter: 'invert(1)' }}
+                    />
+                    <span className='pl-2'>Resume</span>
+                </button>
+
+                {/* Dropdown Menu */}
+                {isOpen && (
+                    <div className="absolute left-0 mt-2 w-30 bg-white border border-surface-300 rounded-lg shadow-lg z-10">
+                        <a 
+                            href={resumeLinks[country].SWE} 
+                            download="Atul_Parida.pdf" 
+                            className="block px-4 py-2 text-on-background hover:bg-primary-300 hover:bg-opacity-30"
+                        >
+                            SWE Roles
+                        </a>
+                        <a 
+                            href={resumeLinks[country].Data} 
+                            download="Atul_Parida.pdf" 
+                            className="block px-4 py-2 text-on-background hover:bg-primary-300 hover:bg-opacity-30"
+                        >
+                            Data Roles
+                        </a>
+                    </div>
+                )}
+            </div>
+
             <div className='flex flex-row'>
                 <a href={props.data.github} target="_blank" rel="noopener noreferrer" className="mr-1 flex flex-row content-center justify-center">
                     <Image src="/logos/github-mark-white.png" alt="GitHub Logo" width={30} height={30} className='object-contain object-top mr-2' />
@@ -21,9 +93,8 @@ const Socials = (props) => {
                     <Image src="/logos/medium-mark.png" alt="Medium Logo" width={30} height={30} className='object-contain object-top' />
                 </a>
             </div>
-            
         </div>
-    )
-}
+    );
+};
 
-export default Socials
+export default Socials;
