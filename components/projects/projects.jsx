@@ -21,6 +21,8 @@ const Projects = (props) => {
                         lib={object.framework}
                         description={object.description}
                         href={object.href}
+                        keywords={object.keywords.length > 0 ? object.keywords.slice(0, 5) : null}
+                        index={index}
                     />
                 ))}
             </div>

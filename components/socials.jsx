@@ -3,7 +3,6 @@ import Image from 'next/image';
 
 const Socials = (props) => {
     const [country, setCountry] = useState("US"); // Default to US
-    const [isOpen, setIsOpen] = useState(false);
 
     useEffect(() => {
         const fetchCountry = async () => {
@@ -25,14 +24,8 @@ const Socials = (props) => {
     }, []);
 
     const resumeLinks = {
-        US: {
-            SWE: "resumes/us_swe.pdf",
-            Data: "resumes/us_data.pdf"
-        },
-        SG: {
-            SWE: "resumes/sg_swe.pdf",
-            Data: "resumes/sg_data.pdf"
-        }
+        US: "resumes/us_swe.pdf",
+        SG: "resumes/sg_swe.pdf",
     };
 
     return (
@@ -46,40 +39,21 @@ const Socials = (props) => {
             
             {/* Resume Dropdown Button */}
             <div className="relative">
-                <button 
-                    onClick={() => setIsOpen(!isOpen)} 
+                <a 
+                    href={resumeLinks[country]}
+                    download="Atul Parida.pdf"
                     className='mr-4 transition-all border border-surface-300 hover:bg-primary-300 hover:bg-opacity-30 text-on-background py-2 px-2 rounded flex justify-center items-center'
                 >
                     <Image 
                         src="/logos/download_icon.svg"
                         alt="Download Icon"
+                        className="w-6 h-6"
                         width={24}
                         height={24}
-                        className="w-6 h-6"
                         style={{ filter: 'invert(1)' }}
                     />
-                    <span className='pl-2'>Resume</span>
-                </button>
-
-                {/* Dropdown Menu */}
-                {isOpen && (
-                    <div className="absolute left-0 mt-2 w-30 bg-white border border-surface-300 rounded-lg shadow-lg z-10">
-                        <a 
-                            href={resumeLinks[country].SWE} 
-                            download="Atul_Parida.pdf" 
-                            className="block px-4 py-2 text-on-background hover:bg-primary-300 hover:bg-opacity-30"
-                        >
-                            SWE Roles
-                        </a>
-                        <a 
-                            href={resumeLinks[country].Data} 
-                            download="Atul_Parida.pdf" 
-                            className="block px-4 py-2 text-on-background hover:bg-primary-300 hover:bg-opacity-30"
-                        >
-                            Data Roles
-                        </a>
-                    </div>
-                )}
+                    <span className='pl-2'>My CV</span>
+                </a>
             </div>
 
             <div className='flex flex-row'>

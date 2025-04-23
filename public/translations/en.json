@@ -140,151 +140,424 @@
   ],
   "projects": [
     {
+      "name": "40.234-report",
+      "framework": "N/A",
+      "description": "Report repository for 40.324 Fundamentals of Investing, taken in Spring 2025.",
+      "href": "https://github.com/T2LIPthedeveloper/40.234-report",
+      "stars": "0",
+      "keywords": []
+    },
+    {
       "name": "50.040-NLP-Final-Project",
       "framework": "Jupyter Notebook",
       "description": "Final project for 50.040 Natural Language Processing course taken in Fall 2024, built with Ansh Oswal and Elvern Neylman Tanny.",
       "href": "https://github.com/T2LIPthedeveloper/50.040-NLP-Final-Project",
-      "stars": "1"
+      "stars": "1",
+      "keywords": [
+        "bert-model",
+        "cnn",
+        "cnn-lstm",
+        "lstm",
+        "pytorch",
+        "sentiment-analysis"
+      ]
     },
     {
       "name": "50.043-Project-Labs",
       "framework": "Java",
       "description": "Project for 50.043 Database Systems and Big Data, in collaboration with Jignesh Motwani and Akash Chandrasekar.",
       "href": "https://github.com/T2LIPthedeveloper/50.043-Project-Labs",
-      "stars": "0"
+      "stars": "0",
+      "keywords": [
+        "big-data",
+        "data-analytics",
+        "database",
+        "java",
+        "labs",
+        "map-reduce",
+        "python",
+        "simpledb"
+      ]
     },
     {
       "name": "AI-Enhanced-CRM",
       "framework": "JavaScript",
       "description": "CRM application built using Django, React and Axios for TikTok TechJam 2024.",
       "href": "https://github.com/T2LIPthedeveloper/AI-Enhanced-CRM",
-      "stars": "0"
+      "stars": "0",
+      "keywords": [
+        "api-rest",
+        "axios",
+        "crm",
+        "django",
+        "firebase",
+        "react",
+        "tiktok"
+      ]
     },
     {
       "name": "BaseChatbot",
       "framework": "Swift",
       "description": "Repository for chatbot application for Swift workshop.",
       "href": "https://github.com/T2LIPthedeveloper/BaseChatbot",
-      "stars": "0"
+      "stars": "0",
+      "keywords": [
+        "chatbot",
+        "ios",
+        "ipados",
+        "macos",
+        "openai",
+        "openai-api",
+        "swift",
+        "swiftui",
+        "xcode"
+      ]
     },
     {
       "name": "binarybros.github.io",
       "framework": "JavaScript",
       "description": "Submission for the SIA App Challenge 2023 hackathon with a 4-person team",
       "href": "https://github.com/T2LIPthedeveloper/binarybros.github.io",
-      "stars": "0"
+      "stars": "0",
+      "keywords": [
+        "firebase-hosting",
+        "javascript",
+        "openai-api",
+        "react",
+        "typescript"
+      ]
     },
     {
       "name": "bizinc-assessment",
       "framework": "JavaScript",
       "description": "Technical assessment for Bizinc Software Developer Internship.",
       "href": "https://github.com/T2LIPthedeveloper/bizinc-assessment",
-      "stars": "0"
+      "stars": "0",
+      "keywords": [
+        "app-router",
+        "full-stack",
+        "mysql",
+        "nextjs",
+        "postgresql"
+      ]
     },
     {
       "name": "ddw_mini_projects",
       "framework": "Python",
-      "description": "No description available.",
+      "description": "Basic projects to build a Flask application for learning math and quizzing each other. Labs for SUTD.",
       "href": "https://github.com/T2LIPthedeveloper/ddw_mini_projects",
-      "stars": "0"
+      "stars": "0",
+      "keywords": [
+        "algorithms",
+        "flask",
+        "game",
+        "math-application",
+        "python"
+      ]
+    },
+    {
+      "name": "Django-Ticker-Prediction",
+      "framework": "Jupyter Notebook",
+      "description": "Macroeconomic phase prediction application using Django & Yahoo! Finance data to predict stock movements. Django to be integrated.",
+      "href": "https://github.com/T2LIPthedeveloper/Django-Ticker-Prediction",
+      "stars": "0",
+      "keywords": [
+        "django",
+        "finance",
+        "finance-api",
+        "fintech",
+        "macroeconomics",
+        "python",
+        "recession",
+        "yahoo-finance"
+      ]
     },
     {
       "name": "GPT-Summarizer-Demo",
       "framework": "N/A",
       "description": "Just something for API testing purposes. Meant to demonstrate how to work with the OpenAI GPT-3 API, should be similar for other GPT-3.5/GPT-4 APIs as well.",
       "href": "https://github.com/T2LIPthedeveloper/GPT-Summarizer-Demo",
-      "stars": "0"
+      "stars": "0",
+      "keywords": [
+        "javascript",
+        "open-ai",
+        "openai-api",
+        "react",
+        "react-router",
+        "summarization"
+      ]
+    },
+    {
+      "name": "HealthHack-2025",
+      "framework": "Jupyter Notebook",
+      "description": "Medication tracker with pill classification and counting using Tensorflow and Flutter. Built by Atul Parida and Kripashree S. for NUS HealthHack 2025.",
+      "href": "https://github.com/T2LIPthedeveloper/HealthHack-2025",
+      "stars": "0",
+      "keywords": [
+        "flutter",
+        "gradio",
+        "healthcare",
+        "huggingface",
+        "huggingface-spaces",
+        "image-classification",
+        "object-detection",
+        "ocr-recognition",
+        "ocr-text-reader",
+        "pillow",
+        "pytorch",
+        "tensorflow"
+      ]
     },
     {
       "name": "Leetcode-Solutions",
       "framework": "Python",
       "description": "My personal Leetcode solutions.",
       "href": "https://github.com/T2LIPthedeveloper/Leetcode-Solutions",
-      "stars": "0"
+      "stars": "0",
+      "keywords": [
+        "java",
+        "javascript",
+        "leetcode",
+        "leetcode-solutions",
+        "python"
+      ]
     },
     {
       "name": "Malloc-Melee",
       "framework": "C",
       "description": "Roguelike game built in C for SUTD 50.051 Programming Language Concepts course by Atul Parida & Jignesh Motwani.",
       "href": "https://github.com/T2LIPthedeveloper/Malloc-Melee",
-      "stars": "0"
+      "stars": "0",
+      "keywords": [
+        "c",
+        "cli",
+        "dungeon-crawler",
+        "game-development",
+        "roguelike-game"
+      ]
     },
     {
       "name": "ML-and-AI-Projects",
       "framework": "Jupyter Notebook",
       "description": "My projects involving machine learning and AI, with datasets typically obtained from Kaggle and other quoted sources.",
       "href": "https://github.com/T2LIPthedeveloper/ML-and-AI-Projects",
-      "stars": "0"
+      "stars": "0",
+      "keywords": [
+        "ai",
+        "deep-learning",
+        "jupyter-notebook",
+        "machine-learning",
+        "python",
+        "pytorch",
+        "scikit-learn",
+        "sentiment-analysis",
+        "tensorflow"
+      ]
     },
     {
       "name": "Monte-Carlo-Pricing-Engine",
       "framework": "C++",
-      "description": "No description available.",
+      "description": "Monte Carlo simulations for options pricing.",
       "href": "https://github.com/T2LIPthedeveloper/Monte-Carlo-Pricing-Engine",
-      "stars": "0"
+      "stars": "0",
+      "keywords": [
+        "cpp",
+        "fintech",
+        "monte-carlo-simulation",
+        "options-pricing"
+      ]
+    },
+    {
+      "name": "obsidian-git",
+      "framework": "N/A",
+      "description": "Integrate Git version control with automatic commit-and-sync and other advanced features in Obsidian.md",
+      "href": "https://github.com/T2LIPthedeveloper/obsidian-git",
+      "stars": "0",
+      "keywords": []
     },
     {
       "name": "Plane-Spotting-Telegram-Bot",
       "framework": "Jupyter Notebook",
       "description": "Telegram bot for plane spotting with custom CV models built using Python.",
       "href": "https://github.com/T2LIPthedeveloper/Plane-Spotting-Telegram-Bot",
-      "stars": "0"
+      "stars": "0",
+      "keywords": [
+        "aviation",
+        "flask",
+        "keras",
+        "python",
+        "python-telegram-bot",
+        "pythonanywhere",
+        "telegram-bot",
+        "tensorflow",
+        "tensorflow-lite"
+      ]
+    },
+    {
+      "name": "portfolio",
+      "framework": "JavaScript",
+      "description": "Portfolio website with chatbot using Next.JS, Vercel, Framer Motion, shadcn-ui, and HuggingFace models.",
+      "href": "https://github.com/T2LIPthedeveloper/portfolio",
+      "stars": "0",
+      "keywords": [
+        "huggingface",
+        "llm-inference",
+        "nextjs",
+        "portfolio-website",
+        "vercel"
+      ]
     },
     {
       "name": "RedditOS",
       "framework": "N/A",
-      "description": "The product name is Curiosity, a SwiftUI Reddit client for macOS Big Sur",
+      "description": "The product name is Curiosity, a SwiftUI Reddit client for macOS Big Sur.",
       "href": "https://github.com/T2LIPthedeveloper/RedditOS",
-      "stars": "0"
+      "stars": "0",
+      "keywords": [
+        "reddit",
+        "reddit-client",
+        "reddit-os",
+        "swift",
+        "swiftui"
+      ]
+    },
+    {
+      "name": "Role-Based-Access-Control",
+      "framework": "Python",
+      "description": "Role-based file-sharing. POC for a similar concept. Wanted to familiarise myself more with Django and Vite.",
+      "href": "https://github.com/T2LIPthedeveloper/Role-Based-Access-Control",
+      "stars": "0",
+      "keywords": [
+        "django",
+        "docker",
+        "file-sharing",
+        "react",
+        "vite"
+      ]
     },
     {
       "name": "Sign-Language-Translator",
       "framework": "Python",
       "description": "Project for 50.021 Artificial Intelligence with Marcus Ng, Ryan Ng and Jignesh Motwani.",
       "href": "https://github.com/T2LIPthedeveloper/Sign-Language-Translator",
-      "stars": "0"
+      "stars": "0",
+      "keywords": [
+        "cnn",
+        "computer-vision",
+        "mediapipe",
+        "mediapipe-hands",
+        "point-network",
+        "python",
+        "tkinter-gui"
+      ]
     },
     {
       "name": "Spacemate",
       "framework": "Java",
       "description": "App repository for Spacemate (50.001 Information Systems & Programming project).",
       "href": "https://github.com/T2LIPthedeveloper/Spacemate",
-      "stars": "0"
+      "stars": "0",
+      "keywords": [
+        "android",
+        "android-studio",
+        "applications",
+        "booking-system",
+        "firebase",
+        "firebase-auth",
+        "firestore-database",
+        "java"
+      ]
     },
     {
       "name": "StarterChatbot",
       "framework": "Swift",
       "description": "Welcome to your starter chatbot! You just need to clone this repository and you'll have all of the files that you need to begin your project!",
       "href": "https://github.com/T2LIPthedeveloper/StarterChatbot",
-      "stars": "0"
+      "stars": "0",
+      "keywords": [
+        "chatbot",
+        "ios",
+        "ipados",
+        "macos",
+        "openai",
+        "openai-api",
+        "openai-chatbot",
+        "swift",
+        "swift5",
+        "swiftui"
+      ]
     },
     {
       "name": "T2LIPthedeveloper",
       "framework": "N/A",
       "description": "Profile page on GitHub.",
       "href": "https://github.com/T2LIPthedeveloper/T2LIPthedeveloper",
-      "stars": "0"
+      "stars": "0",
+      "keywords": [
+        "profile",
+        "profile-readme",
+        "readme"
+      ]
     },
     {
       "name": "t2lipthedeveloper.github.io",
       "framework": "CSS",
       "description": "Personal portfolio website built in JS & CSS and hosted on GitHub Pages.",
       "href": "https://github.com/T2LIPthedeveloper/t2lipthedeveloper.github.io",
-      "stars": "0"
+      "stars": "0",
+      "keywords": [
+        "github-pages",
+        "html5",
+        "javascript",
+        "scss"
+      ]
+    },
+    {
+      "name": "task-list-poc",
+      "framework": "JavaScript",
+      "description": "POC for a Kanban-style task list built using React.",
+      "href": "https://github.com/T2LIPthedeveloper/task-list-poc",
+      "stars": "0",
+      "keywords": [
+        "firebase",
+        "firebase-realtime-database",
+        "firestore",
+        "kanban",
+        "react",
+        "redux",
+        "vercel"
+      ]
     },
     {
       "name": "unbind",
       "framework": "JavaScript",
       "description": "A book tracking website designed to help you track your reading list, discuss books with other people, and get your next book recommendation.",
       "href": "https://github.com/T2LIPthedeveloper/unbind",
-      "stars": "0"
+      "stars": "0",
+      "keywords": [
+        "blog",
+        "book",
+        "book-tracking",
+        "javascript",
+        "library",
+        "openlibrary-api",
+        "reactjs",
+        "supabase-auth",
+        "supabase-db",
+        "supabase-storage",
+        "tailwind-css"
+      ]
     },
     {
       "name": "wisdom-tree",
       "framework": "N/A",
-      "description": "Wisdom Tree is a concentration app i am working on. ",
+      "description": "Wisdom Tree is a concentration app I'm working on, running in the CLI. ",
       "href": "https://github.com/T2LIPthedeveloper/wisdom-tree",
-      "stars": "0"
+      "stars": "0",
+      "keywords": [
+        "python",
+        "python-cli"
+      ]
     }
   ]
 }

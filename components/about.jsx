@@ -22,16 +22,38 @@ import GooglecloudPlain from "devicons-react/lib/icons/GooglecloudPlain";
 import AmazonwebservicesPlainWordmark from "devicons-react/lib/icons/AmazonwebservicesPlainWordmark";
 import GitPlain from "devicons-react/lib/icons/GitPlain";
 import PostmanPlain from "devicons-react/lib/icons/PostmanPlain";
+import TypewriterComponent from "typewriter-effect";
 
 const MainComponent = (props) => {
+  const typewriter_words = [
+    "I'm a Software Engineer.",
+    "I'm a Machine Learning Engineer.",
+    "I'm a Data Scientist.",
+    "I'm a Full Stack Developer.",
+  ];
   return (
     <div data-section id="about" className="flex flex-col mb-16 group pt-16">
       <div className="hero-section flex flex-col justify-center items-center text-center py-20 space-y-4">
         <h1 className="text-5xl subpixel-antialiased font-semibold tracking-wide">
-          Hi, I'm {props.data.name}.
+          <TypewriterComponent
+            options={{
+              strings: ["Hi, I'm Atul Parida.", "Welcome to my portfolio website!"],
+              autoStart: true,
+              loop: true,
+              pauseFor: 100000,
+              cursor: "",
+              delay: 100, // Delay before starting the next string
+            }}
+          />
         </h1>
         <h2 className="text-surface-600 pt-2 text-base subpixel-antialiased font-normal tracking-wider">
-          {props.data.headline}
+        <TypewriterComponent
+            options={{
+              strings: typewriter_words,
+              autoStart: true,
+              loop: true,
+            }}
+          />
         </h2>
         <Socials data={props.data.socials} />
       </div>

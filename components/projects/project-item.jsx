@@ -13,6 +13,18 @@ function ProjectItem(props) {
       </div>
       <h1 className="mb-4 text-xl subpixel-antialiased break-words hyphens-auto overflow-wrap-anywhere">{props.name}</h1>
       <div className="text-surface-600 text-xs">{props.description}</div>
+      <div className="text-surface-600 text-xs mt-2">
+        {props.keywords && props.keywords.length > 0 ? (
+          props.keywords.map((keyword, index) => (
+            <span
+              key={index}
+              className="inline-block bg-surface-200 text-surface-600 rounded-full px-2 py-1 text-xs font-semibold mr-2 mb-2"
+            >
+              {keyword}
+            </span>
+          ))
+        ) : null}
+      </div>
     </a>
   );
 }

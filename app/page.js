@@ -16,7 +16,8 @@ export default async function Home() {
     framework: project.language || 'N/A',
     description: project.description || 'No description available.',
     href: project.html_url,
-    stars: project.stargazers_count.toString()
+    stars: project.stargazers_count.toString(),
+    keywords: project.topics || ["N/A"],
   }));
 
   // Read the translation file
