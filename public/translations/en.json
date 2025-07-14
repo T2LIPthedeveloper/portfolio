@@ -3,10 +3,10 @@
     "name": "Atul Parida",
     "headline": "Software Engineer | Data Scientist | AI/ML Enthusiast",
     "about": [
-      "Hey there!👋",
-      " I'm Atul Parida, a passionate software engineer and data scientist graduating from SUTD in May 2025.",
-      "I specialize in developing scalable data pipelines, AI-driven applications, and full-stack solutions. My work spans fintech, AI/ML, and automation, driven by a commitment to create impactful technology.",
-      "Outside of work, I enjoy mentoring fellow tech enthusiasts and exploring the latest trends in AI and software development."
+      "Hey there! 👋",
+      "I'm Atul, a software engineer and data scientist from Austin passionate about building impactful tech.",
+      "I craft scalable data pipelines, AI applications, and full-stack solutions across fintech and automation sectors.",
+      "When not coding, you'll find me mentoring tech enthusiasts and exploring cutting-edge AI innovations."
     ],
     "socials": {
       "email": "atul.parida@outlook.com",
@@ -16,6 +16,21 @@
     }
   },
   "experiences": [
+    {
+      "title": "Junior Software Developer",
+      "company": "Hitachi Vantara",
+      "href": "https://www.hitachivantara.com/en-us/home.html",
+      "startDate": "06/2025",
+      "endDate": "Present",
+      "description": "Building the platform for Hitachi Vantara's AI-driven data management solutions, focusing on scalable data pipelines and machine learning applications.",
+      "logo": "/logos/hitachi-white.png",
+      "skills": [
+        "Golang",
+        "Kubernetes",
+        "Docker",
+        "JavaScript"
+      ]
+    },
     {
       "title": "Data Science Intern",
       "company": "QuantumStreet AI",
@@ -109,13 +124,13 @@
   ],
   "education": [
     {
-      "subject": "Computer Science, Minor in AI",
+      "subject": "Computer Science",
       "degree": "Bachelor of Engineering",
       "university": "Singapore University of Technology and Design (SUTD)",
       "href": "https://www.sutd.edu.sg/",
       "startDate": "09/2021",
-      "endDate": "05/2025",
-      "description": "Focus tracks in Software Engineering and Financial Technologies, expected to graduate with Honors with Merit."
+      "endDate": "06/2025",
+      "description": "Minor in Artificial Intelligence, focus on Software Engineering and Financial Technologies. Graduated with Honors with Merit."
     }
   ],
   "volunteering": [
