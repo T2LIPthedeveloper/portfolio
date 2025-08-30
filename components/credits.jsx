@@ -48,7 +48,7 @@ const Credits = (props) => {
         <div className="flex flex-row justify-between">
           <span className="flex space-x-2">
             <a
-              href="linkedin.com/in/atulparida"
+              href="https://www.linkedin.com/in/atulparida"
               target="_blank"
               rel="noopener noreferrer"
               className="text-on-background transition-all hover:text-primary-500"
@@ -57,7 +57,7 @@ const Credits = (props) => {
             </a>
             <span>|</span>
             <a
-              href="github.com/T2LIPthedeveloper"
+              href="https://www.github.com/T2LIPthedeveloper"
               target="_blank"
               rel="noopener noreferrer"
               className="text-on-background transition-all hover:text-primary-500"

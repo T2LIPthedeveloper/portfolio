@@ -2,32 +2,6 @@ import React, { useEffect, useState } from "react";
 import Image from 'next/image';
 
 const Socials = (props) => {
-    const [country, setCountry] = useState("US"); // Default to US
-
-    useEffect(() => {
-        const fetchCountry = async () => {
-            try {
-                const res = await fetch("https://ipapi.co/json/");
-                const data = await res.json();
-                const countryCode = data.country_code;
-                
-                const SEA_COUNTRIES = ["SG", "MY", "ID", "TH", "PH", "VN", "BN", "KH", "MM", "LA"];
-                if (SEA_COUNTRIES.includes(countryCode)) {
-                    setCountry("SG");
-                }
-            } catch (error) {
-                console.error("Error fetching country data:", error);
-            }
-        };
-
-        fetchCountry();
-    }, []);
-
-    const resumeLinks = {
-        US: "resumes/us_swe.pdf",
-        SG: "resumes/sg_swe.pdf",
-    };
-
     return (
         <div className='flex flex-1 flex-row items-center relative'>
             <a href={`mailto:${props.data.email}`} className='mr-2 transition-all border border-surface-300 hover:bg-primary-300 hover:bg-opacity-30 text-on-background py-2 px-2 rounded flex flex-1 justify-center items-center'>
@@ -40,8 +14,9 @@ const Socials = (props) => {
             {/* Resume Dropdown Button */}
             <div className="relative">
                 <a 
-                    href={resumeLinks[country]}
-                    download="Atul Parida.pdf"
+                    href="resumes/Atul Parida.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className='mr-4 transition-all border border-surface-300 hover:bg-primary-300 hover:bg-opacity-30 text-on-background py-2 px-2 rounded flex justify-center items-center'
                 >
                     <Image 

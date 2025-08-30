@@ -6,7 +6,8 @@
       "Hey there! 👋",
       "I'm Atul, a software engineer and data scientist from Austin passionate about building impactful tech.",
       "I craft scalable data pipelines, AI applications, and full-stack solutions across fintech and automation sectors.",
-      "When not coding, you'll find me mentoring tech enthusiasts and exploring cutting-edge AI innovations."
+      "When I'm not coding, you'll find me exploring photography, hiking, or diving into the latest tech trends.",
+      "Let's connect and create something amazing together! 🚀"
     ],
     "socials": {
       "email": "atul.parida@outlook.com",
@@ -17,18 +18,33 @@
   },
   "experiences": [
     {
+      "title": "Software Engineer",
+      "company": "Visa Inc.",
+      "href": "https://www.visa.com/",
+      "startDate": "09/2025",
+      "endDate": "Present",
+      "description": "Working with Visa's Payments Platform team to build scalable payment processing systems and enhance transaction security using microservices architecture.",
+      "logo": "/logos/visa-white.png",
+      "skills": [
+        "Java",
+        "Spring Boot",
+        "Microservices",
+        "Typescript"
+      ]
+    },
+    {
       "title": "Junior Software Developer",
       "company": "Hitachi Vantara",
       "href": "https://www.hitachivantara.com/en-us/home.html",
       "startDate": "06/2025",
-      "endDate": "Present",
-      "description": "Building the platform for Hitachi Vantara's AI-driven data management solutions, focusing on scalable data pipelines and machine learning applications.",
+      "endDate": "09/2025",
+      "description": "Helped bring Hitachi's VSP 360 enterprise data platform for AI-driven data management solutions to general availability (GA), focusing on scalable platform engineering and full-stack development.",
       "logo": "/logos/hitachi-white.png",
       "skills": [
         "Golang",
         "Kubernetes",
         "Docker",
-        "JavaScript"
+        "Typescript"
       ]
     },
     {
