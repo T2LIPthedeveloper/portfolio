@@ -3,11 +3,11 @@
     "name": "Atul Parida",
     "headline": "Software Engineer | Data Scientist | AI/ML Enthusiast",
     "about": [
-      "Hey there! 👋",
+      "Hey there!",
       "I'm Atul, a software engineer and data scientist from Austin passionate about building impactful tech.",
       "I craft scalable data pipelines, AI applications, and full-stack solutions across fintech and automation sectors.",
       "When I'm not coding, you'll find me exploring photography, hiking, or diving into the latest tech trends.",
-      "Let's connect and create something amazing together! 🚀"
+      "Let's connect and create something amazing together!"
     ],
     "socials": {
       "email": "atul.parida@outlook.com",
@@ -19,11 +19,11 @@
   "experiences": [
     {
       "title": "Software Engineer",
-      "company": "Visa Inc.",
+      "company": "Visa Inc",
       "href": "https://www.visa.com/",
       "startDate": "09/2025",
       "endDate": "Present",
-      "description": "Working with Visa's Payments Platform team to build scalable payment processing systems and enhance transaction security using microservices architecture.",
+      "description": "Building the next generation of Visa's fintech hyperscaling systems with Visa's Commercial & Money Movement Solutions team, enhancing transaction security and B2B product offerings by leveraging AI-driven technologies and microservices.",
       "logo": "/logos/visa-white.png",
       "skills": [
         "Java",
