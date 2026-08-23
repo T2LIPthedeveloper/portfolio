@@ -1,1 +1,229 @@
-[]
+[
+    {
+        "id": "yosemite-2024",
+        "name": "SF and Yosemite Visit",
+        "description": "Visited UC Berkeley and Yosemite National Park with my ex-girlfriend and her friends during an exchange program.",
+        "waypoints": [
+            {
+                "name": "Berkeley, CA",
+                "lat": 37.87159, "lng": -122.27275
+            },
+            {
+                "name": "Yosemite National Park, CA",
+                "lat": 37.86512,
+                "lng": -119.53833
+            },
+            {
+                "name": "Stockton, CA",
+                "lat": 37.9616,
+                "lng": -121.2756
+            },
+            {
+                "name": "Berkeley, CA",
+                "lat": 37.87159, "lng": -122.27275
+            }
+        ]
+    },
+    {
+        "id":"uiuc-2024",
+        "name": "UIUC Visit",
+        "description": "Visited Chicago and University of Illinois at Urbana-Champaign to drop off my younger brother to college.",
+        "waypoints": [
+            {
+                "name": "Chicago, IL",
+                "lat": 41.88372,
+                "lng": -87.63238
+            },
+            {
+                "name": "University of Illinois at Urbana-Champaign, IL",
+                "lat": 40.1063,
+                "lng": -88.2237
+            },
+            {
+                "name": "Chicago, IL",
+                "lat": 41.88372,
+                "lng": -87.63238
+            }
+        ]
+    },
+    {
+        "id": "htx-2024",
+        "name": "Houston and NASA Visit",
+        "description": "Visited Houston and NASA Johnson Space Center with relatives.",
+        "waypoints": [
+            {
+                "name": "Austin, TX",
+                "lat": 30.2672,
+                "lng": -97.7431
+            },
+            {
+                "name": "Houston, TX",
+                "lat": 29.7604,
+                "lng": -95.3698
+            },
+            {
+                "name": "Austin, TX",
+                "lat": 30.2672,
+                "lng": -97.7431
+            }
+        ]
+    },
+    {
+        "id": "satx-2025",
+        "name": "San Antonio Visit",
+        "description": "Visited San Antonio to purchase my car.",
+        "waypoints": [
+            {
+                "name": "Austin, TX",
+                "lat": 30.2672,
+                "lng": -97.7431
+            },
+            {
+                "name": "San Antonio, TX",
+                "lat": 29.42412,
+                "lng": -98.49362
+            },
+            {
+                "name": "Austin, TX",
+                "lat": 30.2672,
+                "lng": -97.7431
+            }
+        ]
+    },
+    {
+        "id": "arkansas-2026",
+        "name": "Arkansas Visit",
+        "description": "Visited Texarkana, Hot Springs and Little Rock with my friends.",
+        "waypoints": [
+            {
+                "name": "Austin, TX",
+                "lat": 30.2672,
+                "lng": -97.7431
+            },
+            {
+                "name": "Dallas, TX",
+                "lat": 32.77667,
+                "lng": -96.79699
+            },
+            {
+                "name": "Texarkana, AR",
+                "lat": 33.42509,
+                "lng": -94.04774
+            },
+            {
+                "name": "Hot Springs, AR",
+                "lat": 34.5037,
+                "lng": -93.05518
+            },
+            {
+                "name": "Little Rock, AR",
+                "lat": 34.74648,
+                "lng": -92.28959
+            },
+            {
+                "name": "Dallas, TX",
+                "lat": 32.77667,
+                "lng": -96.79699
+            },
+            {
+                "name": "Austin, TX",
+                "lat": 30.2672,
+                "lng": -97.7431
+            }
+        ]
+    },
+    {
+        "id": "wa-2026",
+        "name": "Washington Visit",
+        "description": "Visited Seattle and the three surrounding national parks with my friends. Visited Olympia, Forks (Olympic National Park), Port Angeles, Port Townsend, Coupeville, Marblemount (North Cascades National Park), Paradise (Mount Rainier National Park) and Tacoma.",
+        "waypoints": [
+            {
+                "name": "Seattle, WA",
+                "lat": 47.60621,
+                "lng": -122.33207
+            },
+            {
+                "name": "Olympia, WA",
+                "lat": 47.03787,
+                "lng": -122.90069
+            },
+            {
+                "name": "Forks, WA",
+                "lat": 47.95039,
+                "lng": -124.3855
+            },
+            {
+                "name": "Port Angeles, WA",
+                "lat": 48.11811,
+                "lng": -123.42982
+            },
+            {
+                "name": "Port Townsend, WA",
+                "lat": 48.1170,
+                "lng": -122.7604
+            },
+            {
+                "name": "Coupeville, WA",
+                "lat": 48.2193,
+                "lng": -122.6868
+            },
+            {
+                "name": "Marblemount, WA",
+                "lat": 48.5282,
+                "lng": -121.4332
+            },
+            {
+                "name": "Paradise, WA",
+                "lat": 46.7860,
+                "lng": -121.7351
+            },
+            {
+                "name": "Tacoma, WA",
+                "lat": 47.25288,
+                "lng": -122.44429
+            },
+            {
+                "name": "Seattle, WA",
+                "lat": 47.60621,
+                "lng": -122.33207
+            }
+        ]
+    },
+    {
+        "id": "okc-2026",
+        "name": "Oklahoma City and Tulsa Visit",
+        "description": "Visited Oklahoma City and Tulsa with my friends for the 4th of July. Hit up some casinos along the way.",
+        "waypoints": [
+            {
+                "name": "Austin, TX",
+                "lat": 30.2672,
+                "lng": -97.7431
+            },
+            {
+                "name": "Dallas, TX",
+                "lat": 32.77667,
+                "lng": -96.79699
+            },
+            {
+                "name": "Tulsa, OK",
+                "lat": 36.1540,
+                "lng": -95.9927
+            },
+            {
+                "name": "Oklahoma City, OK",
+                "lat": 35.46756,
+                "lng": -97.51642
+            },
+            {
+                "name": "Dallas, TX",
+                "lat": 32.77667,
+                "lng": -96.79699
+            },
+            {
+                "name": "Austin, TX",
+                "lat": 30.2672,
+                "lng": -97.7431
+            }
+        ]
+    }
+]

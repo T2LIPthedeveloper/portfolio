@@ -22,9 +22,9 @@ export interface TripMapping {
   id: string;
   name: string;
   description?: string;
-  /** Match flights via date|flightNumber keys */
-  flightKeys: string[];
-  /** Optional ordered destination place IDs for globe path */
+  /** Match flights via date|flightNumber keys. Omit or [] for non-flight trips. */
+  flightKeys?: string[];
+  /** Optional ordered destination place IDs for globe path (preferred when ≥2) */
   destinationIds?: string[];
   color?: string;
 }

@@ -22,6 +22,21 @@ const TRAVEL_SCOPE_NOTE =
 export function TravelPageContent({ data }: TravelPageContentProps) {
   const { isPilotMode, togglePilot } = usePilotMode();
 
+  const mappedJourneys = [
+    ...data.tripMappings.map((trip) => ({
+      id: trip.id,
+      name: trip.name,
+      description: trip.description,
+      kind: "flight" as const,
+    })),
+    ...data.roadTrips.map((trip) => ({
+      id: trip.id,
+      name: trip.name,
+      description: trip.description,
+      kind: "road" as const,
+    })),
+  ];
+
   return (
     <div className="space-y-5">
       <div className="flex flex-wrap items-end justify-between gap-4">
@@ -98,12 +113,17 @@ export function TravelPageContent({ data }: TravelPageContentProps) {
               </div>
               <BoundedList
                 title="Mapped journeys"
-                items={data.tripMappings}
+                items={mappedJourneys}
                 getKey={(trip) => trip.id}
                 className="min-h-0 shrink-0"
                 renderItem={(trip) => (
                   <div className="rounded-lg border border-border px-3 py-2 text-sm">
-                    <p className="font-medium text-text-primary">{trip.name}</p>
+                    <div className="flex items-start justify-between gap-2">
+                      <p className="font-medium text-text-primary">{trip.name}</p>
+                      <span className="shrink-0 font-mono text-[10px] uppercase tracking-wider text-text-muted">
+                        {trip.kind === "road" ? "Road" : "Flight"}
+                      </span>
+                    </div>
                     {trip.description && (
                       <p className="mt-0.5 text-text-secondary">{trip.description}</p>
                     )}

@@ -23,6 +23,7 @@ export function FocusCarousel<T>({
 }: FocusCarouselProps<T>) {
   const scrollerRef = useRef<HTMLDivElement>(null);
   const itemRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const didInitialAlign = useRef(false);
   const [focusedIndex, setFocusedIndex] = useState(0);
   const [portHeight, setPortHeight] = useState(0);
 
@@ -43,6 +44,8 @@ export function FocusCarousel<T>({
   }, []);
 
   const updateFocus = useCallback(() => {
+    if (!didInitialAlign.current) return;
+
     const scroller = scrollerRef.current;
     if (!scroller || items.length === 0) return;
 
@@ -65,14 +68,33 @@ export function FocusCarousel<T>({
     setFocusedIndex(closestIndex);
   }, [items.length]);
 
+  // After layout heights are known, snap the first (most recent) card to center once.
+  useEffect(() => {
+    if (portHeight <= 0 || items.length === 0) return;
+
+    const scroller = scrollerRef.current;
+    const first = itemRefs.current[0];
+    if (!scroller || !first) return;
+
+    didInitialAlign.current = false;
+    setFocusedIndex(0);
+
+    const frame = requestAnimationFrame(() => {
+      first.scrollIntoView({ block: "center", behavior: "instant" as ScrollBehavior });
+      didInitialAlign.current = true;
+      setFocusedIndex(0);
+    });
+
+    return () => cancelAnimationFrame(frame);
+  }, [portHeight, items.length]);
+
   useEffect(() => {
     const scroller = scrollerRef.current;
     if (!scroller) return;
 
-    updateFocus();
     scroller.addEventListener("scroll", updateFocus, { passive: true });
     return () => scroller.removeEventListener("scroll", updateFocus);
-  }, [updateFocus, portHeight]);
+  }, [updateFocus]);
 
   if (items.length === 0) return null;
 

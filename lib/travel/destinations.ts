@@ -173,21 +173,23 @@ export function buildTripArcs(
 
   return tripMappings
     .map((trip) => {
-      const expandedKeys = expandFlightKeys(trip.flightKeys, flights);
+      const expandedKeys = expandFlightKeys(trip.flightKeys ?? [], flights);
       const tripFlights = expandedKeys
         .map((key) => flightByKey.get(key))
         .filter((f): f is FlightDetail => Boolean(f));
 
       let coords: [number, number][] = [];
 
-      if (trip.destinationIds?.length) {
-        coords = trip.destinationIds
-          .map((id) => destById.get(id))
+      const destCoords =
+        trip.destinationIds
+          ?.map((id) => destById.get(id))
           .filter((d): d is DestinationPlace => Boolean(d))
-          .map((d) => [d.lat, d.lng] as [number, number]);
-      }
+          .map((d) => [d.lat, d.lng] as [number, number]) ?? [];
 
-      if (tripFlights.length > 0) {
+      // Curated destination path wins when the author provided ≥2 places.
+      if (destCoords.length >= 2) {
+        coords = destCoords;
+      } else if (tripFlights.length > 0) {
         const flightCoords: [number, number][] = [];
         const first = tripFlights[0];
         flightCoords.push([first.startLat, first.startLng]);

@@ -15,9 +15,9 @@ interface HeroSectionProps {
 const PHOTO_SIZE = "h-36 w-36 sm:h-44 sm:w-44 md:h-52 md:w-52";
 
 const TYPEWRITER_LINES = [
-  "I'm a Software Engineer",
-  "I'm a Data Scientist",
-  "I'm an AI/ML Enthusiast",
+  "I'm a Software Engineer.",
+  "I'm a Data Scientist.",
+  "I'm an AI/ML Enthusiast.",
 ];
 
 export function HeroSection({ name, photoSrc = "/images/atul.jpg" }: HeroSectionProps) {

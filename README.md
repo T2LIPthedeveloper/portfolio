@@ -41,18 +41,24 @@ OPENAI_REASONING_EFFORT=low
 
 ## Travel Data Workflow
 
-See **[public/data/README.md](public/data/README.md)** for the full guide (CSV, destinations, trip mappings, road trips).
+See **[public/data/README.md](public/data/README.md)** for the full guide — multi-flight trips, non-flight itineraries, and large road trips with many waypoints.
 
 Short version:
 
 1. Export flights from [my.flightradar24.com](https://my.flightradar24.com) to `public/data/flights.csv`
 2. Add lifetime-only places to `public/data/destinations.json`
-3. Group multi-leg trips in `public/data/trip-mappings.json` (use `date|flightNumber` keys)
-4. Optionally add road trips to `public/data/road-trips.json`
+3. Group trips in `public/data/trip-mappings.json` (`date|flightNumber` keys, and/or `destinationIds` for non-flight itineraries)
+4. Add road trips to `public/data/road-trips.json` (prefer named `waypoints` for many cities)
 5. Run the import CLI:
 
 ```bash
 npm run travel:import
+```
+
+Bootstrap a road trip from city names:
+
+```bash
+npm run travel:import -- --road-trip "Name" --points "City A" "City B" "City C"
 ```
 
 ### Travel views

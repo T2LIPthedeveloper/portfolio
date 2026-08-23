@@ -4,9 +4,9 @@
     "headline": "Software Engineer | Data Scientist | AI/ML Enthusiast",
     "about": [
       "I'm Atul, a software engineer and data scientist based in Austin.",
-      "I build full-stack products, data pipelines, and AI systems — mostly in fintech and platform engineering.",
+      "I build full-stack products, data pipelines, and AI systems, mostly in fintech and platform engineering.",
       "When I'm not at a keyboard, I'm usually hiking, taking photos, or planning the next trip.",
-      "Always happy to talk shop — reach out anytime."
+      "Always happy to talk shop. Reach out anytime."
     ],
     "socials": {
       "email": "atul.parida@outlook.com",
@@ -22,7 +22,7 @@
       "href": "https://www.visa.com/",
       "startDate": "09/2025",
       "endDate": "Present",
-      "description": "Building the next generation of Visa's fintech hyperscaling systems with Visa's Commercial & Money Movement Solutions team, enhancing transaction security and B2B product offerings by leveraging AI-driven technologies and microservices.",
+      "description": "Building the Visa Developer Platform with the Commercial & Money Movement Solutions team, enhancing B2B and B2C integrations with Visa's security and product offerings by leveraging AI, distributed systems and microservices.",
       "logo": "/logos/visa-white.png",
       "logoLight": "/logos/visa-dark.png",
       "skills": [

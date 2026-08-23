@@ -2,7 +2,7 @@ import { writeTravelManifest } from "../lib/travel/index";
 import { geocodePlace } from "../lib/travel/geocode";
 import { promises as fs } from "fs";
 import path from "path";
-import type { RoadTrip } from "../types/travel";
+import type { RoadTrip, RoadTripWaypoint } from "../types/travel";
 
 const ROAD_TRIPS_PATH = path.join(process.cwd(), "public/data/road-trips.json");
 
@@ -18,21 +18,21 @@ async function main() {
     const placeNames = args.slice(pointsIndex + 1);
 
     if (!name || placeNames.length < 2) {
-      console.error("Usage: --road-trip \"Name\" --points \"City A\" \"City B\" ...");
+      console.error('Usage: --road-trip "Name" --points "City A" "City B" ...');
       process.exit(1);
     }
 
-    const pathCoords: [number, number][] = [];
+    const waypoints: RoadTripWaypoint[] = [];
     for (const place of placeNames) {
       const coord = await geocodePlace(place);
       if (!coord) {
         console.warn(`Could not geocode: ${place}`);
         continue;
       }
-      pathCoords.push(coord);
+      waypoints.push({ name: place, lat: coord[0], lng: coord[1] });
     }
 
-    if (pathCoords.length >= 2 && !dryRun) {
+    if (waypoints.length >= 2 && !dryRun) {
       let trips: RoadTrip[] = [];
       try {
         trips = JSON.parse(await fs.readFile(ROAD_TRIPS_PATH, "utf-8")) as RoadTrip[];
@@ -43,11 +43,11 @@ async function main() {
       trips.push({
         id: name.toLowerCase().replace(/\s+/g, "-"),
         name,
-        path: pathCoords,
+        waypoints,
       });
 
       await fs.writeFile(ROAD_TRIPS_PATH, JSON.stringify(trips, null, 2));
-      console.log(`Added road trip: ${name} (${pathCoords.length} points)`);
+      console.log(`Added road trip: ${name} (${waypoints.length} waypoints)`);
     }
   }
 

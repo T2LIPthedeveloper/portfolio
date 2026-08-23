@@ -64,15 +64,26 @@ export interface AirportPoint {
   visitCount: number;
 }
 
+export interface RoadTripWaypoint {
+  name: string;
+  lat: number;
+  lng: number;
+}
+
 export interface RoadTrip {
   id: string;
   name: string;
-  path: [number, number][];
+  description?: string;
+  /** Legacy raw polyline. Prefer `waypoints` for many cities. */
+  path?: [number, number][];
+  /** Named ordered stops — preferred authoring format. */
+  waypoints?: RoadTripWaypoint[];
 }
 
 export interface RoadTripPath {
   id: string;
   name: string;
+  description?: string;
   coords: [number, number][];
 }
 

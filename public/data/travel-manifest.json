@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-23T19:37:31.576Z",
+  "generatedAt": "2026-08-23T23:03:51.406Z",
   "scopeNote": "Destination markers reflect lifetime visits. Flight arcs and Pilot Mode stats cover logged flights from 2017 onward. Add places you've visited outside the flight log below.",
   "stats": {
     "totalFlights": 61,
@@ -965,7 +965,201 @@
       "visitCount": 2
     }
   ],
-  "roadTrips": [],
+  "roadTrips": [
+    {
+      "id": "yosemite-2024",
+      "name": "SF and Yosemite Visit",
+      "coords": [
+        [
+          37.87159,
+          -122.27275
+        ],
+        [
+          37.86512,
+          -119.53833
+        ],
+        [
+          37.9616,
+          -121.2756
+        ],
+        [
+          37.87159,
+          -122.27275
+        ]
+      ],
+      "description": "Visited UC Berkeley and Yosemite National Park with my ex-girlfriend and her friends during an exchange program."
+    },
+    {
+      "id": "uiuc-2024",
+      "name": "UIUC Visit",
+      "coords": [
+        [
+          41.88372,
+          -87.63238
+        ],
+        [
+          40.1063,
+          -88.2237
+        ],
+        [
+          41.88372,
+          -87.63238
+        ]
+      ],
+      "description": "Visited Chicago and University of Illinois at Urbana-Champaign to drop off my younger brother to college."
+    },
+    {
+      "id": "htx-2024",
+      "name": "Houston and NASA Visit",
+      "coords": [
+        [
+          30.2672,
+          -97.7431
+        ],
+        [
+          29.7604,
+          -95.3698
+        ],
+        [
+          30.2672,
+          -97.7431
+        ]
+      ],
+      "description": "Visited Houston and NASA Johnson Space Center with relatives."
+    },
+    {
+      "id": "satx-2025",
+      "name": "San Antonio Visit",
+      "coords": [
+        [
+          30.2672,
+          -97.7431
+        ],
+        [
+          29.42412,
+          -98.49362
+        ],
+        [
+          30.2672,
+          -97.7431
+        ]
+      ],
+      "description": "Visited San Antonio to purchase my car."
+    },
+    {
+      "id": "arkansas-2026",
+      "name": "Arkansas Visit",
+      "coords": [
+        [
+          30.2672,
+          -97.7431
+        ],
+        [
+          32.77667,
+          -96.79699
+        ],
+        [
+          33.42509,
+          -94.04774
+        ],
+        [
+          34.5037,
+          -93.05518
+        ],
+        [
+          34.74648,
+          -92.28959
+        ],
+        [
+          32.77667,
+          -96.79699
+        ],
+        [
+          30.2672,
+          -97.7431
+        ]
+      ],
+      "description": "Visited Texarkana, Hot Springs and Little Rock with my friends."
+    },
+    {
+      "id": "wa-2026",
+      "name": "Washington Visit",
+      "coords": [
+        [
+          47.60621,
+          -122.33207
+        ],
+        [
+          47.03787,
+          -122.90069
+        ],
+        [
+          47.95039,
+          -124.3855
+        ],
+        [
+          48.11811,
+          -123.42982
+        ],
+        [
+          48.117,
+          -122.7604
+        ],
+        [
+          48.2193,
+          -122.6868
+        ],
+        [
+          48.5282,
+          -121.4332
+        ],
+        [
+          46.786,
+          -121.7351
+        ],
+        [
+          47.25288,
+          -122.44429
+        ],
+        [
+          47.60621,
+          -122.33207
+        ]
+      ],
+      "description": "Visited Seattle and the three surrounding national parks with my friends. Visited Olympia, Forks (Olympic National Park), Port Angeles, Port Townsend, Coupeville, Marblemount (North Cascades National Park), Paradise (Mount Rainier National Park) and Tacoma."
+    },
+    {
+      "id": "okc-2026",
+      "name": "Oklahoma City and Tulsa Visit",
+      "coords": [
+        [
+          30.2672,
+          -97.7431
+        ],
+        [
+          32.77667,
+          -96.79699
+        ],
+        [
+          36.154,
+          -95.9927
+        ],
+        [
+          35.46756,
+          -97.51642
+        ],
+        [
+          32.77667,
+          -96.79699
+        ],
+        [
+          30.2672,
+          -97.7431
+        ]
+      ],
+      "description": "Visited Oklahoma City and Tulsa with my friends for the 4th of July. Hit up some casinos along the way."
+    }
+  ],
   "flights": [
     {
       "date": "2026-06-21",
@@ -2231,7 +2425,8 @@
       "lng": -97.7431,
       "sources": [
         "flight",
-        "manual"
+        "manual",
+        "road-trip"
       ],
       "firstVisit": "2024",
       "notes": "Current home base"
@@ -2247,6 +2442,255 @@
       ],
       "firstVisit": "2010",
       "notes": "Hometown — lifetime visits beyond logged flights"
+    },
+    {
+      "id": "berkeley",
+      "name": "Berkeley",
+      "country": "United States",
+      "lat": 37.87159,
+      "lng": -122.27275,
+      "sources": [
+        "road-trip"
+      ],
+      "firstVisit": "2024",
+      "notes": "UC Berkeley — SF / Yosemite trip"
+    },
+    {
+      "id": "yosemite",
+      "name": "Yosemite National Park",
+      "country": "United States",
+      "lat": 37.86512,
+      "lng": -119.53833,
+      "sources": [
+        "road-trip"
+      ],
+      "firstVisit": "2024"
+    },
+    {
+      "id": "stockton",
+      "name": "Stockton",
+      "country": "United States",
+      "lat": 37.9616,
+      "lng": -121.2756,
+      "sources": [
+        "road-trip"
+      ],
+      "firstVisit": "2024"
+    },
+    {
+      "id": "chicago",
+      "name": "Chicago",
+      "country": "United States",
+      "lat": 41.88372,
+      "lng": -87.63238,
+      "sources": [
+        "road-trip"
+      ],
+      "firstVisit": "2024",
+      "notes": "UIUC drop-off trip"
+    },
+    {
+      "id": "urbana-champaign",
+      "name": "Urbana–Champaign",
+      "country": "United States",
+      "lat": 40.1063,
+      "lng": -88.2237,
+      "sources": [
+        "road-trip"
+      ],
+      "firstVisit": "2024",
+      "notes": "University of Illinois at Urbana-Champaign"
+    },
+    {
+      "id": "houston",
+      "name": "Houston",
+      "country": "United States",
+      "lat": 29.7604,
+      "lng": -95.3698,
+      "sources": [
+        "road-trip"
+      ],
+      "firstVisit": "2024",
+      "notes": "NASA Johnson Space Center visit"
+    },
+    {
+      "id": "san-antonio",
+      "name": "San Antonio",
+      "country": "United States",
+      "lat": 29.42412,
+      "lng": -98.49362,
+      "sources": [
+        "road-trip"
+      ],
+      "firstVisit": "2025"
+    },
+    {
+      "id": "dallas",
+      "name": "Dallas",
+      "country": "United States",
+      "lat": 32.77667,
+      "lng": -96.79699,
+      "sources": [
+        "road-trip"
+      ],
+      "firstVisit": "2026"
+    },
+    {
+      "id": "texarkana",
+      "name": "Texarkana",
+      "country": "United States",
+      "lat": 33.42509,
+      "lng": -94.04774,
+      "sources": [
+        "road-trip"
+      ],
+      "firstVisit": "2026"
+    },
+    {
+      "id": "hot-springs",
+      "name": "Hot Springs",
+      "country": "United States",
+      "lat": 34.5037,
+      "lng": -93.05518,
+      "sources": [
+        "road-trip"
+      ],
+      "firstVisit": "2026"
+    },
+    {
+      "id": "little-rock",
+      "name": "Little Rock",
+      "country": "United States",
+      "lat": 34.74648,
+      "lng": -92.28959,
+      "sources": [
+        "road-trip"
+      ],
+      "firstVisit": "2026"
+    },
+    {
+      "id": "seattle",
+      "name": "Seattle",
+      "country": "United States",
+      "lat": 47.60621,
+      "lng": -122.33207,
+      "sources": [
+        "road-trip"
+      ],
+      "firstVisit": "2026"
+    },
+    {
+      "id": "olympia",
+      "name": "Olympia",
+      "country": "United States",
+      "lat": 47.03787,
+      "lng": -122.90069,
+      "sources": [
+        "road-trip"
+      ],
+      "firstVisit": "2026"
+    },
+    {
+      "id": "forks",
+      "name": "Forks",
+      "country": "United States",
+      "lat": 47.95039,
+      "lng": -124.3855,
+      "sources": [
+        "road-trip"
+      ],
+      "firstVisit": "2026",
+      "notes": "Olympic National Park"
+    },
+    {
+      "id": "port-angeles",
+      "name": "Port Angeles",
+      "country": "United States",
+      "lat": 48.11811,
+      "lng": -123.42982,
+      "sources": [
+        "road-trip"
+      ],
+      "firstVisit": "2026"
+    },
+    {
+      "id": "port-townsend",
+      "name": "Port Townsend",
+      "country": "United States",
+      "lat": 48.117,
+      "lng": -122.7604,
+      "sources": [
+        "road-trip"
+      ],
+      "firstVisit": "2026"
+    },
+    {
+      "id": "coupeville",
+      "name": "Coupeville",
+      "country": "United States",
+      "lat": 48.2193,
+      "lng": -122.6868,
+      "sources": [
+        "road-trip"
+      ],
+      "firstVisit": "2026"
+    },
+    {
+      "id": "marblemount",
+      "name": "Marblemount",
+      "country": "United States",
+      "lat": 48.5282,
+      "lng": -121.4332,
+      "sources": [
+        "road-trip"
+      ],
+      "firstVisit": "2026",
+      "notes": "North Cascades National Park"
+    },
+    {
+      "id": "paradise",
+      "name": "Paradise",
+      "country": "United States",
+      "lat": 46.786,
+      "lng": -121.7351,
+      "sources": [
+        "road-trip"
+      ],
+      "firstVisit": "2026",
+      "notes": "Mount Rainier National Park"
+    },
+    {
+      "id": "tacoma",
+      "name": "Tacoma",
+      "country": "United States",
+      "lat": 47.25288,
+      "lng": -122.44429,
+      "sources": [
+        "road-trip"
+      ],
+      "firstVisit": "2026"
+    },
+    {
+      "id": "tulsa",
+      "name": "Tulsa",
+      "country": "United States",
+      "lat": 36.154,
+      "lng": -95.9927,
+      "sources": [
+        "road-trip"
+      ],
+      "firstVisit": "2026"
+    },
+    {
+      "id": "oklahoma-city",
+      "name": "Oklahoma City",
+      "country": "United States",
+      "lat": 35.46756,
+      "lng": -97.51642,
+      "sources": [
+        "road-trip"
+      ],
+      "firstVisit": "2026"
     },
     {
       "id": "bom",
@@ -2617,8 +3061,8 @@
       "name": "Bali Getaway",
       "startLat": 1.3644,
       "startLng": 103.9915,
-      "endLat": 1.3644,
-      "endLng": 103.9915,
+      "endLat": -8.7482,
+      "endLng": 115.1672,
       "color": "#b45309",
       "coords": [
         [
@@ -2628,10 +3072,6 @@
         [
           -8.7482,
           115.1672
-        ],
-        [
-          1.3644,
-          103.9915
         ]
       ]
     },
@@ -2640,8 +3080,8 @@
       "name": "US Summer 2024",
       "startLat": 1.3644,
       "startLng": 103.9915,
-      "endLat": 1.3644,
-      "endLng": 103.9915,
+      "endLat": 40.6413,
+      "endLng": -73.7781,
       "color": "#0f766e",
       "coords": [
         [
@@ -2651,14 +3091,6 @@
         [
           40.6413,
           -73.7781
-        ],
-        [
-          40.6413,
-          -73.7781
-        ],
-        [
-          1.3644,
-          103.9915
         ]
       ]
     },
@@ -2667,8 +3099,8 @@
       "name": "Kashmir Winter Trip",
       "startLat": 18.5822,
       "startLng": 73.9197,
-      "endLat": 18.5822,
-      "endLng": 73.9197,
+      "endLat": 33.9871,
+      "endLng": 74.7742,
       "color": "#2dd4bf",
       "coords": [
         [
@@ -2682,14 +3114,6 @@
         [
           33.9871,
           74.7742
-        ],
-        [
-          28.5562,
-          77.1
-        ],
-        [
-          18.5822,
-          73.9197
         ]
       ]
     },
@@ -2721,8 +3145,8 @@
       "name": "Houston → Singapore via Manchester",
       "startLat": 29.9902,
       "startLng": -95.3368,
-      "endLat": 53.3537,
-      "endLng": -2.275,
+      "endLat": 1.3644,
+      "endLng": 103.9915,
       "color": "#22d3ee",
       "coords": [
         [
@@ -2732,6 +3156,10 @@
         [
           53.3537,
           -2.275
+        ],
+        [
+          1.3644,
+          103.9915
         ]
       ]
     }
@@ -2765,9 +3193,9 @@
     ]
   },
   "destinationStats": {
-    "totalPlaces": 28,
+    "totalPlaces": 50,
     "totalCountries": 8,
-    "totalTrips": 5,
+    "totalTrips": 12,
     "lifetimeScope": true
   }
 }
