@@ -412,3 +412,4 @@ FodyWeavers.xsd
 .env.local
 .env.*.local
 data/geocode-cache.json
+.vercel

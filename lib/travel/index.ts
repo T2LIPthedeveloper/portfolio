@@ -20,20 +20,22 @@ async function loadRoadTrips(): Promise<RoadTripPath[]> {
   try {
     const raw = await fs.readFile(ROAD_TRIPS_PATH, "utf-8");
     const trips = JSON.parse(raw) as RoadTrip[];
-    return trips
-      .map((trip) => {
-        const fromWaypoints =
-          trip.waypoints?.map((point) => [point.lat, point.lng] as [number, number]) ?? [];
-        const coords = fromWaypoints.length >= 2 ? fromWaypoints : (trip.path ?? []);
-        if (coords.length < 2) return null;
-        return {
-          id: trip.id,
-          name: trip.name,
-          description: trip.description,
-          coords,
-        } satisfies RoadTripPath;
-      })
-      .filter((trip): trip is RoadTripPath => trip !== null);
+    const paths: RoadTripPath[] = [];
+
+    for (const trip of trips) {
+      const fromWaypoints =
+        trip.waypoints?.map((point) => [point.lat, point.lng] as [number, number]) ?? [];
+      const coords = fromWaypoints.length >= 2 ? fromWaypoints : (trip.path ?? []);
+      if (coords.length < 2) continue;
+      paths.push({
+        id: trip.id,
+        name: trip.name,
+        description: trip.description,
+        coords,
+      });
+    }
+
+    return paths;
   } catch {
     return [];
   }
