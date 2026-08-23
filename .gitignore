@@ -1,9 +1,13 @@
 ## Ignore Next.js temporary files and build results.
 
 .next
+.next-dev
+.next-process.lock
 out
 node_modules
 .DS_Store
+chrome/
+.cursor/
 
 
 ## Ignore Visual Studio temporary files, build results, and
@@ -404,4 +408,7 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+.env
 .env.local
+.env.*.local
+data/geocode-cache.json

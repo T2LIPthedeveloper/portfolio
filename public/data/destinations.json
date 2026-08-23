@@ -1,0 +1,27 @@
+{
+  "meta": {
+    "scopeNote": "Destination markers reflect lifetime visits. Flight arcs and Pilot Mode stats cover logged flights from 2017 onward. Add places you've visited outside the flight log below."
+  },
+  "places": [
+    {
+      "id": "austin",
+      "name": "Austin",
+      "country": "United States",
+      "lat": 30.2672,
+      "lng": -97.7431,
+      "sources": ["flight", "manual"],
+      "firstVisit": "2024",
+      "notes": "Current home base"
+    },
+    {
+      "id": "pune",
+      "name": "Pune",
+      "country": "India",
+      "lat": 18.5204,
+      "lng": 73.8567,
+      "sources": ["manual"],
+      "firstVisit": "2010",
+      "notes": "Hometown — lifetime visits beyond logged flights"
+    }
+  ]
+}

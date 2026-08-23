@@ -2,27 +2,161 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --color-canvas: #f7f4ef;
+  --color-surface: #fffcf7;
+  --color-surface-muted: #ede8df;
+  --color-text-primary: #1c1917;
+  --color-text-secondary: #57534e;
+  --color-text-muted: #78716c;
+  --color-accent: #0f766e;
+  --color-accent-muted: #0f766e22;
+  --color-gold: #b45309;
+  --color-border: #d6d0c4;
+  --color-globe-base: #e8e4dc;
+  --color-arc: #0f766e;
+  --color-point: #b45309;
+  --color-circuit: #14b8a6;
+  --color-pilot-bg: #070a0f;
+  --color-pilot-panel: #0f1419;
+  --color-pilot-text: #d6d3d1;
+  --color-pilot-accent: #22d3ee;
+  --color-pilot-amber: #fbbf24;
+}
+
+.dark {
+  --color-canvas: #0c0f0a;
+  --color-surface: #141916;
+  --color-surface-muted: #1c211d;
+  --color-text-primary: #e7e5e4;
+  --color-text-secondary: #a8a29e;
+  --color-text-muted: #78716c;
+  --color-accent: #2dd4bf;
+  --color-accent-muted: #2dd4bf22;
+  --color-gold: #f59e0b;
+  --color-border: #292524;
+  --color-globe-base: #0a0e14;
+  --color-arc: #2dd4bf;
+  --color-point: #f59e0b;
+  --color-circuit: #5eead4;
+}
+
 @layer base {
   html {
     @apply scroll-smooth;
   }
-  body {
-    @apply bg-surface-100 text-on-background tracking-wide;
+
+  html,
+  body,
+  main {
+    transition:
+      background-color 0.35s ease,
+      color 0.35s ease,
+      border-color 0.35s ease;
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-bold font-body 
+  body {
+    @apply bg-canvas text-text-primary font-sans antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-display;
   }
 }
 
 @layer utilities {
-  /* Hide scrollbar for Chrome, Safari and Opera */
-  .no-scrollbar::-webkit-scrollbar {
-      display: none;
+  .glass {
+    background-color: color-mix(in srgb, var(--color-surface) 70%, transparent);
+    @apply backdrop-blur-xl border border-border;
   }
- /* Hide scrollbar for IE, Edge and Firefox */
+
+  html.pilot-mode {
+    --color-canvas: var(--color-pilot-bg);
+    --color-surface: var(--color-pilot-panel);
+    --color-surface-muted: #161b22;
+    --color-text-primary: var(--color-pilot-text);
+    --color-text-secondary: #a8a29e;
+    --color-text-muted: #78716c;
+    --color-accent: var(--color-pilot-accent);
+    --color-accent-muted: #22d3ee22;
+    --color-gold: var(--color-pilot-amber);
+    --color-border: #1f2937;
+    --color-globe-base: #070a0f;
+  }
+
+  html.pilot-mode body {
+    background: radial-gradient(ellipse at top, #111827 0%, #070a0f 55%);
+  }
+
+  .thin-scrollbar::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  .thin-scrollbar::-webkit-scrollbar-thumb {
+    background-color: color-mix(in srgb, var(--color-text-muted) 50%, transparent);
+    border-radius: 9999px;
+  }
+
+  .thin-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: color-mix(in srgb, var(--color-text-muted) 50%, transparent) transparent;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
   .no-scrollbar {
-      -ms-overflow-style: none;  /* IE and Edge */
-      scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .flip-scene {
+    perspective: 420px;
+  }
+
+  .flip-digit {
+    transform-style: preserve-3d;
+  }
+
+  .flip-digit.is-flipping .flip-top {
+    animation: flip-top 0.42s ease-in forwards;
+  }
+
+  .flip-digit.is-flipping .flip-bottom-flap {
+    animation: flip-bottom 0.42s 0.42s ease-out forwards;
+  }
 }
+
+@keyframes flip-top {
+  0% {
+    transform: rotateX(0deg);
+  }
+  100% {
+    transform: rotateX(-90deg);
+  }
+}
+
+@keyframes flip-bottom {
+  0% {
+    transform: rotateX(90deg);
+  }
+  100% {
+    transform: rotateX(0deg);
+  }
+}
+
+@keyframes circuit-pulse {
+  0%,
+  100% {
+    opacity: 0.45;
+  }
+  50% {
+    opacity: 0.95;
+  }
 }
