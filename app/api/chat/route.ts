@@ -28,7 +28,7 @@ export async function POST(request: Request) {
   try {
     const completion = await client.chat.completions.create({
       model,
-      max_tokens: 512,
+      max_completion_tokens: 512,
       messages: [
         { role: "system", content: systemPrompt },
         ...history,
