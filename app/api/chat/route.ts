@@ -19,7 +19,7 @@ export async function POST(request: Request) {
 
   const content = await getContent();
   const systemPrompt = buildPortfolioContext(content);
-  const model = process.env.OPENAI_MODEL ?? "gpt-4o-mini";
+  const model = process.env.OPENAI_MODEL ?? "gpt-5.6-luna";
 
   const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
