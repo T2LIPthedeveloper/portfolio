@@ -35,7 +35,7 @@ Create `.env.local` (never commit this file):
 
 ```bash
 OPENAI_API_KEY=sk-proj-...
-OPENAI_MODEL=gpt-4o-mini
+OPENAI_MODEL=gpt-5.6-luna
 OPENAI_REASONING_EFFORT=low
 ```
 
