@@ -1,0 +1,42 @@
+[
+  {
+    "id": "bali-dec-2022",
+    "name": "Bali Getaway",
+    "description": "Holiday loop from Singapore",
+    "flightKeys": ["2022-12-21|3K245", "2022-12-25|3K244"],
+    "destinationIds": ["sin", "dps"],
+    "color": "#b45309"
+  },
+  {
+    "id": "us-summer-2024",
+    "name": "US Summer 2024",
+    "description": "JFK ↔ Singapore via long haul + domestic connections",
+    "flightKeys": ["2024-05-13|SQ24", "2024-09-01|AA2246", "2024-09-01|SQ23"],
+    "destinationIds": ["sin", "jfk"],
+    "color": "#0f766e"
+  },
+  {
+    "id": "kashmir-winter-2023",
+    "name": "Kashmir Winter Trip",
+    "description": "Pune → Delhi → Srinagar loop",
+    "flightKeys": ["2023-12-20|AI854", "2023-12-21|AI827", "2023-12-26|AI826", "2023-12-26|AI853"],
+    "destinationIds": ["pnq", "del", "sxr"],
+    "color": "#2dd4bf"
+  },
+  {
+    "id": "sin-hou-via-man-dec-2024",
+    "name": "Singapore → Houston via Manchester",
+    "description": "SQ52 fifth-freedom stopover (2 legs, same flight number)",
+    "flightKeys": ["2024-12-21|SQ52"],
+    "destinationIds": ["sin", "man", "iah"],
+    "color": "#22d3ee"
+  },
+  {
+    "id": "hou-sin-via-man-jan-2025",
+    "name": "Houston → Singapore via Manchester",
+    "description": "SQ51 return journey (2 legs, same flight number)",
+    "flightKeys": ["2025-01-24|SQ51"],
+    "destinationIds": ["iah", "man", "sin"],
+    "color": "#22d3ee"
+  }
+]

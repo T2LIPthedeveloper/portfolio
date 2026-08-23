@@ -3,11 +3,10 @@
     "name": "Atul Parida",
     "headline": "Software Engineer | Data Scientist | AI/ML Enthusiast",
     "about": [
-      "Hey there!",
-      "I'm Atul, a software engineer and data scientist from Austin passionate about building impactful tech.",
-      "I craft scalable data pipelines, AI applications, and full-stack solutions across fintech and automation sectors.",
-      "When I'm not coding, you'll find me exploring photography, hiking, or diving into the latest tech trends.",
-      "Let's connect and create something amazing together!"
+      "I'm Atul, a software engineer and data scientist based in Austin.",
+      "I build full-stack products, data pipelines, and AI systems, mostly in fintech and platform engineering.",
+      "When I'm not at a keyboard, I'm usually hiking, taking photos, or planning the next trip.",
+      "Always happy to talk shop. Reach out anytime."
     ],
     "socials": {
       "email": "atul.parida@outlook.com",
@@ -23,8 +22,9 @@
       "href": "https://www.visa.com/",
       "startDate": "09/2025",
       "endDate": "Present",
-      "description": "Building the next generation of Visa's fintech hyperscaling systems with Visa's Commercial & Money Movement Solutions team, enhancing transaction security and B2B product offerings by leveraging AI-driven technologies and microservices.",
+      "description": "Building the Visa Developer Platform with the Commercial & Money Movement Solutions team, enhancing B2B and B2C integrations with Visa's security and product offerings by leveraging AI, distributed systems and microservices.",
       "logo": "/logos/visa-white.png",
+      "logoLight": "/logos/visa-dark.png",
       "skills": [
         "Java",
         "Spring Boot",
@@ -40,6 +40,7 @@
       "endDate": "09/2025",
       "description": "Helped bring Hitachi's VSP 360 enterprise data platform for AI-driven data management solutions to general availability (GA), focusing on scalable platform engineering and full-stack development.",
       "logo": "/logos/hitachi-white.png",
+      "logoLight": "/logos/hitachi-dark.png",
       "skills": [
         "Golang",
         "Kubernetes",
@@ -55,6 +56,7 @@
       "endDate": "09/2024",
       "description": "Developed scalable ETL pipelines and predictive models, improving forecasting accuracy by 40% and driving data-driven insights.",
       "logo": "/logos/quantumstreet-white.png",
+      "logoLight": "/logos/quantumstreet-dark.png",
       "skills": [
         "Python",
         "Data Engineering",
@@ -70,6 +72,7 @@
       "endDate": "05/2024",
       "description": "Conducted research on computer vision and deep learning for analyzing marine ecosystems, collaborating closely with faculty and peers.",
       "logo": "/logos/sutd-white.png",
+      "logoLight": "/logos/sutd-dark.png",
       "skills": [
         "Computer Vision",
         "Python",
@@ -84,6 +87,7 @@
       "endDate": "01/2024",
       "description": "Designed AI-driven tools for content summarization and developed front-end components using React and Redux.",
       "logo": "/logos/twokey-purple.png",
+      "logoLight": "/logos/twokey-purple.png",
       "skills": [
         "JavaScript",
         "React",
@@ -99,6 +103,7 @@
       "endDate": "12/2023",
       "description": "Conducted system testing and performance analysis for automotive analytics and infotainment systems.",
       "logo": "/logos/continental-yellow.png",
+      "logoLight": "/logos/continental-yellow.png",
       "skills": [
         "Testing",
         "QA",
@@ -114,6 +119,7 @@
       "endDate": "10/2022",
       "description": "Improved robot scripting to reduce plotter energy overhead by 30%, and improve plotting speeds through automation scripting by up to 50%.",
       "logo": "/logos/write_brothers_logo.jpeg",
+      "logoLight": "/logos/write_brothers_logo.jpeg",
       "skills": [
         "Python",
         "ROS",
@@ -129,6 +135,7 @@
       "endDate": "01/2020",
       "description": "Conducted UX research, interviewed stakeholders and designed interfaces for vehicle management applications using Sketch and Figma.",
       "logo": "/logos/copods-grey.png",
+      "logoLight": "/logos/copods-grey.png",
       "skills": [
         "UI/UX",
         "Design Research",

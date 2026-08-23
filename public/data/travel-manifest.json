@@ -1,0 +1,3201 @@
+{
+  "generatedAt": "2026-08-23T23:03:51.406Z",
+  "scopeNote": "Destination markers reflect lifetime visits. Flight arcs and Pilot Mode stats cover logged flights from 2017 onward. Add places you've visited outside the flight log below.",
+  "stats": {
+    "totalFlights": 61,
+    "uniqueRoutes": 47,
+    "uniqueAirports": 26,
+    "countries": 8
+  },
+  "arcs": [
+    {
+      "startLat": 19.0896,
+      "startLng": 72.8656,
+      "endLat": 1.3644,
+      "endLng": 103.9915,
+      "count": 1,
+      "airlines": [
+        "Vistara (UK/VTI)"
+      ],
+      "dates": [
+        "2022-08-03"
+      ],
+      "fromIata": "BOM",
+      "toIata": "SIN"
+    },
+    {
+      "startLat": 1.3644,
+      "startLng": 103.9915,
+      "endLat": -8.7482,
+      "endLng": 115.1672,
+      "count": 1,
+      "airlines": [
+        "Jetstar Asia Airways (3K/JSA)"
+      ],
+      "dates": [
+        "2022-12-21"
+      ],
+      "fromIata": "SIN",
+      "toIata": "DPS"
+    },
+    {
+      "startLat": -8.7482,
+      "startLng": 115.1672,
+      "endLat": 1.3644,
+      "endLng": 103.9915,
+      "count": 1,
+      "airlines": [
+        "Jetstar Asia Airways (3K/JSA)"
+      ],
+      "dates": [
+        "2022-12-25"
+      ],
+      "fromIata": "DPS",
+      "toIata": "SIN"
+    },
+    {
+      "startLat": 1.3644,
+      "startLng": 103.9915,
+      "endLat": 19.0896,
+      "endLng": 72.8656,
+      "count": 1,
+      "airlines": [
+        "Singapore Airlines (SQ/SIA)"
+      ],
+      "dates": [
+        "2022-05-08"
+      ],
+      "fromIata": "SIN",
+      "toIata": "BOM"
+    },
+    {
+      "startLat": 1.3644,
+      "startLng": 103.9915,
+      "endLat": 18.5822,
+      "endLng": 73.9197,
+      "count": 3,
+      "airlines": [
+        "Vistara (UK/VTI)"
+      ],
+      "dates": [
+        "2023-04-30",
+        "2023-08-20",
+        "2023-12-17"
+      ],
+      "fromIata": "SIN",
+      "toIata": "PNQ"
+    },
+    {
+      "startLat": 18.5822,
+      "startLng": 73.9197,
+      "endLat": 20.2444,
+      "endLng": 85.8178,
+      "count": 2,
+      "airlines": [
+        "Akasa Air (QP/AKJ)",
+        "Starlight Airlines (QP/SLT)"
+      ],
+      "dates": [
+        "2023-05-09",
+        "2024-01-10"
+      ],
+      "fromIata": "PNQ",
+      "toIata": "BBI"
+    },
+    {
+      "startLat": 20.2444,
+      "startLng": 85.8178,
+      "endLat": 18.5822,
+      "endLng": 73.9197,
+      "count": 1,
+      "airlines": [
+        "AirAsia India (I5/IAD)"
+      ],
+      "dates": [
+        "2023-05-10"
+      ],
+      "fromIata": "BBI",
+      "toIata": "PNQ"
+    },
+    {
+      "startLat": 18.5822,
+      "startLng": 73.9197,
+      "endLat": 1.3644,
+      "endLng": 103.9915,
+      "count": 2,
+      "airlines": [
+        "Vistara (UK/VTI)"
+      ],
+      "dates": [
+        "2023-05-14",
+        "2023-08-27"
+      ],
+      "fromIata": "PNQ",
+      "toIata": "SIN"
+    },
+    {
+      "startLat": 18.5822,
+      "startLng": 73.9197,
+      "endLat": 28.5562,
+      "endLng": 77.1,
+      "count": 2,
+      "airlines": [
+        "Air India (AI/AIC)",
+        "GoAir (G8/GOW)"
+      ],
+      "dates": [
+        "2023-12-20",
+        "2022-07-01"
+      ],
+      "fromIata": "PNQ",
+      "toIata": "DEL"
+    },
+    {
+      "startLat": 28.5562,
+      "startLng": 77.1,
+      "endLat": 33.9871,
+      "endLng": 74.7742,
+      "count": 1,
+      "airlines": [
+        "Air India (AI/AIC)"
+      ],
+      "dates": [
+        "2023-12-21"
+      ],
+      "fromIata": "DEL",
+      "toIata": "SXR"
+    },
+    {
+      "startLat": 33.9871,
+      "startLng": 74.7742,
+      "endLat": 28.5562,
+      "endLng": 77.1,
+      "count": 1,
+      "airlines": [
+        "Air India (AI/AIC)"
+      ],
+      "dates": [
+        "2023-12-26"
+      ],
+      "fromIata": "SXR",
+      "toIata": "DEL"
+    },
+    {
+      "startLat": 28.5562,
+      "startLng": 77.1,
+      "endLat": 18.5822,
+      "endLng": 73.9197,
+      "count": 4,
+      "airlines": [
+        "Air India (AI/AIC)",
+        "Vistara (UK/VTI)",
+        "AirAsia India (I5/IAD)",
+        "GoAir (G8/GOW)"
+      ],
+      "dates": [
+        "2023-12-26",
+        "2018-04-29",
+        "2022-06-05",
+        "2022-07-08"
+      ],
+      "fromIata": "DEL",
+      "toIata": "PNQ"
+    },
+    {
+      "startLat": 20.2444,
+      "startLng": 85.8178,
+      "endLat": 1.3644,
+      "endLng": 103.9915,
+      "count": 1,
+      "airlines": [
+        "IndiGo (6E/IGO)"
+      ],
+      "dates": [
+        "2024-01-20"
+      ],
+      "fromIata": "BBI",
+      "toIata": "SIN"
+    },
+    {
+      "startLat": 1.3644,
+      "startLng": 103.9915,
+      "endLat": 40.6413,
+      "endLng": -73.7781,
+      "count": 1,
+      "airlines": [
+        "Singapore Airlines (SQ/SIA)"
+      ],
+      "dates": [
+        "2024-05-13"
+      ],
+      "fromIata": "SIN",
+      "toIata": "JFK"
+    },
+    {
+      "startLat": 30.1975,
+      "startLng": -97.6664,
+      "endLat": 37.6213,
+      "endLng": -122.379,
+      "count": 1,
+      "airlines": [
+        "Alaska Airlines (AS/ASA)"
+      ],
+      "dates": [
+        "2024-07-12"
+      ],
+      "fromIata": "AUS",
+      "toIata": "SFO"
+    },
+    {
+      "startLat": 37.6213,
+      "startLng": -122.379,
+      "endLat": 30.1975,
+      "endLng": -97.6664,
+      "count": 1,
+      "airlines": [
+        "Alaska Airlines (AS/ASA)"
+      ],
+      "dates": [
+        "2024-07-15"
+      ],
+      "fromIata": "SFO",
+      "toIata": "AUS"
+    },
+    {
+      "startLat": 32.8998,
+      "startLng": -97.0403,
+      "endLat": 40.6413,
+      "endLng": -73.7781,
+      "count": 1,
+      "airlines": [
+        "American Airlines (AA/AAL)"
+      ],
+      "dates": [
+        "2024-09-01"
+      ],
+      "fromIata": "DFW",
+      "toIata": "JFK"
+    },
+    {
+      "startLat": 40.6895,
+      "startLng": -74.1745,
+      "endLat": 30.1975,
+      "endLng": -97.6664,
+      "count": 1,
+      "airlines": [
+        "United Airlines (UA/UAL)"
+      ],
+      "dates": [
+        "2024-06-22"
+      ],
+      "fromIata": "EWR",
+      "toIata": "AUS"
+    },
+    {
+      "startLat": 40.6413,
+      "startLng": -73.7781,
+      "endLat": 1.3644,
+      "endLng": 103.9915,
+      "count": 1,
+      "airlines": [
+        "Singapore Airlines (SQ/SIA)"
+      ],
+      "dates": [
+        "2024-09-01"
+      ],
+      "fromIata": "JFK",
+      "toIata": "SIN"
+    },
+    {
+      "startLat": 30.1975,
+      "startLng": -97.6664,
+      "endLat": 41.9742,
+      "endLng": -87.9073,
+      "count": 1,
+      "airlines": [
+        "United Airlines (UA/UAL)"
+      ],
+      "dates": [
+        "2024-08-19"
+      ],
+      "fromIata": "AUS",
+      "toIata": "ORD"
+    },
+    {
+      "startLat": 19.0896,
+      "startLng": 72.8656,
+      "endLat": 31.7096,
+      "endLng": 74.7973,
+      "count": 1,
+      "airlines": [
+        "Air India (AI/AIC)"
+      ],
+      "dates": [
+        "2018-04-22"
+      ],
+      "fromIata": "BOM",
+      "toIata": "ATQ"
+    },
+    {
+      "startLat": 31.7096,
+      "startLng": 74.7973,
+      "endLat": 28.5562,
+      "endLng": 77.1,
+      "count": 1,
+      "airlines": [
+        "Vistara (UK/VTI)"
+      ],
+      "dates": [
+        "2018-04-29"
+      ],
+      "fromIata": "ATQ",
+      "toIata": "DEL"
+    },
+    {
+      "startLat": 19.0896,
+      "startLng": 72.8656,
+      "endLat": 20.2444,
+      "endLng": 85.8178,
+      "count": 2,
+      "airlines": [
+        "IndiGo (6E/IGO)"
+      ],
+      "dates": [
+        "2018-05-05",
+        "2020-01-29"
+      ],
+      "fromIata": "BOM",
+      "toIata": "BBI"
+    },
+    {
+      "startLat": 20.2444,
+      "startLng": 85.8178,
+      "endLat": 19.0896,
+      "endLng": 72.8656,
+      "count": 2,
+      "airlines": [
+        "IndiGo (6E/IGO)"
+      ],
+      "dates": [
+        "2018-05-19",
+        "2020-02-01"
+      ],
+      "fromIata": "BBI",
+      "toIata": "BOM"
+    },
+    {
+      "startLat": 19.0896,
+      "startLng": 72.8656,
+      "endLat": 49.0097,
+      "endLng": 2.5479,
+      "count": 1,
+      "airlines": [
+        "Joon (JN/JON)"
+      ],
+      "dates": [
+        "2019-04-14"
+      ],
+      "fromIata": "BOM",
+      "toIata": "CDG"
+    },
+    {
+      "startLat": 49.0097,
+      "startLng": 2.5479,
+      "endLat": 52.5597,
+      "endLng": 13.2877,
+      "count": 1,
+      "airlines": [
+        "Easyjet (U2/EZY)"
+      ],
+      "dates": [
+        "2019-04-17"
+      ],
+      "fromIata": "CDG",
+      "toIata": "TXL"
+    },
+    {
+      "startLat": 49.0097,
+      "startLng": 2.5479,
+      "endLat": 19.0896,
+      "endLng": 72.8656,
+      "count": 1,
+      "airlines": [
+        "Air France (AF/AFR)"
+      ],
+      "dates": [
+        "2019-04-27"
+      ],
+      "fromIata": "CDG",
+      "toIata": "BOM"
+    },
+    {
+      "startLat": 19.0896,
+      "startLng": 72.8656,
+      "endLat": 22.6547,
+      "endLng": 88.4467,
+      "count": 1,
+      "airlines": [
+        "IndiGo (6E/IGO)"
+      ],
+      "dates": [
+        "2019-12-20"
+      ],
+      "fromIata": "BOM",
+      "toIata": "CCU"
+    },
+    {
+      "startLat": 19.0896,
+      "startLng": 72.8656,
+      "endLat": 51.47,
+      "endLng": -0.4543,
+      "count": 1,
+      "airlines": [
+        "Virgin Atlantic (VS/VIR)"
+      ],
+      "dates": [
+        "2021-08-29"
+      ],
+      "fromIata": "BOM",
+      "toIata": "LHR"
+    },
+    {
+      "startLat": 51.47,
+      "startLng": -0.4543,
+      "endLat": 40.6413,
+      "endLng": -73.7781,
+      "count": 1,
+      "airlines": [
+        "Virgin Atlantic (VS/VIR)"
+      ],
+      "dates": [
+        "2021-08-29"
+      ],
+      "fromIata": "LHR",
+      "toIata": "JFK"
+    },
+    {
+      "startLat": 40.6895,
+      "startLng": -74.1745,
+      "endLat": 37.6213,
+      "endLng": -122.379,
+      "count": 1,
+      "airlines": [
+        "United Airlines (UA/UAL)"
+      ],
+      "dates": [
+        "2021-09-20"
+      ],
+      "fromIata": "EWR",
+      "toIata": "SFO"
+    },
+    {
+      "startLat": 18.5822,
+      "startLng": 73.9197,
+      "endLat": 17.2403,
+      "endLng": 78.4294,
+      "count": 1,
+      "airlines": [
+        "IndiGo (6E/IGO)"
+      ],
+      "dates": [
+        "2022-05-27"
+      ],
+      "fromIata": "PNQ",
+      "toIata": "HYD"
+    },
+    {
+      "startLat": 17.2403,
+      "startLng": 78.4294,
+      "endLat": 26.6812,
+      "endLng": 88.3286,
+      "count": 1,
+      "airlines": [
+        "IndiGo (6E/IGO)"
+      ],
+      "dates": [
+        "2022-05-27"
+      ],
+      "fromIata": "HYD",
+      "toIata": "IXB"
+    },
+    {
+      "startLat": 26.6812,
+      "startLng": 88.3286,
+      "endLat": 28.5562,
+      "endLng": 77.1,
+      "count": 1,
+      "airlines": [
+        "AirAsia India (I5/IAD)"
+      ],
+      "dates": [
+        "2022-06-05"
+      ],
+      "fromIata": "IXB",
+      "toIata": "DEL"
+    },
+    {
+      "startLat": 28.5562,
+      "startLng": 77.1,
+      "endLat": 34.1359,
+      "endLng": 77.5465,
+      "count": 1,
+      "airlines": [
+        "GoAir (G8/GOW)"
+      ],
+      "dates": [
+        "2022-07-02"
+      ],
+      "fromIata": "DEL",
+      "toIata": "IXL"
+    },
+    {
+      "startLat": 34.1359,
+      "startLng": 77.5465,
+      "endLat": 28.5562,
+      "endLng": 77.1,
+      "count": 1,
+      "airlines": [
+        "GoAir (G8/GOW)"
+      ],
+      "dates": [
+        "2022-07-08"
+      ],
+      "fromIata": "IXL",
+      "toIata": "DEL"
+    },
+    {
+      "startLat": 21.0922,
+      "startLng": 79.0472,
+      "endLat": 18.5822,
+      "endLng": 73.9197,
+      "count": 1,
+      "airlines": [
+        "GoAir (G8/GOW)"
+      ],
+      "dates": [
+        "2022-07-25"
+      ],
+      "fromIata": "NAG",
+      "toIata": "PNQ"
+    },
+    {
+      "startLat": 1.3644,
+      "startLng": 103.9915,
+      "endLat": 53.3537,
+      "endLng": -2.275,
+      "count": 1,
+      "airlines": [
+        "Singapore Airlines (SQ/SIA)"
+      ],
+      "dates": [
+        "2024-12-21"
+      ],
+      "fromIata": "SIN",
+      "toIata": "MAN"
+    },
+    {
+      "startLat": 53.3537,
+      "startLng": -2.275,
+      "endLat": 29.9902,
+      "endLng": -95.3368,
+      "count": 1,
+      "airlines": [
+        "Singapore Airlines (SQ/SIA)"
+      ],
+      "dates": [
+        "2024-12-21"
+      ],
+      "fromIata": "MAN",
+      "toIata": "IAH"
+    },
+    {
+      "startLat": 41.9742,
+      "startLng": -87.9073,
+      "endLat": 30.1975,
+      "endLng": -97.6664,
+      "count": 1,
+      "airlines": [
+        "United Airlines (UA/UAL)"
+      ],
+      "dates": [
+        "2024-08-23"
+      ],
+      "fromIata": "ORD",
+      "toIata": "AUS"
+    },
+    {
+      "startLat": 29.9902,
+      "startLng": -95.3368,
+      "endLat": 53.3537,
+      "endLng": -2.275,
+      "count": 1,
+      "airlines": [
+        "Singapore Airlines (SQ/SIA)"
+      ],
+      "dates": [
+        "2025-01-24"
+      ],
+      "fromIata": "IAH",
+      "toIata": "MAN"
+    },
+    {
+      "startLat": 53.3537,
+      "startLng": -2.275,
+      "endLat": 1.3644,
+      "endLng": 103.9915,
+      "count": 1,
+      "airlines": [
+        "Singapore Airlines (SQ/SIA)"
+      ],
+      "dates": [
+        "2025-01-25"
+      ],
+      "fromIata": "MAN",
+      "toIata": "SIN"
+    },
+    {
+      "startLat": 20.2444,
+      "startLng": 85.8178,
+      "endLat": 28.5562,
+      "endLng": 77.1,
+      "count": 1,
+      "airlines": [
+        "Air India (AI/AIC)"
+      ],
+      "dates": [
+        "2025-06-09"
+      ],
+      "fromIata": "BBI",
+      "toIata": "DEL"
+    },
+    {
+      "startLat": 28.5562,
+      "startLng": 77.1,
+      "endLat": 48.1103,
+      "endLng": 16.5697,
+      "count": 1,
+      "airlines": [
+        "Air India (AI/AIC)"
+      ],
+      "dates": [
+        "2025-06-10"
+      ],
+      "fromIata": "DEL",
+      "toIata": "VIE"
+    },
+    {
+      "startLat": 1.3644,
+      "startLng": 103.9915,
+      "endLat": 20.2444,
+      "endLng": 85.8178,
+      "count": 1,
+      "airlines": [
+        "IndiGo (6E/IGO)"
+      ],
+      "dates": [
+        "2025-06-04"
+      ],
+      "fromIata": "SIN",
+      "toIata": "BBI"
+    },
+    {
+      "startLat": 30.1975,
+      "startLng": -97.6664,
+      "endLat": 47.4502,
+      "endLng": -122.3088,
+      "count": 1,
+      "airlines": [
+        "Delta Air Lines (DL/DAL)"
+      ],
+      "dates": [
+        "2026-06-17"
+      ],
+      "fromIata": "AUS",
+      "toIata": "SEA"
+    },
+    {
+      "startLat": 47.4502,
+      "startLng": -122.3088,
+      "endLat": 30.1975,
+      "endLng": -97.6664,
+      "count": 1,
+      "airlines": [
+        "Delta Air Lines (DL/DAL)"
+      ],
+      "dates": [
+        "2026-06-21"
+      ],
+      "fromIata": "SEA",
+      "toIata": "AUS"
+    }
+  ],
+  "points": [
+    {
+      "lat": 19.0896,
+      "lng": 72.8656,
+      "iata": "BOM",
+      "name": "Chhatrapati Shivaji Maharaj International",
+      "city": "Mumbai",
+      "country": "India",
+      "visitCount": 11
+    },
+    {
+      "lat": 1.3644,
+      "lng": 103.9915,
+      "iata": "SIN",
+      "name": "Changi",
+      "city": "Singapore",
+      "country": "Singapore",
+      "visitCount": 16
+    },
+    {
+      "lat": -8.7482,
+      "lng": 115.1672,
+      "iata": "DPS",
+      "name": "Ngurah Rai",
+      "city": "Bali",
+      "country": "Indonesia",
+      "visitCount": 2
+    },
+    {
+      "lat": 18.5822,
+      "lng": 73.9197,
+      "iata": "PNQ",
+      "name": "Lohegaon",
+      "city": "Pune",
+      "country": "India",
+      "visitCount": 16
+    },
+    {
+      "lat": 20.2444,
+      "lng": 85.8178,
+      "iata": "BBI",
+      "name": "Bhubaneswar",
+      "city": "Bhubaneswar",
+      "country": "India",
+      "visitCount": 10
+    },
+    {
+      "lat": 28.5562,
+      "lng": 77.1,
+      "iata": "DEL",
+      "name": "Indira Gandhi International",
+      "city": "Delhi",
+      "country": "India",
+      "visitCount": 14
+    },
+    {
+      "lat": 33.9871,
+      "lng": 74.7742,
+      "iata": "SXR",
+      "name": "Srinagar",
+      "city": "Srinagar",
+      "country": "India",
+      "visitCount": 2
+    },
+    {
+      "lat": 40.6413,
+      "lng": -73.7781,
+      "iata": "JFK",
+      "name": "John F Kennedy International",
+      "city": "New York",
+      "country": "United States",
+      "visitCount": 4
+    },
+    {
+      "lat": 30.1975,
+      "lng": -97.6664,
+      "iata": "AUS",
+      "name": "Bergstrom International",
+      "city": "Austin",
+      "country": "United States",
+      "visitCount": 8
+    },
+    {
+      "lat": 37.6213,
+      "lng": -122.379,
+      "iata": "SFO",
+      "name": "San Francisco International",
+      "city": "San Francisco",
+      "country": "United States",
+      "visitCount": 4
+    },
+    {
+      "lat": 32.8998,
+      "lng": -97.0403,
+      "iata": "DFW",
+      "name": "Dallas-Fort Worth International",
+      "city": "Dallas",
+      "country": "United States",
+      "visitCount": 1
+    },
+    {
+      "lat": 40.6895,
+      "lng": -74.1745,
+      "iata": "EWR",
+      "name": "Liberty International",
+      "city": "Newark",
+      "country": "United States",
+      "visitCount": 2
+    },
+    {
+      "lat": 41.9742,
+      "lng": -87.9073,
+      "iata": "ORD",
+      "name": "O'Hare International",
+      "city": "Chicago",
+      "country": "United States",
+      "visitCount": 2
+    },
+    {
+      "lat": 31.7096,
+      "lng": 74.7973,
+      "iata": "ATQ",
+      "name": "Amritsar",
+      "city": "Amritsar",
+      "country": "India",
+      "visitCount": 2
+    },
+    {
+      "lat": 49.0097,
+      "lng": 2.5479,
+      "iata": "CDG",
+      "name": "Charles de Gaulle",
+      "city": "Paris",
+      "country": "France",
+      "visitCount": 3
+    },
+    {
+      "lat": 52.5597,
+      "lng": 13.2877,
+      "iata": "TXL",
+      "name": "Tegel",
+      "city": "Berlin",
+      "country": "Germany",
+      "visitCount": 1
+    },
+    {
+      "lat": 22.6547,
+      "lng": 88.4467,
+      "iata": "CCU",
+      "name": "Netaji Subhas Chandra Bose International",
+      "city": "Kolkata",
+      "country": "India",
+      "visitCount": 1
+    },
+    {
+      "lat": 51.47,
+      "lng": -0.4543,
+      "iata": "LHR",
+      "name": "Heathrow",
+      "city": "London",
+      "country": "United Kingdom",
+      "visitCount": 2
+    },
+    {
+      "lat": 17.2403,
+      "lng": 78.4294,
+      "iata": "HYD",
+      "name": "Rajiv Gandhi International",
+      "city": "Hyderabad",
+      "country": "India",
+      "visitCount": 2
+    },
+    {
+      "lat": 26.6812,
+      "lng": 88.3286,
+      "iata": "IXB",
+      "name": "Bagdogra",
+      "city": "Bagdogra",
+      "country": "India",
+      "visitCount": 2
+    },
+    {
+      "lat": 34.1359,
+      "lng": 77.5465,
+      "iata": "IXL",
+      "name": "Kushok Bakula Rimpochee",
+      "city": "Leh",
+      "country": "India",
+      "visitCount": 2
+    },
+    {
+      "lat": 21.0922,
+      "lng": 79.0472,
+      "iata": "NAG",
+      "name": "Dr. Babasaheb Ambedkar International",
+      "city": "Nagpur",
+      "country": "India",
+      "visitCount": 1
+    },
+    {
+      "lat": 53.3537,
+      "lng": -2.275,
+      "iata": "MAN",
+      "name": "Manchester",
+      "city": "Manchester",
+      "country": "United Kingdom",
+      "visitCount": 4
+    },
+    {
+      "lat": 29.9902,
+      "lng": -95.3368,
+      "iata": "IAH",
+      "name": "George Bush Intercontinental",
+      "city": "Houston",
+      "country": "United States",
+      "visitCount": 2
+    },
+    {
+      "lat": 48.1103,
+      "lng": 16.5697,
+      "iata": "VIE",
+      "name": "Schwechat",
+      "city": "Vienna",
+      "country": "Austria",
+      "visitCount": 2
+    },
+    {
+      "lat": 47.4502,
+      "lng": -122.3088,
+      "iata": "SEA",
+      "name": "Seattle-Tacoma International",
+      "city": "Seattle",
+      "country": "United States",
+      "visitCount": 2
+    }
+  ],
+  "roadTrips": [
+    {
+      "id": "yosemite-2024",
+      "name": "SF and Yosemite Visit",
+      "coords": [
+        [
+          37.87159,
+          -122.27275
+        ],
+        [
+          37.86512,
+          -119.53833
+        ],
+        [
+          37.9616,
+          -121.2756
+        ],
+        [
+          37.87159,
+          -122.27275
+        ]
+      ],
+      "description": "Visited UC Berkeley and Yosemite National Park with my ex-girlfriend and her friends during an exchange program."
+    },
+    {
+      "id": "uiuc-2024",
+      "name": "UIUC Visit",
+      "coords": [
+        [
+          41.88372,
+          -87.63238
+        ],
+        [
+          40.1063,
+          -88.2237
+        ],
+        [
+          41.88372,
+          -87.63238
+        ]
+      ],
+      "description": "Visited Chicago and University of Illinois at Urbana-Champaign to drop off my younger brother to college."
+    },
+    {
+      "id": "htx-2024",
+      "name": "Houston and NASA Visit",
+      "coords": [
+        [
+          30.2672,
+          -97.7431
+        ],
+        [
+          29.7604,
+          -95.3698
+        ],
+        [
+          30.2672,
+          -97.7431
+        ]
+      ],
+      "description": "Visited Houston and NASA Johnson Space Center with relatives."
+    },
+    {
+      "id": "satx-2025",
+      "name": "San Antonio Visit",
+      "coords": [
+        [
+          30.2672,
+          -97.7431
+        ],
+        [
+          29.42412,
+          -98.49362
+        ],
+        [
+          30.2672,
+          -97.7431
+        ]
+      ],
+      "description": "Visited San Antonio to purchase my car."
+    },
+    {
+      "id": "arkansas-2026",
+      "name": "Arkansas Visit",
+      "coords": [
+        [
+          30.2672,
+          -97.7431
+        ],
+        [
+          32.77667,
+          -96.79699
+        ],
+        [
+          33.42509,
+          -94.04774
+        ],
+        [
+          34.5037,
+          -93.05518
+        ],
+        [
+          34.74648,
+          -92.28959
+        ],
+        [
+          32.77667,
+          -96.79699
+        ],
+        [
+          30.2672,
+          -97.7431
+        ]
+      ],
+      "description": "Visited Texarkana, Hot Springs and Little Rock with my friends."
+    },
+    {
+      "id": "wa-2026",
+      "name": "Washington Visit",
+      "coords": [
+        [
+          47.60621,
+          -122.33207
+        ],
+        [
+          47.03787,
+          -122.90069
+        ],
+        [
+          47.95039,
+          -124.3855
+        ],
+        [
+          48.11811,
+          -123.42982
+        ],
+        [
+          48.117,
+          -122.7604
+        ],
+        [
+          48.2193,
+          -122.6868
+        ],
+        [
+          48.5282,
+          -121.4332
+        ],
+        [
+          46.786,
+          -121.7351
+        ],
+        [
+          47.25288,
+          -122.44429
+        ],
+        [
+          47.60621,
+          -122.33207
+        ]
+      ],
+      "description": "Visited Seattle and the three surrounding national parks with my friends. Visited Olympia, Forks (Olympic National Park), Port Angeles, Port Townsend, Coupeville, Marblemount (North Cascades National Park), Paradise (Mount Rainier National Park) and Tacoma."
+    },
+    {
+      "id": "okc-2026",
+      "name": "Oklahoma City and Tulsa Visit",
+      "coords": [
+        [
+          30.2672,
+          -97.7431
+        ],
+        [
+          32.77667,
+          -96.79699
+        ],
+        [
+          36.154,
+          -95.9927
+        ],
+        [
+          35.46756,
+          -97.51642
+        ],
+        [
+          32.77667,
+          -96.79699
+        ],
+        [
+          30.2672,
+          -97.7431
+        ]
+      ],
+      "description": "Visited Oklahoma City and Tulsa with my friends for the 4th of July. Hit up some casinos along the way."
+    }
+  ],
+  "flights": [
+    {
+      "date": "2026-06-21",
+      "flightNumber": "DL848",
+      "from": "Seattle / Seattle-Tacoma (SEA/KSEA)",
+      "to": "Austin / Bergstrom International (AUS/KAUS)",
+      "fromIata": "SEA",
+      "toIata": "AUS",
+      "airline": "Delta Air Lines (DL/DAL)",
+      "aircraft": "Boeing 737-800 (B738)",
+      "duration": "04:03:00",
+      "note": "",
+      "key": "2026-06-21|DL848|leg1",
+      "miles": 1769,
+      "startLat": 47.4502,
+      "startLng": -122.3088,
+      "endLat": 30.1975,
+      "endLng": -97.6664,
+      "legNumber": 1,
+      "totalLegs": 1,
+      "journeyKey": "2026-06-21|DL848",
+      "isMultiLeg": false
+    },
+    {
+      "date": "2026-06-17",
+      "flightNumber": "DL780",
+      "from": "Austin / Bergstrom International (AUS/KAUS)",
+      "to": "Seattle / Seattle-Tacoma (SEA/KSEA)",
+      "fromIata": "AUS",
+      "toIata": "SEA",
+      "airline": "Delta Air Lines (DL/DAL)",
+      "aircraft": "Boeing 737-800 (B738)",
+      "duration": "04:40:00",
+      "note": "Solo trip to Seattle",
+      "key": "2026-06-17|DL780|leg1",
+      "miles": 1769,
+      "startLat": 30.1975,
+      "startLng": -97.6664,
+      "endLat": 47.4502,
+      "endLng": -122.3088,
+      "legNumber": 1,
+      "totalLegs": 1,
+      "journeyKey": "2026-06-17|DL780",
+      "isMultiLeg": false
+    },
+    {
+      "date": "2025-06-10",
+      "flightNumber": "AI103",
+      "from": "Delhi / Indira Gandhi (DEL/VIDP)",
+      "to": "Vienna / Schwechat (VIE/LOWW)",
+      "fromIata": "DEL",
+      "toIata": "VIE",
+      "airline": "Air India (AI/AIC)",
+      "aircraft": "Boeing 787-8 (B788)",
+      "duration": "08:20:00",
+      "note": "Travelling to Austin for my job at Hitachi.",
+      "key": "2025-06-10|AI103|leg1",
+      "miles": 3446,
+      "startLat": 28.5562,
+      "startLng": 77.1,
+      "endLat": 48.1103,
+      "endLng": 16.5697,
+      "legNumber": 1,
+      "totalLegs": 2,
+      "journeyKey": "2025-06-10|AI103",
+      "isMultiLeg": true
+    },
+    {
+      "date": "2025-06-09",
+      "flightNumber": "AI2490",
+      "from": "Bhubaneswar / Bhubaneswar (BBI/VEBS)",
+      "to": "Delhi / Indira Gandhi (DEL/VIDP)",
+      "fromIata": "BBI",
+      "toIata": "DEL",
+      "airline": "Air India (AI/AIC)",
+      "aircraft": "Airbus A320neo (A20N)",
+      "duration": "02:25:00",
+      "note": "Travelling to Austin for my job at Hitachi.",
+      "key": "2025-06-09|AI2490|leg1",
+      "miles": 794,
+      "startLat": 20.2444,
+      "startLng": 85.8178,
+      "endLat": 28.5562,
+      "endLng": 77.1,
+      "legNumber": 1,
+      "totalLegs": 1,
+      "journeyKey": "2025-06-09|AI2490",
+      "isMultiLeg": false
+    },
+    {
+      "date": "2025-06-04",
+      "flightNumber": "6E1018",
+      "from": "Singapore / Changi (SIN/WSSS)",
+      "to": "Bhubaneswar / Bhubaneswar (BBI/VEBS)",
+      "fromIata": "SIN",
+      "toIata": "BBI",
+      "airline": "IndiGo (6E/IGO)",
+      "aircraft": "Airbus A320 (A320)",
+      "duration": "04:35:00",
+      "note": "",
+      "key": "2025-06-04|6E1018|leg1",
+      "miles": 1791,
+      "startLat": 1.3644,
+      "startLng": 103.9915,
+      "endLat": 20.2444,
+      "endLng": 85.8178,
+      "legNumber": 1,
+      "totalLegs": 1,
+      "journeyKey": "2025-06-04|6E1018",
+      "isMultiLeg": false
+    },
+    {
+      "date": "2025-01-25",
+      "flightNumber": "SQ51",
+      "from": "Manchester / Manchester (MAN/EGCC)",
+      "to": "Singapore / Changi (SIN/WSSS)",
+      "fromIata": "MAN",
+      "toIata": "SIN",
+      "airline": "Singapore Airlines (SQ/SIA)",
+      "aircraft": "Airbus A350-900 (A359)",
+      "duration": "13:25:00",
+      "note": "Second leg from MAN to SIN.",
+      "key": "2025-01-25|SQ51|leg1",
+      "miles": 6807,
+      "startLat": 53.3537,
+      "startLng": -2.275,
+      "endLat": 1.3644,
+      "endLng": 103.9915,
+      "legNumber": 1,
+      "totalLegs": 1,
+      "journeyKey": "2025-01-25|SQ51",
+      "isMultiLeg": false
+    },
+    {
+      "date": "2025-01-24",
+      "flightNumber": "SQ51",
+      "from": "Houston / George Bush Intercontinental (IAH/KIAH)",
+      "to": "Manchester / Manchester (MAN/EGCC)",
+      "fromIata": "IAH",
+      "toIata": "MAN",
+      "airline": "Singapore Airlines (SQ/SIA)",
+      "aircraft": "Airbus A350-900 (A359)",
+      "duration": "09:05:00",
+      "note": "Returning to Singapore via MAN.",
+      "key": "2025-01-24|SQ51|leg1",
+      "miles": 4703,
+      "startLat": 29.9902,
+      "startLng": -95.3368,
+      "endLat": 53.3537,
+      "endLng": -2.275,
+      "legNumber": 1,
+      "totalLegs": 1,
+      "journeyKey": "2025-01-24|SQ51",
+      "isMultiLeg": false
+    },
+    {
+      "date": "2024-12-21",
+      "flightNumber": "SQ52",
+      "from": "Singapore / Changi (SIN/WSSS)",
+      "to": "Manchester / Manchester (MAN/EGCC)",
+      "fromIata": "SIN",
+      "toIata": "MAN",
+      "airline": "Singapore Airlines (SQ/SIA)",
+      "aircraft": "Airbus A350-900 (A359)",
+      "duration": "13:45:00",
+      "note": "Back to AUS from SIN (last trip before I graduate.)\r\n\r\n10,000th Airbus aircraft ever built (that special livery A350.)",
+      "key": "2024-12-21|SQ52|leg1",
+      "miles": 6807,
+      "startLat": 1.3644,
+      "startLng": 103.9915,
+      "endLat": 53.3537,
+      "endLng": -2.275,
+      "legNumber": 1,
+      "totalLegs": 2,
+      "journeyKey": "2024-12-21|SQ52",
+      "isMultiLeg": true
+    },
+    {
+      "date": "2024-12-21",
+      "flightNumber": "SQ52",
+      "from": "Manchester / Manchester (MAN/EGCC)",
+      "to": "Houston / George Bush Intercontinental (IAH/KIAH)",
+      "fromIata": "MAN",
+      "toIata": "IAH",
+      "airline": "Singapore Airlines (SQ/SIA)",
+      "aircraft": "Airbus A350-900 (A359)",
+      "duration": "09:50:00",
+      "note": "Second leg (first time flying a flight with a fifth-freedom service, and first time to Houston.)\r\n\r\n10,000th Airbus aircraft ever built, that special livery A350.",
+      "key": "2024-12-21|SQ52|leg2",
+      "miles": 4703,
+      "startLat": 53.3537,
+      "startLng": -2.275,
+      "endLat": 29.9902,
+      "endLng": -95.3368,
+      "legNumber": 2,
+      "totalLegs": 2,
+      "journeyKey": "2024-12-21|SQ52",
+      "isMultiLeg": true
+    },
+    {
+      "date": "2024-09-01",
+      "flightNumber": "AA2246",
+      "from": "Dallas-Ft Worth / Dallas-Ft Worth (DFW/KDFW)",
+      "to": "New York / John F Kennedy (JFK/KJFK)",
+      "fromIata": "DFW",
+      "toIata": "JFK",
+      "airline": "American Airlines (AA/AAL)",
+      "aircraft": "Boeing 737-800 (B738)",
+      "duration": "03:53:00",
+      "note": "Heading back to JFK to catch SQ23",
+      "key": "2024-09-01|AA2246|leg1",
+      "miles": 1389,
+      "startLat": 32.8998,
+      "startLng": -97.0403,
+      "endLat": 40.6413,
+      "endLng": -73.7781,
+      "legNumber": 1,
+      "totalLegs": 1,
+      "journeyKey": "2024-09-01|AA2246",
+      "isMultiLeg": false
+    },
+    {
+      "date": "2024-09-01",
+      "flightNumber": "SQ23",
+      "from": "New York / John F Kennedy (JFK/KJFK)",
+      "to": "Singapore / Changi (SIN/WSSS)",
+      "fromIata": "JFK",
+      "toIata": "SIN",
+      "airline": "Singapore Airlines (SQ/SIA)",
+      "aircraft": "Airbus A350-900 (A359)",
+      "duration": "19:00:00",
+      "note": "Back to SG for final year of university from the US after internship and Austin move completed.",
+      "key": "2024-09-01|SQ23|leg1",
+      "miles": 9531,
+      "startLat": 40.6413,
+      "startLng": -73.7781,
+      "endLat": 1.3644,
+      "endLng": 103.9915,
+      "legNumber": 1,
+      "totalLegs": 1,
+      "journeyKey": "2024-09-01|SQ23",
+      "isMultiLeg": false
+    },
+    {
+      "date": "2024-08-23",
+      "flightNumber": "UA2201",
+      "from": "Chicago / O'Hare (ORD/KORD)",
+      "to": "Austin / Bergstrom International (AUS/KAUS)",
+      "fromIata": "ORD",
+      "toIata": "AUS",
+      "airline": "United Airlines (UA/UAL)",
+      "aircraft": "Airbus A320-200 (A320)",
+      "duration": "02:49:00",
+      "note": "Returning from dropping off my brother in UIUC.",
+      "key": "2024-08-23|UA2201|leg1",
+      "miles": 978,
+      "startLat": 41.9742,
+      "startLng": -87.9073,
+      "endLat": 30.1975,
+      "endLng": -97.6664,
+      "legNumber": 1,
+      "totalLegs": 1,
+      "journeyKey": "2024-08-23|UA2201",
+      "isMultiLeg": false
+    },
+    {
+      "date": "2024-08-19",
+      "flightNumber": "UA210",
+      "from": "Austin / Bergstrom International (AUS/KAUS)",
+      "to": "Chicago / O'Hare (ORD/KORD)",
+      "fromIata": "AUS",
+      "toIata": "ORD",
+      "airline": "United Airlines (UA/UAL)",
+      "aircraft": "Airbus A319-100 (A319)",
+      "duration": "02:50:00",
+      "note": "Dropping off brother at UIUC. Initial flight got rescheduled so we rebooked for free thankfully. Insane crosswind at ORD.",
+      "key": "2024-08-19|UA210|leg1",
+      "miles": 978,
+      "startLat": 30.1975,
+      "startLng": -97.6664,
+      "endLat": 41.9742,
+      "endLng": -87.9073,
+      "legNumber": 1,
+      "totalLegs": 1,
+      "journeyKey": "2024-08-19|UA210",
+      "isMultiLeg": false
+    },
+    {
+      "date": "2024-07-15",
+      "flightNumber": "AS534",
+      "from": "San Francisco / San Francisco International (SFO/KSFO)",
+      "to": "Austin / Bergstrom International (AUS/KAUS)",
+      "fromIata": "SFO",
+      "toIata": "AUS",
+      "airline": "Alaska Airlines (AS/ASA)",
+      "aircraft": "Boeing 737-800 (B738)",
+      "duration": "03:35:00",
+      "note": "End of solo trip to SFO, randomly allocated a really good seat",
+      "key": "2024-07-15|AS534|leg1",
+      "miles": 1502,
+      "startLat": 37.6213,
+      "startLng": -122.379,
+      "endLat": 30.1975,
+      "endLng": -97.6664,
+      "legNumber": 1,
+      "totalLegs": 1,
+      "journeyKey": "2024-07-15|AS534",
+      "isMultiLeg": false
+    },
+    {
+      "date": "2024-07-12",
+      "flightNumber": "AS513",
+      "from": "Austin / Bergstrom International (AUS/KAUS)",
+      "to": "San Francisco / San Francisco International (SFO/KSFO)",
+      "fromIata": "AUS",
+      "toIata": "SFO",
+      "airline": "Alaska Airlines (AS/ASA)",
+      "aircraft": "Boeing 737 MAX 9 (B39M)",
+      "duration": "03:40:00",
+      "note": "Solo trip to SFO",
+      "key": "2024-07-12|AS513|leg1",
+      "miles": 1502,
+      "startLat": 30.1975,
+      "startLng": -97.6664,
+      "endLat": 37.6213,
+      "endLng": -122.379,
+      "legNumber": 1,
+      "totalLegs": 1,
+      "journeyKey": "2024-07-12|AS513",
+      "isMultiLeg": false
+    },
+    {
+      "date": "2024-06-22",
+      "flightNumber": "UA1802",
+      "from": "Newark / Liberty International (EWR/KEWR)",
+      "to": "Austin / Bergstrom International (AUS/KAUS)",
+      "fromIata": "EWR",
+      "toIata": "AUS",
+      "airline": "United Airlines (UA/UAL)",
+      "aircraft": "Airbus A319neo (A19N)",
+      "duration": "03:56:00",
+      "note": "Heading to Austin to meet family",
+      "key": "2024-06-22|UA1802|leg1",
+      "miles": 1501,
+      "startLat": 40.6895,
+      "startLng": -74.1745,
+      "endLat": 30.1975,
+      "endLng": -97.6664,
+      "legNumber": 1,
+      "totalLegs": 1,
+      "journeyKey": "2024-06-22|UA1802",
+      "isMultiLeg": false
+    },
+    {
+      "date": "2024-05-13",
+      "flightNumber": "SQ24",
+      "from": "Singapore / Changi (SIN/WSSS)",
+      "to": "New York / John F Kennedy (JFK/KJFK)",
+      "fromIata": "SIN",
+      "toIata": "JFK",
+      "airline": "Singapore Airlines (SQ/SIA)",
+      "aircraft": "Airbus A350-900 (A359)",
+      "duration": "18:40:00",
+      "note": "Travelling to the US for the first time in 3 years. Taking the world's longest flight to and fro.",
+      "key": "2024-05-13|SQ24|leg1",
+      "miles": 9531,
+      "startLat": 1.3644,
+      "startLng": 103.9915,
+      "endLat": 40.6413,
+      "endLng": -73.7781,
+      "legNumber": 1,
+      "totalLegs": 1,
+      "journeyKey": "2024-05-13|SQ24",
+      "isMultiLeg": false
+    },
+    {
+      "date": "2024-01-20",
+      "flightNumber": "6E1479",
+      "from": "Bhubaneswar / Bhubaneswar (BBI/VEBS)",
+      "to": "Singapore / Changi (SIN/WSSS)",
+      "fromIata": "BBI",
+      "toIata": "SIN",
+      "airline": "IndiGo (6E/IGO)",
+      "aircraft": "Airbus A320neo (A20N)",
+      "duration": "03:40:00",
+      "note": "Going back to Singapore after term break (1 month)",
+      "key": "2024-01-20|6E1479|leg1",
+      "miles": 1791,
+      "startLat": 20.2444,
+      "startLng": 85.8178,
+      "endLat": 1.3644,
+      "endLng": 103.9915,
+      "legNumber": 1,
+      "totalLegs": 1,
+      "journeyKey": "2024-01-20|6E1479",
+      "isMultiLeg": false
+    },
+    {
+      "date": "2024-01-10",
+      "flightNumber": "QP1383",
+      "from": "Pune / Lohegaon (PNQ/VAPO)",
+      "to": "Bhubaneswar / Bhubaneswar (BBI/VEBS)",
+      "fromIata": "PNQ",
+      "toIata": "BBI",
+      "airline": "Starlight Airlines (QP/SLT)",
+      "aircraft": "Boeing 737 MAX 8 (B38M)",
+      "duration": "02:15:00",
+      "note": "",
+      "key": "2024-01-10|QP1383|leg1",
+      "miles": 784,
+      "startLat": 18.5822,
+      "startLng": 73.9197,
+      "endLat": 20.2444,
+      "endLng": 85.8178,
+      "legNumber": 1,
+      "totalLegs": 1,
+      "journeyKey": "2024-01-10|QP1383",
+      "isMultiLeg": false
+    },
+    {
+      "date": "2023-12-26",
+      "flightNumber": "AI826",
+      "from": "Srinagar / Srinagar (SXR/VISR)",
+      "to": "Delhi / Indira Gandhi (DEL/VIDP)",
+      "fromIata": "SXR",
+      "toIata": "DEL",
+      "airline": "Air India (AI/AIC)",
+      "aircraft": "Airbus A321neo (A21N)",
+      "duration": "01:45:00",
+      "note": "EXTREMELY DELAYED due to Delhi fog.",
+      "key": "2023-12-26|AI826|leg1",
+      "miles": 400,
+      "startLat": 33.9871,
+      "startLng": 74.7742,
+      "endLat": 28.5562,
+      "endLng": 77.1,
+      "legNumber": 1,
+      "totalLegs": 1,
+      "journeyKey": "2023-12-26|AI826",
+      "isMultiLeg": false
+    },
+    {
+      "date": "2023-12-26",
+      "flightNumber": "AI853",
+      "from": "Delhi / Indira Gandhi (DEL/VIDP)",
+      "to": "Pune / Lohegaon (PNQ/VAPO)",
+      "fromIata": "DEL",
+      "toIata": "PNQ",
+      "airline": "Air India (AI/AIC)",
+      "aircraft": "Airbus A321 (A321)",
+      "duration": "02:15:00",
+      "note": "Transferred due to delay. Initially supposed to have been on AI849",
+      "key": "2023-12-26|AI853|leg1",
+      "miles": 718,
+      "startLat": 28.5562,
+      "startLng": 77.1,
+      "endLat": 18.5822,
+      "endLng": 73.9197,
+      "legNumber": 1,
+      "totalLegs": 1,
+      "journeyKey": "2023-12-26|AI853",
+      "isMultiLeg": false
+    },
+    {
+      "date": "2023-12-21",
+      "flightNumber": "AI827",
+      "from": "Delhi / Indira Gandhi (DEL/VIDP)",
+      "to": "Srinagar / Srinagar (SXR/VISR)",
+      "fromIata": "DEL",
+      "toIata": "SXR",
+      "airline": "Air India (AI/AIC)",
+      "aircraft": "Airbus A320neo (A20N)",
+      "duration": "01:30:00",
+      "note": "",
+      "key": "2023-12-21|AI827|leg1",
+      "miles": 400,
+      "startLat": 28.5562,
+      "startLng": 77.1,
+      "endLat": 33.9871,
+      "endLng": 74.7742,
+      "legNumber": 1,
+      "totalLegs": 1,
+      "journeyKey": "2023-12-21|AI827",
+      "isMultiLeg": false
+    },
+    {
+      "date": "2023-12-20",
+      "flightNumber": "AI854",
+      "from": "Pune / Lohegaon (PNQ/VAPO)",
+      "to": "Delhi / Indira Gandhi (DEL/VIDP)",
+      "fromIata": "PNQ",
+      "toIata": "DEL",
+      "airline": "Air India (AI/AIC)",
+      "aircraft": "Airbus A321 (A321)",
+      "duration": "02:10:00",
+      "note": "",
+      "key": "2023-12-20|AI854|leg1",
+      "miles": 718,
+      "startLat": 18.5822,
+      "startLng": 73.9197,
+      "endLat": 28.5562,
+      "endLng": 77.1,
+      "legNumber": 1,
+      "totalLegs": 1,
+      "journeyKey": "2023-12-20|AI854",
+      "isMultiLeg": false
+    },
+    {
+      "date": "2023-12-17",
+      "flightNumber": "UK110",
+      "from": "Singapore / Changi (SIN/WSSS)",
+      "to": "Pune / Lohegaon (PNQ/VAPO)",
+      "fromIata": "SIN",
+      "toIata": "PNQ",
+      "airline": "Vistara (UK/VTI)",
+      "aircraft": "Airbus A321neo (A21N)",
+      "duration": "06:30:00",
+      "note": "",
+      "key": "2023-12-17|UK110|leg1",
+      "miles": 2359,
+      "startLat": 1.3644,
+      "startLng": 103.9915,
+      "endLat": 18.5822,
+      "endLng": 73.9197,
+      "legNumber": 1,
+      "totalLegs": 1,
+      "journeyKey": "2023-12-17|UK110",
+      "isMultiLeg": false
+    },
+    {
+      "date": "2023-08-27",
+      "flightNumber": "UK111",
+      "from": "Pune / Lohegaon (PNQ/VAPO)",
+      "to": "Singapore / Changi (SIN/WSSS)",
+      "fromIata": "PNQ",
+      "toIata": "SIN",
+      "airline": "Vistara (UK/VTI)",
+      "aircraft": "Airbus A321neo (A21N)",
+      "duration": "05:30:00",
+      "note": "Coming back to Singapore for internship.",
+      "key": "2023-08-27|UK111|leg1",
+      "miles": 2359,
+      "startLat": 18.5822,
+      "startLng": 73.9197,
+      "endLat": 1.3644,
+      "endLng": 103.9915,
+      "legNumber": 1,
+      "totalLegs": 1,
+      "journeyKey": "2023-08-27|UK111",
+      "isMultiLeg": false
+    },
+    {
+      "date": "2023-08-20",
+      "flightNumber": "UK112",
+      "from": "Singapore / Changi (SIN/WSSS)",
+      "to": "Pune / Lohegaon (PNQ/VAPO)",
+      "fromIata": "SIN",
+      "toIata": "PNQ",
+      "airline": "Vistara (UK/VTI)",
+      "aircraft": "Airbus A321neo (A21N)",
+      "duration": "06:15:00",
+      "note": "",
+      "key": "2023-08-20|UK112|leg1",
+      "miles": 2359,
+      "startLat": 1.3644,
+      "startLng": 103.9915,
+      "endLat": 18.5822,
+      "endLng": 73.9197,
+      "legNumber": 1,
+      "totalLegs": 1,
+      "journeyKey": "2023-08-20|UK112",
+      "isMultiLeg": false
+    },
+    {
+      "date": "2023-05-14",
+      "flightNumber": "UK111",
+      "from": "Pune / Lohegaon (PNQ/VAPO)",
+      "to": "Singapore / Changi (SIN/WSSS)",
+      "fromIata": "PNQ",
+      "toIata": "SIN",
+      "airline": "Vistara (UK/VTI)",
+      "aircraft": "Airbus A321neo (A21N)",
+      "duration": "05:30:00",
+      "note": "",
+      "key": "2023-05-14|UK111|leg1",
+      "miles": 2359,
+      "startLat": 18.5822,
+      "startLng": 73.9197,
+      "endLat": 1.3644,
+      "endLng": 103.9915,
+      "legNumber": 1,
+      "totalLegs": 1,
+      "journeyKey": "2023-05-14|UK111",
+      "isMultiLeg": false
+    },
+    {
+      "date": "2023-05-10",
+      "flightNumber": "I5319",
+      "from": "Bhubaneswar / Bhubaneswar (BBI/VEBS)",
+      "to": "Pune / Lohegaon (PNQ/VAPO)",
+      "fromIata": "BBI",
+      "toIata": "PNQ",
+      "airline": "AirAsia India (I5/IAD)",
+      "aircraft": "Airbus A320 (A320)",
+      "duration": "02:00:00",
+      "note": "",
+      "key": "2023-05-10|I5319|leg1",
+      "miles": 784,
+      "startLat": 20.2444,
+      "startLng": 85.8178,
+      "endLat": 18.5822,
+      "endLng": 73.9197,
+      "legNumber": 1,
+      "totalLegs": 1,
+      "journeyKey": "2023-05-10|I5319",
+      "isMultiLeg": false
+    },
+    {
+      "date": "2023-05-09",
+      "flightNumber": "QP1383",
+      "from": "Pune / Lohegaon (PNQ/VAPO)",
+      "to": "Bhubaneswar / Bhubaneswar (BBI/VEBS)",
+      "fromIata": "PNQ",
+      "toIata": "BBI",
+      "airline": "Akasa Air (QP/AKJ)",
+      "aircraft": "Boeing 737 MAX 8 (B38M)",
+      "duration": "02:20:00",
+      "note": "First flight to Bhubaneswar directly from Pune by Akasa.",
+      "key": "2023-05-09|QP1383|leg1",
+      "miles": 784,
+      "startLat": 18.5822,
+      "startLng": 73.9197,
+      "endLat": 20.2444,
+      "endLng": 85.8178,
+      "legNumber": 1,
+      "totalLegs": 1,
+      "journeyKey": "2023-05-09|QP1383",
+      "isMultiLeg": false
+    },
+    {
+      "date": "2023-04-30",
+      "flightNumber": "UK112",
+      "from": "Singapore / Changi (SIN/WSSS)",
+      "to": "Pune / Lohegaon (PNQ/VAPO)",
+      "fromIata": "SIN",
+      "toIata": "PNQ",
+      "airline": "Vistara (UK/VTI)",
+      "aircraft": "Airbus A321neo (A21N)",
+      "duration": "06:15:00",
+      "note": "",
+      "key": "2023-04-30|UK112|leg1",
+      "miles": 2359,
+      "startLat": 1.3644,
+      "startLng": 103.9915,
+      "endLat": 18.5822,
+      "endLng": 73.9197,
+      "legNumber": 1,
+      "totalLegs": 1,
+      "journeyKey": "2023-04-30|UK112",
+      "isMultiLeg": false
+    },
+    {
+      "date": "2022-12-25",
+      "flightNumber": "3K244",
+      "from": "Denpasar Bali / Ngurah Rai (DPS/WADD)",
+      "to": "Singapore / Changi (SIN/WSSS)",
+      "fromIata": "DPS",
+      "toIata": "SIN",
+      "airline": "Jetstar Asia Airways (3K/JSA)",
+      "aircraft": "Airbus A320-200 (A320)",
+      "duration": "02:40:00",
+      "note": "",
+      "key": "2022-12-25|3K244|leg1",
+      "miles": 1039,
+      "startLat": -8.7482,
+      "startLng": 115.1672,
+      "endLat": 1.3644,
+      "endLng": 103.9915,
+      "legNumber": 1,
+      "totalLegs": 1,
+      "journeyKey": "2022-12-25|3K244",
+      "isMultiLeg": false
+    },
+    {
+      "date": "2022-12-21",
+      "flightNumber": "3K245",
+      "from": "Singapore / Changi (SIN/WSSS)",
+      "to": "Denpasar Bali / Ngurah Rai (DPS/WADD)",
+      "fromIata": "SIN",
+      "toIata": "DPS",
+      "airline": "Jetstar Asia Airways (3K/JSA)",
+      "aircraft": "Airbus A320-200 (A320)",
+      "duration": "02:55:00",
+      "note": "",
+      "key": "2022-12-21|3K245|leg1",
+      "miles": 1039,
+      "startLat": 1.3644,
+      "startLng": 103.9915,
+      "endLat": -8.7482,
+      "endLng": 115.1672,
+      "legNumber": 1,
+      "totalLegs": 1,
+      "journeyKey": "2022-12-21|3K245",
+      "isMultiLeg": false
+    },
+    {
+      "date": "2022-08-03",
+      "flightNumber": "UK103",
+      "from": "Mumbai / Chhatrapati Shivaji (BOM/VABB)",
+      "to": "Singapore / Changi (SIN/WSSS)",
+      "fromIata": "BOM",
+      "toIata": "SIN",
+      "airline": "Vistara (UK/VTI)",
+      "aircraft": "Airbus A321-200 (A321)",
+      "duration": "05:15:00",
+      "note": "",
+      "key": "2022-08-03|UK103|leg1",
+      "miles": 2436,
+      "startLat": 19.0896,
+      "startLng": 72.8656,
+      "endLat": 1.3644,
+      "endLng": 103.9915,
+      "legNumber": 1,
+      "totalLegs": 1,
+      "journeyKey": "2022-08-03|UK103",
+      "isMultiLeg": false
+    },
+    {
+      "date": "2022-07-25",
+      "flightNumber": "GOW881",
+      "from": "Nagpur / Sonegaon (NAG/VANP)",
+      "to": "Pune / Lohegaon (PNQ/VAPO)",
+      "fromIata": "NAG",
+      "toIata": "PNQ",
+      "airline": "GoAir (G8/GOW)",
+      "aircraft": "Airbus A320neo (A20N)",
+      "duration": "01:20:00",
+      "note": "Coming back from visiting uncle (Badapapa), went to Nagpur by train so this is interesting.",
+      "key": "2022-07-25|GOW881|leg1",
+      "miles": 376,
+      "startLat": 21.0922,
+      "startLng": 79.0472,
+      "endLat": 18.5822,
+      "endLng": 73.9197,
+      "legNumber": 1,
+      "totalLegs": 1,
+      "journeyKey": "2022-07-25|GOW881",
+      "isMultiLeg": false
+    },
+    {
+      "date": "2022-07-08",
+      "flightNumber": "G8226",
+      "from": "Leh / Kushok Bakula Rimpochee (IXL/VILH)",
+      "to": "Delhi / Indira Gandhi (DEL/VIDP)",
+      "fromIata": "IXL",
+      "toIata": "DEL",
+      "airline": "GoAir (G8/GOW)",
+      "aircraft": "Airbus A320-200 (A320)",
+      "duration": "01:30:00",
+      "note": "Returning from Leh",
+      "key": "2022-07-08|G8226|leg1",
+      "miles": 386,
+      "startLat": 34.1359,
+      "startLng": 77.5465,
+      "endLat": 28.5562,
+      "endLng": 77.1,
+      "legNumber": 1,
+      "totalLegs": 1,
+      "journeyKey": "2022-07-08|G8226",
+      "isMultiLeg": false
+    },
+    {
+      "date": "2022-07-08",
+      "flightNumber": "G82513",
+      "from": "Delhi / Indira Gandhi (DEL/VIDP)",
+      "to": "Pune / Lohegaon (PNQ/VAPO)",
+      "fromIata": "DEL",
+      "toIata": "PNQ",
+      "airline": "GoAir (G8/GOW)",
+      "aircraft": "Airbus A320-200 (A320)",
+      "duration": "02:15:00",
+      "note": "Miserable, but we initially weren’t planning on flying so it’s fine",
+      "key": "2022-07-08|G82513|leg1",
+      "miles": 718,
+      "startLat": 28.5562,
+      "startLng": 77.1,
+      "endLat": 18.5822,
+      "endLng": 73.9197,
+      "legNumber": 1,
+      "totalLegs": 1,
+      "journeyKey": "2022-07-08|G82513",
+      "isMultiLeg": false
+    },
+    {
+      "date": "2022-07-02",
+      "flightNumber": "G8205",
+      "from": "Delhi / Indira Gandhi (DEL/VIDP)",
+      "to": "Leh / Kushok Bakula Rimpochee (IXL/VILH)",
+      "fromIata": "DEL",
+      "toIata": "IXL",
+      "airline": "GoAir (G8/GOW)",
+      "aircraft": "Airbus A320-200 (A320)",
+      "duration": "01:20:00",
+      "note": "Reaching Len",
+      "key": "2022-07-02|G8205|leg1",
+      "miles": 386,
+      "startLat": 28.5562,
+      "startLng": 77.1,
+      "endLat": 34.1359,
+      "endLng": 77.5465,
+      "legNumber": 1,
+      "totalLegs": 1,
+      "journeyKey": "2022-07-02|G8205",
+      "isMultiLeg": false
+    },
+    {
+      "date": "2022-07-01",
+      "flightNumber": "G8176",
+      "from": "Pune / Lohegaon (PNQ/VAPO)",
+      "to": "Delhi / Indira Gandhi (DEL/VIDP)",
+      "fromIata": "PNQ",
+      "toIata": "DEL",
+      "airline": "GoAir (G8/GOW)",
+      "aircraft": "Airbus A320-200 (A320)",
+      "duration": "02:30:00",
+      "note": "Going to Ladakh",
+      "key": "2022-07-01|G8176|leg1",
+      "miles": 718,
+      "startLat": 18.5822,
+      "startLng": 73.9197,
+      "endLat": 28.5562,
+      "endLng": 77.1,
+      "legNumber": 1,
+      "totalLegs": 1,
+      "journeyKey": "2022-07-01|G8176",
+      "isMultiLeg": false
+    },
+    {
+      "date": "2022-06-05",
+      "flightNumber": "I5768",
+      "from": "Bagdogra / Bagdogra (IXB/VEBD)",
+      "to": "Delhi / Indira Gandhi (DEL/VIDP)",
+      "fromIata": "IXB",
+      "toIata": "DEL",
+      "airline": "AirAsia India (I5/IAD)",
+      "aircraft": "Airbus A320-200 (A320)",
+      "duration": "02:10:00",
+      "note": "Coming back to Pune",
+      "key": "2022-06-05|I5768|leg1",
+      "miles": 699,
+      "startLat": 26.6812,
+      "startLng": 88.3286,
+      "endLat": 28.5562,
+      "endLng": 77.1,
+      "legNumber": 1,
+      "totalLegs": 2,
+      "journeyKey": "2022-06-05|I5768",
+      "isMultiLeg": true
+    },
+    {
+      "date": "2022-06-05",
+      "flightNumber": "I5768",
+      "from": "Delhi / Indira Gandhi (DEL/VIDP)",
+      "to": "Pune / Lohegaon (PNQ/VAPO)",
+      "fromIata": "DEL",
+      "toIata": "PNQ",
+      "airline": "AirAsia India (I5/IAD)",
+      "aircraft": "Airbus A320-200 (A320)",
+      "duration": "02:10:00",
+      "note": "Interesting second leg, having stopped over at DEL but not gotten off, but direct flight to PNQ as a result",
+      "key": "2022-06-05|I5768|leg2",
+      "miles": 718,
+      "startLat": 28.5562,
+      "startLng": 77.1,
+      "endLat": 18.5822,
+      "endLng": 73.9197,
+      "legNumber": 2,
+      "totalLegs": 2,
+      "journeyKey": "2022-06-05|I5768",
+      "isMultiLeg": true
+    },
+    {
+      "date": "2022-05-27",
+      "flightNumber": "6E352",
+      "from": "Pune / Lohegaon (PNQ/VAPO)",
+      "to": "Hyderabad / Rajiv Gandhi International (HYD/VOHS)",
+      "fromIata": "PNQ",
+      "toIata": "HYD",
+      "airline": "IndiGo (6E/IGO)",
+      "aircraft": "Airbus A320neo (A20N)",
+      "duration": "01:15:00",
+      "note": "Going to Sikkim",
+      "key": "2022-05-27|6E352|leg1",
+      "miles": 311,
+      "startLat": 18.5822,
+      "startLng": 73.9197,
+      "endLat": 17.2403,
+      "endLng": 78.4294,
+      "legNumber": 1,
+      "totalLegs": 1,
+      "journeyKey": "2022-05-27|6E352",
+      "isMultiLeg": false
+    },
+    {
+      "date": "2022-05-27",
+      "flightNumber": "6E6054",
+      "from": "Hyderabad / Rajiv Gandhi International (HYD/VOHS)",
+      "to": "Bagdogra / Bagdogra (IXB/VEBD)",
+      "fromIata": "HYD",
+      "toIata": "IXB",
+      "airline": "IndiGo (6E/IGO)",
+      "aircraft": "Airbus A320neo (A20N)",
+      "duration": "02:25:00",
+      "note": "Reaching Sikkim",
+      "key": "2022-05-27|6E6054|leg1",
+      "miles": 909,
+      "startLat": 17.2403,
+      "startLng": 78.4294,
+      "endLat": 26.6812,
+      "endLng": 88.3286,
+      "legNumber": 1,
+      "totalLegs": 1,
+      "journeyKey": "2022-05-27|6E6054",
+      "isMultiLeg": false
+    },
+    {
+      "date": "2022-05-08",
+      "flightNumber": "SQ424",
+      "from": "Singapore / Changi (SIN/WSSS)",
+      "to": "Mumbai / Chhatrapati Shivaji (BOM/VABB)",
+      "fromIata": "SIN",
+      "toIata": "BOM",
+      "airline": "Singapore Airlines (SQ/SIA)",
+      "aircraft": "Airbus A380-800 (A388)",
+      "duration": "06:25:00",
+      "note": "",
+      "key": "2022-05-08|SQ424|leg1",
+      "miles": 2436,
+      "startLat": 1.3644,
+      "startLng": 103.9915,
+      "endLat": 19.0896,
+      "endLng": 72.8656,
+      "legNumber": 1,
+      "totalLegs": 1,
+      "journeyKey": "2022-05-08|SQ424",
+      "isMultiLeg": false
+    },
+    {
+      "date": "2021-09-20",
+      "flightNumber": "UA1991",
+      "from": "Newark / Liberty International (EWR/KEWR)",
+      "to": "San Francisco / San Francisco International (SFO/KSFO)",
+      "fromIata": "EWR",
+      "toIata": "SFO",
+      "airline": "United Airlines (UA/UAL)",
+      "aircraft": "Boeing 777-300ER (B77W)",
+      "duration": "06:56:00",
+      "note": "Going to SG via SF",
+      "key": "2021-09-20|UA1991|leg1",
+      "miles": 2559,
+      "startLat": 40.6895,
+      "startLng": -74.1745,
+      "endLat": 37.6213,
+      "endLng": -122.379,
+      "legNumber": 1,
+      "totalLegs": 1,
+      "journeyKey": "2021-09-20|UA1991",
+      "isMultiLeg": false
+    },
+    {
+      "date": "2021-08-29",
+      "flightNumber": "DL4353",
+      "from": "Mumbai / Chhatrapati Shivaji (BOM/VABB)",
+      "to": "London / Heathrow (LHR/EGLL)",
+      "fromIata": "BOM",
+      "toIata": "LHR",
+      "airline": "Virgin Atlantic (VS/VIR)",
+      "aircraft": "Airbus A350-1000 (A35K)",
+      "duration": "09:05:00",
+      "note": "Going to SG via USA",
+      "key": "2021-08-29|DL4353|leg1",
+      "miles": 4482,
+      "startLat": 19.0896,
+      "startLng": 72.8656,
+      "endLat": 51.47,
+      "endLng": -0.4543,
+      "legNumber": 1,
+      "totalLegs": 1,
+      "journeyKey": "2021-08-29|DL4353",
+      "isMultiLeg": false
+    },
+    {
+      "date": "2021-08-29",
+      "flightNumber": "VS3",
+      "from": "London / Heathrow (LHR/EGLL)",
+      "to": "New York / John F Kennedy (JFK/KJFK)",
+      "fromIata": "LHR",
+      "toIata": "JFK",
+      "airline": "Virgin Atlantic (VS/VIR)",
+      "aircraft": "Airbus A350-1000 (A35K)",
+      "duration": "07:40:00",
+      "note": "OTW to US to SG",
+      "key": "2021-08-29|VS3|leg1",
+      "miles": 3442,
+      "startLat": 51.47,
+      "startLng": -0.4543,
+      "endLat": 40.6413,
+      "endLng": -73.7781,
+      "legNumber": 1,
+      "totalLegs": 1,
+      "journeyKey": "2021-08-29|VS3",
+      "isMultiLeg": false
+    },
+    {
+      "date": "2020-02-01",
+      "flightNumber": "6E0257",
+      "from": "Bhubaneswar / Bhubaneswar (BBI/VEBS)",
+      "to": "Mumbai / Chhatrapati Shivaji (BOM/VABB)",
+      "fromIata": "BBI",
+      "toIata": "BOM",
+      "airline": "IndiGo (6E/IGO)",
+      "aircraft": "Airbus A320neo (A20N)",
+      "duration": "02:30:00",
+      "note": "",
+      "key": "2020-02-01|6E0257|leg1",
+      "miles": 846,
+      "startLat": 20.2444,
+      "startLng": 85.8178,
+      "endLat": 19.0896,
+      "endLng": 72.8656,
+      "legNumber": 1,
+      "totalLegs": 1,
+      "journeyKey": "2020-02-01|6E0257",
+      "isMultiLeg": false
+    },
+    {
+      "date": "2020-01-29",
+      "flightNumber": "6E533",
+      "from": "Mumbai / Chhatrapati Shivaji (BOM/VABB)",
+      "to": "Bhubaneswar / Bhubaneswar (BBI/VEBS)",
+      "fromIata": "BOM",
+      "toIata": "BBI",
+      "airline": "IndiGo (6E/IGO)",
+      "aircraft": "Airbus A320neo (A20N)",
+      "duration": "02:15:00",
+      "note": "Uncle’s funeral (Bada Mamu).",
+      "key": "2020-01-29|6E533|leg1",
+      "miles": 846,
+      "startLat": 19.0896,
+      "startLng": 72.8656,
+      "endLat": 20.2444,
+      "endLng": 85.8178,
+      "legNumber": 1,
+      "totalLegs": 1,
+      "journeyKey": "2020-01-29|6E533",
+      "isMultiLeg": false
+    },
+    {
+      "date": "2019-12-20",
+      "flightNumber": "6E323",
+      "from": "Mumbai / Chhatrapati Shivaji (BOM/VABB)",
+      "to": "Calcutta / NS Chandra Bose Int (CCU/VECC)",
+      "fromIata": "BOM",
+      "toIata": "CCU",
+      "airline": "IndiGo (6E/IGO)",
+      "aircraft": "Airbus A320neo (A20N)",
+      "duration": "02:35:00",
+      "note": "",
+      "key": "2019-12-20|6E323|leg1",
+      "miles": 1035,
+      "startLat": 19.0896,
+      "startLng": 72.8656,
+      "endLat": 22.6547,
+      "endLng": 88.4467,
+      "legNumber": 1,
+      "totalLegs": 1,
+      "journeyKey": "2019-12-20|6E323",
+      "isMultiLeg": false
+    },
+    {
+      "date": "2019-04-27",
+      "flightNumber": "AF218",
+      "from": "Paris / Charles de Gaulle (CDG/LFPG)",
+      "to": "Mumbai / Chhatrapati Shivaji (BOM/VABB)",
+      "fromIata": "CDG",
+      "toIata": "BOM",
+      "airline": "Air France (AF/AFR)",
+      "aircraft": "Boeing 777-200 (B772)",
+      "duration": "09:20:00",
+      "note": "Return from Europe trip",
+      "key": "2019-04-27|AF218|leg1",
+      "miles": 4346,
+      "startLat": 49.0097,
+      "startLng": 2.5479,
+      "endLat": 19.0896,
+      "endLng": 72.8656,
+      "legNumber": 1,
+      "totalLegs": 1,
+      "journeyKey": "2019-04-27|AF218",
+      "isMultiLeg": false
+    },
+    {
+      "date": "2019-04-17",
+      "flightNumber": "U25674",
+      "from": "Paris / Charles de Gaulle (CDG/LFPG)",
+      "to": "Berlin / Tegel (TXL/EDDT)",
+      "fromIata": "CDG",
+      "toIata": "TXL",
+      "airline": "Easyjet (U2/EZY)",
+      "aircraft": "Airbus A320-200 (A320)",
+      "duration": "01:50:00",
+      "note": "",
+      "key": "2019-04-17|U25674|leg1",
+      "miles": 529,
+      "startLat": 49.0097,
+      "startLng": 2.5479,
+      "endLat": 52.5597,
+      "endLng": 13.2877,
+      "legNumber": 1,
+      "totalLegs": 1,
+      "journeyKey": "2019-04-17|U25674",
+      "isMultiLeg": false
+    },
+    {
+      "date": "2019-04-14",
+      "flightNumber": "AF217",
+      "from": "Mumbai / Chhatrapati Shivaji (BOM/VABB)",
+      "to": "Paris / Charles de Gaulle (CDG/LFPG)",
+      "fromIata": "BOM",
+      "toIata": "CDG",
+      "airline": "Joon (JN/JON)",
+      "aircraft": "Airbus A340-300 (A343)",
+      "duration": "09:20:00",
+      "note": "",
+      "key": "2019-04-14|AF217|leg1",
+      "miles": 4346,
+      "startLat": 19.0896,
+      "startLng": 72.8656,
+      "endLat": 49.0097,
+      "endLng": 2.5479,
+      "legNumber": 1,
+      "totalLegs": 1,
+      "journeyKey": "2019-04-14|AF217",
+      "isMultiLeg": false
+    },
+    {
+      "date": "2018-05-19",
+      "flightNumber": "6E257",
+      "from": "Bhubaneswar / Bhubaneswar (BBI/VEBS)",
+      "to": "Mumbai / Chhatrapati Shivaji (BOM/VABB)",
+      "fromIata": "BBI",
+      "toIata": "BOM",
+      "airline": "IndiGo (6E/IGO)",
+      "aircraft": "Airbus A320-200 (A320)",
+      "duration": "02:30:00",
+      "note": "",
+      "key": "2018-05-19|6E257|leg1",
+      "miles": 846,
+      "startLat": 20.2444,
+      "startLng": 85.8178,
+      "endLat": 19.0896,
+      "endLng": 72.8656,
+      "legNumber": 1,
+      "totalLegs": 1,
+      "journeyKey": "2018-05-19|6E257",
+      "isMultiLeg": false
+    },
+    {
+      "date": "2018-05-05",
+      "flightNumber": "6E0598",
+      "from": "Mumbai / Chhatrapati Shivaji (BOM/VABB)",
+      "to": "Bhubaneswar / Bhubaneswar (BBI/VEBS)",
+      "fromIata": "BOM",
+      "toIata": "BBI",
+      "airline": "IndiGo (6E/IGO)",
+      "aircraft": "Airbus A320-200 (A320)",
+      "duration": "02:25:00",
+      "note": "",
+      "key": "2018-05-05|6E0598|leg1",
+      "miles": 846,
+      "startLat": 19.0896,
+      "startLng": 72.8656,
+      "endLat": 20.2444,
+      "endLng": 85.8178,
+      "legNumber": 1,
+      "totalLegs": 1,
+      "journeyKey": "2018-05-05|6E0598",
+      "isMultiLeg": false
+    },
+    {
+      "date": "2018-04-29",
+      "flightNumber": "UK813",
+      "from": "Amritsar / Amritsar (ATQ/VIAR)",
+      "to": "Delhi / Indira Gandhi (DEL/VIDP)",
+      "fromIata": "ATQ",
+      "toIata": "DEL",
+      "airline": "Vistara (UK/VTI)",
+      "aircraft": "Airbus A320-200 (A320)",
+      "duration": "01:15:00",
+      "note": "Otw back from Amritsar",
+      "key": "2018-04-29|UK813|leg1",
+      "miles": 258,
+      "startLat": 31.7096,
+      "startLng": 74.7973,
+      "endLat": 28.5562,
+      "endLng": 77.1,
+      "legNumber": 1,
+      "totalLegs": 1,
+      "journeyKey": "2018-04-29|UK813",
+      "isMultiLeg": false
+    },
+    {
+      "date": "2018-04-29",
+      "flightNumber": "UK991",
+      "from": "Delhi / Indira Gandhi (DEL/VIDP)",
+      "to": "Pune / Lohegaon (PNQ/VAPO)",
+      "fromIata": "DEL",
+      "toIata": "PNQ",
+      "airline": "Vistara (UK/VTI)",
+      "aircraft": "Airbus A320-200 (A320)",
+      "duration": "02:10:00",
+      "note": "Reaching Pune",
+      "key": "2018-04-29|UK991|leg1",
+      "miles": 718,
+      "startLat": 28.5562,
+      "startLng": 77.1,
+      "endLat": 18.5822,
+      "endLng": 73.9197,
+      "legNumber": 1,
+      "totalLegs": 1,
+      "journeyKey": "2018-04-29|UK991",
+      "isMultiLeg": false
+    },
+    {
+      "date": "2018-04-22",
+      "flightNumber": "AI649",
+      "from": "Mumbai / Chhatrapati Shivaji (BOM/VABB)",
+      "to": "Amritsar / Amritsar (ATQ/VIAR)",
+      "fromIata": "BOM",
+      "toIata": "ATQ",
+      "airline": "Air India (AI/AIC)",
+      "aircraft": "Airbus A321-200 (A321)",
+      "duration": "02:20:00",
+      "note": "Going to Amritsar and Himachal Pradesh",
+      "key": "2018-04-22|AI649|leg1",
+      "miles": 880,
+      "startLat": 19.0896,
+      "startLng": 72.8656,
+      "endLat": 31.7096,
+      "endLng": 74.7973,
+      "legNumber": 1,
+      "totalLegs": 1,
+      "journeyKey": "2018-04-22|AI649",
+      "isMultiLeg": false
+    }
+  ],
+  "destinations": [
+    {
+      "id": "austin",
+      "name": "Austin",
+      "country": "United States",
+      "lat": 30.2672,
+      "lng": -97.7431,
+      "sources": [
+        "flight",
+        "manual",
+        "road-trip"
+      ],
+      "firstVisit": "2024",
+      "notes": "Current home base"
+    },
+    {
+      "id": "pune",
+      "name": "Pune",
+      "country": "India",
+      "lat": 18.5204,
+      "lng": 73.8567,
+      "sources": [
+        "manual"
+      ],
+      "firstVisit": "2010",
+      "notes": "Hometown — lifetime visits beyond logged flights"
+    },
+    {
+      "id": "berkeley",
+      "name": "Berkeley",
+      "country": "United States",
+      "lat": 37.87159,
+      "lng": -122.27275,
+      "sources": [
+        "road-trip"
+      ],
+      "firstVisit": "2024",
+      "notes": "UC Berkeley — SF / Yosemite trip"
+    },
+    {
+      "id": "yosemite",
+      "name": "Yosemite National Park",
+      "country": "United States",
+      "lat": 37.86512,
+      "lng": -119.53833,
+      "sources": [
+        "road-trip"
+      ],
+      "firstVisit": "2024"
+    },
+    {
+      "id": "stockton",
+      "name": "Stockton",
+      "country": "United States",
+      "lat": 37.9616,
+      "lng": -121.2756,
+      "sources": [
+        "road-trip"
+      ],
+      "firstVisit": "2024"
+    },
+    {
+      "id": "chicago",
+      "name": "Chicago",
+      "country": "United States",
+      "lat": 41.88372,
+      "lng": -87.63238,
+      "sources": [
+        "road-trip"
+      ],
+      "firstVisit": "2024",
+      "notes": "UIUC drop-off trip"
+    },
+    {
+      "id": "urbana-champaign",
+      "name": "Urbana–Champaign",
+      "country": "United States",
+      "lat": 40.1063,
+      "lng": -88.2237,
+      "sources": [
+        "road-trip"
+      ],
+      "firstVisit": "2024",
+      "notes": "University of Illinois at Urbana-Champaign"
+    },
+    {
+      "id": "houston",
+      "name": "Houston",
+      "country": "United States",
+      "lat": 29.7604,
+      "lng": -95.3698,
+      "sources": [
+        "road-trip"
+      ],
+      "firstVisit": "2024",
+      "notes": "NASA Johnson Space Center visit"
+    },
+    {
+      "id": "san-antonio",
+      "name": "San Antonio",
+      "country": "United States",
+      "lat": 29.42412,
+      "lng": -98.49362,
+      "sources": [
+        "road-trip"
+      ],
+      "firstVisit": "2025"
+    },
+    {
+      "id": "dallas",
+      "name": "Dallas",
+      "country": "United States",
+      "lat": 32.77667,
+      "lng": -96.79699,
+      "sources": [
+        "road-trip"
+      ],
+      "firstVisit": "2026"
+    },
+    {
+      "id": "texarkana",
+      "name": "Texarkana",
+      "country": "United States",
+      "lat": 33.42509,
+      "lng": -94.04774,
+      "sources": [
+        "road-trip"
+      ],
+      "firstVisit": "2026"
+    },
+    {
+      "id": "hot-springs",
+      "name": "Hot Springs",
+      "country": "United States",
+      "lat": 34.5037,
+      "lng": -93.05518,
+      "sources": [
+        "road-trip"
+      ],
+      "firstVisit": "2026"
+    },
+    {
+      "id": "little-rock",
+      "name": "Little Rock",
+      "country": "United States",
+      "lat": 34.74648,
+      "lng": -92.28959,
+      "sources": [
+        "road-trip"
+      ],
+      "firstVisit": "2026"
+    },
+    {
+      "id": "seattle",
+      "name": "Seattle",
+      "country": "United States",
+      "lat": 47.60621,
+      "lng": -122.33207,
+      "sources": [
+        "road-trip"
+      ],
+      "firstVisit": "2026"
+    },
+    {
+      "id": "olympia",
+      "name": "Olympia",
+      "country": "United States",
+      "lat": 47.03787,
+      "lng": -122.90069,
+      "sources": [
+        "road-trip"
+      ],
+      "firstVisit": "2026"
+    },
+    {
+      "id": "forks",
+      "name": "Forks",
+      "country": "United States",
+      "lat": 47.95039,
+      "lng": -124.3855,
+      "sources": [
+        "road-trip"
+      ],
+      "firstVisit": "2026",
+      "notes": "Olympic National Park"
+    },
+    {
+      "id": "port-angeles",
+      "name": "Port Angeles",
+      "country": "United States",
+      "lat": 48.11811,
+      "lng": -123.42982,
+      "sources": [
+        "road-trip"
+      ],
+      "firstVisit": "2026"
+    },
+    {
+      "id": "port-townsend",
+      "name": "Port Townsend",
+      "country": "United States",
+      "lat": 48.117,
+      "lng": -122.7604,
+      "sources": [
+        "road-trip"
+      ],
+      "firstVisit": "2026"
+    },
+    {
+      "id": "coupeville",
+      "name": "Coupeville",
+      "country": "United States",
+      "lat": 48.2193,
+      "lng": -122.6868,
+      "sources": [
+        "road-trip"
+      ],
+      "firstVisit": "2026"
+    },
+    {
+      "id": "marblemount",
+      "name": "Marblemount",
+      "country": "United States",
+      "lat": 48.5282,
+      "lng": -121.4332,
+      "sources": [
+        "road-trip"
+      ],
+      "firstVisit": "2026",
+      "notes": "North Cascades National Park"
+    },
+    {
+      "id": "paradise",
+      "name": "Paradise",
+      "country": "United States",
+      "lat": 46.786,
+      "lng": -121.7351,
+      "sources": [
+        "road-trip"
+      ],
+      "firstVisit": "2026",
+      "notes": "Mount Rainier National Park"
+    },
+    {
+      "id": "tacoma",
+      "name": "Tacoma",
+      "country": "United States",
+      "lat": 47.25288,
+      "lng": -122.44429,
+      "sources": [
+        "road-trip"
+      ],
+      "firstVisit": "2026"
+    },
+    {
+      "id": "tulsa",
+      "name": "Tulsa",
+      "country": "United States",
+      "lat": 36.154,
+      "lng": -95.9927,
+      "sources": [
+        "road-trip"
+      ],
+      "firstVisit": "2026"
+    },
+    {
+      "id": "oklahoma-city",
+      "name": "Oklahoma City",
+      "country": "United States",
+      "lat": 35.46756,
+      "lng": -97.51642,
+      "sources": [
+        "road-trip"
+      ],
+      "firstVisit": "2026"
+    },
+    {
+      "id": "bom",
+      "name": "Mumbai",
+      "country": "India",
+      "lat": 19.0896,
+      "lng": 72.8656,
+      "sources": [
+        "flight"
+      ],
+      "firstVisit": "2018"
+    },
+    {
+      "id": "sin",
+      "name": "Singapore",
+      "country": "Singapore",
+      "lat": 1.3644,
+      "lng": 103.9915,
+      "sources": [
+        "flight"
+      ],
+      "firstVisit": "2021"
+    },
+    {
+      "id": "dps",
+      "name": "Bali",
+      "country": "Indonesia",
+      "lat": -8.7482,
+      "lng": 115.1672,
+      "sources": [
+        "flight"
+      ],
+      "firstVisit": "2022"
+    },
+    {
+      "id": "pnq",
+      "name": "Pune",
+      "country": "India",
+      "lat": 18.5822,
+      "lng": 73.9197,
+      "sources": [
+        "flight"
+      ],
+      "firstVisit": "2018"
+    },
+    {
+      "id": "bbi",
+      "name": "Bhubaneswar",
+      "country": "India",
+      "lat": 20.2444,
+      "lng": 85.8178,
+      "sources": [
+        "flight"
+      ],
+      "firstVisit": "2018"
+    },
+    {
+      "id": "del",
+      "name": "Delhi",
+      "country": "India",
+      "lat": 28.5562,
+      "lng": 77.1,
+      "sources": [
+        "flight"
+      ],
+      "firstVisit": "2018"
+    },
+    {
+      "id": "sxr",
+      "name": "Srinagar",
+      "country": "India",
+      "lat": 33.9871,
+      "lng": 74.7742,
+      "sources": [
+        "flight"
+      ],
+      "firstVisit": "2023"
+    },
+    {
+      "id": "jfk",
+      "name": "New York",
+      "country": "United States",
+      "lat": 40.6413,
+      "lng": -73.7781,
+      "sources": [
+        "flight"
+      ],
+      "firstVisit": "2021"
+    },
+    {
+      "id": "aus",
+      "name": "Austin",
+      "country": "United States",
+      "lat": 30.1975,
+      "lng": -97.6664,
+      "sources": [
+        "flight"
+      ],
+      "firstVisit": "2024"
+    },
+    {
+      "id": "sfo",
+      "name": "San Francisco",
+      "country": "United States",
+      "lat": 37.6213,
+      "lng": -122.379,
+      "sources": [
+        "flight"
+      ],
+      "firstVisit": "2021"
+    },
+    {
+      "id": "dfw",
+      "name": "Dallas",
+      "country": "United States",
+      "lat": 32.8998,
+      "lng": -97.0403,
+      "sources": [
+        "flight"
+      ],
+      "firstVisit": "2024"
+    },
+    {
+      "id": "ewr",
+      "name": "Newark",
+      "country": "United States",
+      "lat": 40.6895,
+      "lng": -74.1745,
+      "sources": [
+        "flight"
+      ],
+      "firstVisit": "2021"
+    },
+    {
+      "id": "ord",
+      "name": "Chicago",
+      "country": "United States",
+      "lat": 41.9742,
+      "lng": -87.9073,
+      "sources": [
+        "flight"
+      ],
+      "firstVisit": "2024"
+    },
+    {
+      "id": "atq",
+      "name": "Amritsar",
+      "country": "India",
+      "lat": 31.7096,
+      "lng": 74.7973,
+      "sources": [
+        "flight"
+      ],
+      "firstVisit": "2018"
+    },
+    {
+      "id": "cdg",
+      "name": "Paris",
+      "country": "France",
+      "lat": 49.0097,
+      "lng": 2.5479,
+      "sources": [
+        "flight"
+      ],
+      "firstVisit": "2019"
+    },
+    {
+      "id": "txl",
+      "name": "Berlin",
+      "country": "Germany",
+      "lat": 52.5597,
+      "lng": 13.2877,
+      "sources": [
+        "flight"
+      ],
+      "firstVisit": "2019"
+    },
+    {
+      "id": "ccu",
+      "name": "Kolkata",
+      "country": "India",
+      "lat": 22.6547,
+      "lng": 88.4467,
+      "sources": [
+        "flight"
+      ],
+      "firstVisit": "2019"
+    },
+    {
+      "id": "lhr",
+      "name": "London",
+      "country": "United Kingdom",
+      "lat": 51.47,
+      "lng": -0.4543,
+      "sources": [
+        "flight"
+      ],
+      "firstVisit": "2021"
+    },
+    {
+      "id": "hyd",
+      "name": "Hyderabad",
+      "country": "India",
+      "lat": 17.2403,
+      "lng": 78.4294,
+      "sources": [
+        "flight"
+      ],
+      "firstVisit": "2022"
+    },
+    {
+      "id": "ixb",
+      "name": "Bagdogra",
+      "country": "India",
+      "lat": 26.6812,
+      "lng": 88.3286,
+      "sources": [
+        "flight"
+      ],
+      "firstVisit": "2022"
+    },
+    {
+      "id": "ixl",
+      "name": "Leh",
+      "country": "India",
+      "lat": 34.1359,
+      "lng": 77.5465,
+      "sources": [
+        "flight"
+      ],
+      "firstVisit": "2022"
+    },
+    {
+      "id": "nag",
+      "name": "Nagpur",
+      "country": "India",
+      "lat": 21.0922,
+      "lng": 79.0472,
+      "sources": [
+        "flight"
+      ],
+      "firstVisit": "2022"
+    },
+    {
+      "id": "man",
+      "name": "Manchester",
+      "country": "United Kingdom",
+      "lat": 53.3537,
+      "lng": -2.275,
+      "sources": [
+        "flight"
+      ],
+      "firstVisit": "2024"
+    },
+    {
+      "id": "iah",
+      "name": "Houston",
+      "country": "United States",
+      "lat": 29.9902,
+      "lng": -95.3368,
+      "sources": [
+        "flight"
+      ],
+      "firstVisit": "2024"
+    },
+    {
+      "id": "vie",
+      "name": "Vienna",
+      "country": "Austria",
+      "lat": 48.1103,
+      "lng": 16.5697,
+      "sources": [
+        "flight"
+      ],
+      "firstVisit": "2025"
+    },
+    {
+      "id": "sea",
+      "name": "Seattle",
+      "country": "United States",
+      "lat": 47.4502,
+      "lng": -122.3088,
+      "sources": [
+        "flight"
+      ],
+      "firstVisit": "2026"
+    }
+  ],
+  "tripMappings": [
+    {
+      "id": "bali-dec-2022",
+      "name": "Bali Getaway",
+      "description": "Holiday loop from Singapore",
+      "flightKeys": [
+        "2022-12-21|3K245",
+        "2022-12-25|3K244"
+      ],
+      "destinationIds": [
+        "sin",
+        "dps"
+      ],
+      "color": "#b45309"
+    },
+    {
+      "id": "us-summer-2024",
+      "name": "US Summer 2024",
+      "description": "JFK ↔ Singapore via long haul + domestic connections",
+      "flightKeys": [
+        "2024-05-13|SQ24",
+        "2024-09-01|AA2246",
+        "2024-09-01|SQ23"
+      ],
+      "destinationIds": [
+        "sin",
+        "jfk"
+      ],
+      "color": "#0f766e"
+    },
+    {
+      "id": "kashmir-winter-2023",
+      "name": "Kashmir Winter Trip",
+      "description": "Pune → Delhi → Srinagar loop",
+      "flightKeys": [
+        "2023-12-20|AI854",
+        "2023-12-21|AI827",
+        "2023-12-26|AI826",
+        "2023-12-26|AI853"
+      ],
+      "destinationIds": [
+        "pnq",
+        "del",
+        "sxr"
+      ],
+      "color": "#2dd4bf"
+    },
+    {
+      "id": "sin-hou-via-man-dec-2024",
+      "name": "Singapore → Houston via Manchester",
+      "description": "SQ52 fifth-freedom stopover (2 legs, same flight number)",
+      "flightKeys": [
+        "2024-12-21|SQ52"
+      ],
+      "destinationIds": [
+        "sin",
+        "man",
+        "iah"
+      ],
+      "color": "#22d3ee"
+    },
+    {
+      "id": "hou-sin-via-man-jan-2025",
+      "name": "Houston → Singapore via Manchester",
+      "description": "SQ51 return journey (2 legs, same flight number)",
+      "flightKeys": [
+        "2025-01-24|SQ51"
+      ],
+      "destinationIds": [
+        "iah",
+        "man",
+        "sin"
+      ],
+      "color": "#22d3ee"
+    }
+  ],
+  "tripArcs": [
+    {
+      "id": "bali-dec-2022",
+      "name": "Bali Getaway",
+      "startLat": 1.3644,
+      "startLng": 103.9915,
+      "endLat": -8.7482,
+      "endLng": 115.1672,
+      "color": "#b45309",
+      "coords": [
+        [
+          1.3644,
+          103.9915
+        ],
+        [
+          -8.7482,
+          115.1672
+        ]
+      ]
+    },
+    {
+      "id": "us-summer-2024",
+      "name": "US Summer 2024",
+      "startLat": 1.3644,
+      "startLng": 103.9915,
+      "endLat": 40.6413,
+      "endLng": -73.7781,
+      "color": "#0f766e",
+      "coords": [
+        [
+          1.3644,
+          103.9915
+        ],
+        [
+          40.6413,
+          -73.7781
+        ]
+      ]
+    },
+    {
+      "id": "kashmir-winter-2023",
+      "name": "Kashmir Winter Trip",
+      "startLat": 18.5822,
+      "startLng": 73.9197,
+      "endLat": 33.9871,
+      "endLng": 74.7742,
+      "color": "#2dd4bf",
+      "coords": [
+        [
+          18.5822,
+          73.9197
+        ],
+        [
+          28.5562,
+          77.1
+        ],
+        [
+          33.9871,
+          74.7742
+        ]
+      ]
+    },
+    {
+      "id": "sin-hou-via-man-dec-2024",
+      "name": "Singapore → Houston via Manchester",
+      "startLat": 1.3644,
+      "startLng": 103.9915,
+      "endLat": 29.9902,
+      "endLng": -95.3368,
+      "color": "#22d3ee",
+      "coords": [
+        [
+          1.3644,
+          103.9915
+        ],
+        [
+          53.3537,
+          -2.275
+        ],
+        [
+          29.9902,
+          -95.3368
+        ]
+      ]
+    },
+    {
+      "id": "hou-sin-via-man-jan-2025",
+      "name": "Houston → Singapore via Manchester",
+      "startLat": 29.9902,
+      "startLng": -95.3368,
+      "endLat": 1.3644,
+      "endLng": 103.9915,
+      "color": "#22d3ee",
+      "coords": [
+        [
+          29.9902,
+          -95.3368
+        ],
+        [
+          53.3537,
+          -2.275
+        ],
+        [
+          1.3644,
+          103.9915
+        ]
+      ]
+    }
+  ],
+  "pilotStats": {
+    "totalMiles": 115825,
+    "uniqueAircraft": 18,
+    "uniqueAirlines": 17,
+    "dataSince": "2018",
+    "topAircraft": [
+      {
+        "type": "Airbus A320-200 (A320)",
+        "count": 14
+      },
+      {
+        "type": "Airbus A320neo (A20N)",
+        "count": 9
+      },
+      {
+        "type": "Airbus A350-900 (A359)",
+        "count": 6
+      },
+      {
+        "type": "Airbus A321neo (A21N)",
+        "count": 6
+      },
+      {
+        "type": "Boeing 737-800 (B738)",
+        "count": 4
+      }
+    ]
+  },
+  "destinationStats": {
+    "totalPlaces": 50,
+    "totalCountries": 8,
+    "totalTrips": 12,
+    "lifetimeScope": true
+  }
+}
