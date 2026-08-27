@@ -36,6 +36,7 @@ export function BoundedList<T>({
         )}
       </div>
       <div
+        data-cursor="scroll"
         style={{ "--list-row": "3.25rem" } as React.CSSProperties}
         className={cn(
           "thin-scrollbar mt-3 min-h-0 flex-1 space-y-2 overflow-y-auto",

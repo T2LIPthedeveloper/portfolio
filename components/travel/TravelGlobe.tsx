@@ -9,6 +9,7 @@ import type { FeatureCollection, Geometry } from "geojson";
 import type { Topology, GeometryCollection } from "topojson-specification";
 import type { GlobeMode, TravelManifest } from "@/types/travel";
 import { cn } from "@/lib/utils";
+import { GlobeErrorBoundary } from "./GlobeErrorBoundary";
 
 const Globe = dynamic(() => import("react-globe.gl"), {
   ssr: false,
@@ -21,6 +22,31 @@ const Globe = dynamic(() => import("react-globe.gl"), {
 
 const OCEAN_LIGHT = "/images/globe/ocean-light.png";
 const OCEAN_DARK = "/images/globe/ocean-dark.png";
+
+function canCreateWebGLContext() {
+  if (typeof document === "undefined") return false;
+  try {
+    const canvas = document.createElement("canvas");
+    return Boolean(
+      canvas.getContext("webgl2") ||
+        canvas.getContext("webgl") ||
+        canvas.getContext("experimental-webgl")
+    );
+  } catch {
+    return false;
+  }
+}
+
+function GlobeUnavailable() {
+  return (
+    <div className="flex h-full w-full flex-col items-center justify-center gap-2 px-6 text-center">
+      <p className="font-mono text-xs uppercase tracking-widest text-text-muted">Map unavailable</p>
+      <p className="max-w-xs text-sm text-text-secondary">
+        3D globe couldn&apos;t start on this device. Stats and trip lists below still work.
+      </p>
+    </div>
+  );
+}
 
 interface TravelGlobeProps {
   data: TravelManifest;
@@ -56,12 +82,14 @@ export function TravelGlobe({ data, mode, className }: TravelGlobeProps) {
   const { resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
   const [countries, setCountries] = useState<object[]>([]);
+  const [webglOk, setWebglOk] = useState(true);
 
   const isDark = resolvedTheme === "dark";
   const oceanUrl = isDark ? OCEAN_DARK : OCEAN_LIGHT;
 
   useEffect(() => {
     setMounted(true);
+    setWebglOk(canCreateWebGLContext());
   }, []);
 
   useEffect(() => {
@@ -150,6 +178,7 @@ export function TravelGlobe({ data, mode, className }: TravelGlobeProps) {
   return (
     <div
       ref={containerRef}
+      data-cursor="zoom"
       className={cn(
         "relative h-full w-full min-h-[280px] overflow-hidden rounded-2xl border border-border bg-globe-base",
         className
@@ -159,73 +188,86 @@ export function TravelGlobe({ data, mode, className }: TravelGlobeProps) {
         <div className="flex h-full w-full items-center justify-center">
           <p className="font-mono text-sm uppercase tracking-widest text-text-muted">Loading map</p>
         </div>
+      ) : !webglOk ? (
+        <GlobeUnavailable />
       ) : (
-        <Globe
-          key={`${mode}-${isDark ? "dark" : "light"}`}
-          ref={globeRef}
-          width={size.width}
-          height={size.height}
-          globeImageUrl={oceanUrl}
-          backgroundColor="rgba(0,0,0,0)"
-          globeOffset={[0, 0]}
-          animateIn={false}
-          polygonsData={countries}
-          polygonCapColor={() => (isDark ? "rgba(34, 211, 238, 0.08)" : "rgba(15, 118, 110, 0.1)")}
-          polygonSideColor={() => "rgba(0,0,0,0)"}
-          polygonStrokeColor={() => (isDark ? "#67e8f9" : "#0f766e")}
-          polygonAltitude={0.004}
-          arcsData={arcsData}
-          arcColor={() =>
-            mode === "pilot" ? ["#22d3ee", "#fbbf24"] : ["#2dd4bf", "#b45308cc"]
-          }
-          arcStroke={(arc) =>
-            mode === "pilot"
-              ? Math.max(0.65, Math.min(1.4, 0.45 + (arc as { count: number }).count * 0.12))
-              : Math.min(0.8, 0.15 + (arc as { count: number }).count * 0.05)
-          }
-          arcAltitude={
-            mode === "pilot"
-              ? (arc: object) => pilotArcAltitude(arc as { startLat: number; endLat: number; startLng: number; endLng: number })
-              : 0.04
-          }
-          arcDashLength={mode === "pilot" ? 0.65 : 0.5}
-          arcDashGap={mode === "pilot" ? 0.06 : 0.15}
-          arcDashAnimateTime={mode === "pilot" ? 1600 : 2200}
-          arcLabel={(arc: { fromIata?: string; toIata?: string }) =>
-            mode === "pilot" && arc.fromIata && arc.toIata
-              ? `${arc.fromIata} → ${arc.toIata}`
-              : ""
-          }
-          pointsData={pointsData}
-          pointLat="lat"
-          pointLng="lng"
-          pointAltitude={0.01}
-          pointRadius="size"
-          pointColor={(p: { kind?: string }) =>
-            mode === "pilot" ? (p.kind === "destination" ? "#fbbf24" : "#67e8f9") : p.kind === "destination" ? "#f59e0b" : "#22d3ee"
-          }
-          pointLabel={(p: { name?: string; iata?: string; country?: string }) =>
-            mode === "destinations"
-              ? p.country && p.country !== p.name
-                ? `${p.name}, ${p.country}`
-                : p.name ?? ""
-              : p.iata ?? ""
-          }
-          pathsData={pathsData}
-          pathPoints="coords"
-          pathPointLat={(point: [number, number]) => point[0]}
-          pathPointLng={(point: [number, number]) => point[1]}
-          pathColor={(path: { color?: string }) => path.color ?? "#2dd4bf"}
-          pathStroke={1.4}
-          ringsData={ringsData}
-          ringColor={() => "#f59e0b66"}
-          ringMaxRadius="maxR"
-          ringPropagationSpeed="propagationSpeed"
-          ringRepeatPeriod="repeatPeriod"
-          atmosphereColor={isDark ? "#22d3ee33" : "#0f766e44"}
-          atmosphereAltitude={0.12}
-          onGlobeReady={onGlobeReady}
-        />
+        <GlobeErrorBoundary fallback={<GlobeUnavailable />}>
+          <Globe
+            key={`${mode}-${isDark ? "dark" : "light"}`}
+            ref={globeRef}
+            width={size.width}
+            height={size.height}
+            globeImageUrl={oceanUrl}
+            backgroundColor="rgba(0,0,0,0)"
+            globeOffset={[0, 0]}
+            animateIn={false}
+            polygonsData={countries}
+            polygonCapColor={() => (isDark ? "rgba(34, 211, 238, 0.08)" : "rgba(15, 118, 110, 0.1)")}
+            polygonSideColor={() => "rgba(0,0,0,0)"}
+            polygonStrokeColor={() => (isDark ? "#67e8f9" : "#0f766e")}
+            polygonAltitude={0.004}
+            arcsData={arcsData}
+            arcColor={() =>
+              mode === "pilot" ? ["#22d3ee", "#fbbf24"] : ["#2dd4bf", "#b45308cc"]
+            }
+            arcStroke={(arc) =>
+              mode === "pilot"
+                ? Math.max(0.65, Math.min(1.4, 0.45 + (arc as { count: number }).count * 0.12))
+                : Math.min(0.8, 0.15 + (arc as { count: number }).count * 0.05)
+            }
+            arcAltitude={
+              mode === "pilot"
+                ? (arc: object) =>
+                    pilotArcAltitude(
+                      arc as { startLat: number; endLat: number; startLng: number; endLng: number }
+                    )
+                : 0.04
+            }
+            arcDashLength={mode === "pilot" ? 0.65 : 0.5}
+            arcDashGap={mode === "pilot" ? 0.06 : 0.15}
+            arcDashAnimateTime={mode === "pilot" ? 1600 : 2200}
+            arcLabel={(arc: { fromIata?: string; toIata?: string }) =>
+              mode === "pilot" && arc.fromIata && arc.toIata
+                ? `${arc.fromIata} → ${arc.toIata}`
+                : ""
+            }
+            pointsData={pointsData}
+            pointLat="lat"
+            pointLng="lng"
+            pointAltitude={0.01}
+            pointRadius="size"
+            pointColor={(p: { kind?: string }) =>
+              mode === "pilot"
+                ? p.kind === "destination"
+                  ? "#fbbf24"
+                  : "#67e8f9"
+                : p.kind === "destination"
+                  ? "#f59e0b"
+                  : "#22d3ee"
+            }
+            pointLabel={(p: { name?: string; iata?: string; country?: string }) =>
+              mode === "destinations"
+                ? p.country && p.country !== p.name
+                  ? `${p.name}, ${p.country}`
+                  : (p.name ?? "")
+                : (p.iata ?? "")
+            }
+            pathsData={pathsData}
+            pathPoints="coords"
+            pathPointLat={(point: [number, number]) => point[0]}
+            pathPointLng={(point: [number, number]) => point[1]}
+            pathColor={(path: { color?: string }) => path.color ?? "#2dd4bf"}
+            pathStroke={1.4}
+            ringsData={ringsData}
+            ringColor={() => "#f59e0b66"}
+            ringMaxRadius="maxR"
+            ringPropagationSpeed="propagationSpeed"
+            ringRepeatPeriod="repeatPeriod"
+            atmosphereColor={isDark ? "#22d3ee33" : "#0f766e44"}
+            atmosphereAltitude={0.12}
+            onGlobeReady={onGlobeReady}
+          />
+        </GlobeErrorBoundary>
       )}
     </div>
   );

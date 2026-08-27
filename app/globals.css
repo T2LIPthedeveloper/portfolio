@@ -44,6 +44,7 @@
 @layer base {
   html {
     @apply scroll-smooth;
+    overflow-x: clip;
   }
 
   html,
@@ -57,6 +58,8 @@
 
   body {
     @apply bg-canvas text-text-primary font-sans antialiased;
+    overflow-x: clip;
+    -webkit-tap-highlight-color: transparent;
   }
 
   h1,
@@ -67,44 +70,120 @@
   h6 {
     @apply font-display;
   }
-}
 
-@layer utilities {
-  .glass {
-    background-color: color-mix(in srgb, var(--color-surface) 70%, transparent);
-    @apply backdrop-blur-xl border border-border;
+  /* Fine-pointer custom cursor — never on touch / coarse devices */
+  @media (hover: hover) and (pointer: fine) {
+    html.custom-cursor,
+    html.custom-cursor * {
+      cursor: none !important;
+    }
   }
 
-  html.pilot-mode {
-    --color-canvas: var(--color-pilot-bg);
-    --color-surface: var(--color-pilot-panel);
-    --color-surface-muted: #161b22;
-    --color-text-primary: var(--color-pilot-text);
-    --color-text-secondary: #a8a29e;
-    --color-text-muted: #78716c;
-    --color-accent: var(--color-pilot-accent);
-    --color-accent-muted: #22d3ee22;
-    --color-gold: var(--color-pilot-amber);
-    --color-border: #1f2937;
-    --color-globe-base: #070a0f;
+  /* Theme-aware cursor pigments — accent blue/teal in light, bright teal in dark */
+  :root {
+    --cursor-ink: #0f766e;
+    --cursor-ink-soft: rgba(15, 118, 110, 0.2);
+    --cursor-ink-ring: rgba(15, 118, 110, 0.7);
+    --cursor-ink-fill: rgba(15, 118, 110, 0.12);
   }
 
-  html.pilot-mode body {
-    background: radial-gradient(ellipse at top, #111827 0%, #070a0f 55%);
+  .dark {
+    --cursor-ink: #5eead4;
+    --cursor-ink-soft: rgba(94, 234, 212, 0.2);
+    --cursor-ink-ring: rgba(94, 234, 212, 0.65);
+    --cursor-ink-fill: rgba(94, 234, 212, 0.12);
+  }
+
+  .cursor-dot {
+    background: var(--cursor-ink);
+    box-shadow: 0 0 0 1px color-mix(in srgb, var(--cursor-ink) 40%, transparent);
+  }
+
+  .cursor-glyph {
+    color: var(--cursor-ink);
+  }
+
+  .cursor-melt {
+    border: 1.5px solid var(--cursor-ink-ring);
+    background: var(--cursor-ink-fill);
+    box-shadow: 0 0 0 1px var(--cursor-ink-soft);
+  }
+
+  .cursor-melt--full {
+    border-color: var(--cursor-ink-ring);
+    background: var(--cursor-ink-fill);
+    box-shadow:
+      0 0 0 1px var(--cursor-ink-soft),
+      0 8px 28px var(--cursor-ink-soft);
+  }
+
+  .cursor-melt--soft {
+    border-color: var(--cursor-ink-ring);
+    background: var(--cursor-ink-fill);
+    box-shadow: 0 0 22px var(--cursor-ink-soft);
+  }
+
+  .cursor-melt--scroll {
+    border-color: var(--cursor-ink-ring);
+    background: var(--cursor-ink-soft);
+  }
+
+  .cursor-melt--zoom {
+    border-color: var(--cursor-ink-ring);
+    background: transparent;
+    box-shadow: 0 0 0 1px var(--cursor-ink-soft);
+  }
+
+  .cursor-melt--text {
+    border-color: var(--cursor-ink);
+    background: var(--cursor-ink);
+  }
+
+  .cursor-melt--idle {
+    border-color: var(--cursor-ink-ring);
+    background: transparent;
+  }
+
+  /* Thin scrollbars: fade until hover on fine pointers; always subtle on touch */
+  .thin-scrollbar {
+    scrollbar-width: thin;
   }
 
   .thin-scrollbar::-webkit-scrollbar {
     width: 4px;
+    height: 4px;
   }
 
-  .thin-scrollbar::-webkit-scrollbar-thumb {
-    background-color: color-mix(in srgb, var(--color-text-muted) 50%, transparent);
-    border-radius: 9999px;
+  @media (hover: hover) and (pointer: fine) {
+    .thin-scrollbar {
+      scrollbar-color: transparent transparent;
+    }
+
+    .thin-scrollbar::-webkit-scrollbar-thumb {
+      background-color: transparent;
+      border-radius: 9999px;
+    }
+
+    .thin-scrollbar:hover,
+    .thin-scrollbar:focus-within {
+      scrollbar-color: color-mix(in srgb, var(--color-text-muted) 45%, transparent) transparent;
+    }
+
+    .thin-scrollbar:hover::-webkit-scrollbar-thumb,
+    .thin-scrollbar:focus-within::-webkit-scrollbar-thumb {
+      background-color: color-mix(in srgb, var(--color-text-muted) 45%, transparent);
+    }
   }
 
-  .thin-scrollbar {
-    scrollbar-width: thin;
-    scrollbar-color: color-mix(in srgb, var(--color-text-muted) 50%, transparent) transparent;
+  @media (hover: none), (pointer: coarse) {
+    .thin-scrollbar {
+      scrollbar-color: color-mix(in srgb, var(--color-text-muted) 40%, transparent) transparent;
+    }
+
+    .thin-scrollbar::-webkit-scrollbar-thumb {
+      background-color: color-mix(in srgb, var(--color-text-muted) 40%, transparent);
+      border-radius: 9999px;
+    }
   }
 
   .no-scrollbar::-webkit-scrollbar {
@@ -130,6 +209,35 @@
 
   .flip-digit.is-flipping .flip-bottom-flap {
     animation: flip-bottom 0.42s 0.42s ease-out forwards;
+  }
+}
+
+@layer utilities {
+  .glass {
+    background-color: color-mix(in srgb, var(--color-surface) 70%, transparent);
+    @apply backdrop-blur-xl border border-border;
+  }
+
+  html.pilot-mode {
+    --color-canvas: var(--color-pilot-bg);
+    --color-surface: var(--color-pilot-panel);
+    --color-surface-muted: #161b22;
+    --color-text-primary: var(--color-pilot-text);
+    --color-text-secondary: #a8a29e;
+    --color-text-muted: #78716c;
+    --color-accent: var(--color-pilot-accent);
+    --color-accent-muted: #22d3ee22;
+    --color-gold: var(--color-pilot-amber);
+    --color-border: #1f2937;
+    --color-globe-base: #070a0f;
+    --cursor-ink: #67e8f9;
+    --cursor-ink-soft: rgba(103, 232, 249, 0.22);
+    --cursor-ink-ring: rgba(103, 232, 249, 0.7);
+    --cursor-ink-fill: rgba(103, 232, 249, 0.12);
+  }
+
+  html.pilot-mode body {
+    background: radial-gradient(ellipse at top, #111827 0%, #070a0f 55%);
   }
 }
 

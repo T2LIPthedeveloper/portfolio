@@ -1,8 +1,9 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Fraunces, Space_Grotesk, Space_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/layout/ThemeProvider";
 import { Navbar } from "@/components/layout/Navbar";
+import { CustomCursor } from "@/components/layout/CustomCursor";
 import { PilotModeProvider } from "@/components/travel/PilotModeProvider";
 
 const display = Fraunces({
@@ -31,6 +32,16 @@ export const metadata: Metadata = {
   description: "Portfolio website of Atul Parida showcasing projects, work, and travel.",
 };
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#f7f4ef" },
+    { media: "(prefers-color-scheme: dark)", color: "#0c0f0a" },
+  ],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -41,6 +52,7 @@ export default function RootLayout({
       <body className={`${sans.variable} ${display.variable} ${mono.variable} font-sans antialiased`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <PilotModeProvider>
+            <CustomCursor />
             <Navbar />
             <main className="min-h-screen">{children}</main>
           </PilotModeProvider>

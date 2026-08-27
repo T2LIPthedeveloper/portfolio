@@ -28,7 +28,7 @@ export function TeaserSection({ experiences, projects }: TeaserSectionProps) {
             </p>
             <Link
               href="/work"
-              className="mt-4 inline-block text-base font-medium text-accent hover:underline"
+              className="mt-4 inline-flex min-h-11 items-center text-base font-medium text-accent hover:underline"
             >
               See full work history →
             </Link>
@@ -45,7 +45,7 @@ export function TeaserSection({ experiences, projects }: TeaserSectionProps) {
               href={project.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="block rounded-xl border border-border px-4 py-2.5 transition-colors hover:border-accent/30"
+              className="block min-h-11 rounded-xl border border-border px-4 py-2.5 transition-colors hover:border-accent/30"
               style={{ backgroundColor: "color-mix(in srgb, var(--color-surface-muted) 45%, transparent)" }}
             >
               <div className="flex items-center justify-between gap-3">
@@ -60,7 +60,7 @@ export function TeaserSection({ experiences, projects }: TeaserSectionProps) {
         </div>
         <Link
           href="/projects"
-          className="mt-4 inline-block text-base font-medium text-accent hover:underline"
+          className="mt-4 inline-flex min-h-11 items-center text-base font-medium text-accent hover:underline"
         >
           Browse all projects →
         </Link>

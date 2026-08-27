@@ -14,7 +14,7 @@ interface TravelPageContentProps {
 }
 
 const GLOBE_BOX =
-  "w-full min-h-[280px] h-[min(42vh,420px)] lg:h-full lg:min-h-[360px]";
+  "w-full min-h-[280px] h-[min(48dvh,440px)] touch-manipulation lg:h-full lg:min-h-[360px]";
 
 const TRAVEL_SCOPE_NOTE =
   "Markers show everywhere I've been. Flight stats cover logged trips since 2017.";
@@ -39,19 +39,19 @@ export function TravelPageContent({ data }: TravelPageContentProps) {
 
   return (
     <div className="space-y-5">
-      <div className="flex flex-wrap items-end justify-between gap-4">
-        <div>
-          <p className="font-mono text-sm uppercase tracking-[0.25em] text-text-muted">
+      <div className="flex flex-col items-stretch gap-3 sm:flex-row sm:flex-wrap sm:items-end sm:justify-between sm:gap-4">
+        <div className="min-w-0">
+          <p className="font-mono text-xs uppercase tracking-[0.25em] text-text-muted sm:text-sm">
             Trips &amp; places
           </p>
           <h1 className="mt-2 font-display text-4xl text-text-primary md:text-5xl">Travel</h1>
-          <p className="mt-2 max-w-2xl text-base text-text-secondary">{TRAVEL_SCOPE_NOTE}</p>
+          <p className="mt-2 max-w-2xl text-sm text-text-secondary sm:text-base">{TRAVEL_SCOPE_NOTE}</p>
         </div>
         <button
           type="button"
           onClick={togglePilot}
           className={cn(
-            "inline-flex items-center gap-2 rounded-full border px-4 py-2.5 text-base font-medium transition-colors",
+            "inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-full border px-4 py-2.5 text-base font-medium transition-colors sm:w-auto",
             isPilotMode
               ? "border-[#fbbf24]/40 bg-[#0f172a] text-[#fbbf24] hover:bg-[#1e293b]"
               : "border-border bg-surface text-text-primary hover:border-accent/40 hover:text-accent"
