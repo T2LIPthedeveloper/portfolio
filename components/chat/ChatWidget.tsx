@@ -127,8 +127,12 @@ export function ChatWidget() {
   }
 
   return (
-    <div className="flex min-h-[55vh] flex-col rounded-3xl border border-border bg-surface">
-      <div ref={scrollRef} className="flex-1 space-y-4 overflow-y-auto p-5 no-scrollbar md:p-6">
+    <div className="flex min-h-[min(70dvh,560px)] flex-col rounded-3xl border border-border bg-surface">
+      <div
+        ref={scrollRef}
+        data-cursor="scroll"
+        className="flex-1 space-y-4 overflow-y-auto overscroll-y-contain p-4 no-scrollbar sm:p-5 md:p-6"
+      >
         {messages.map((message, index) => (
           <div
             key={`${message.role}-${index}`}
@@ -136,7 +140,7 @@ export function ChatWidget() {
           >
             <div
               className={cn(
-                "max-w-[85%] rounded-2xl px-4 py-3 text-sm",
+                "max-w-[min(85%,28rem)] rounded-2xl px-4 py-3 text-sm leading-relaxed sm:text-[0.9375rem]",
                 message.role === "user"
                   ? "bg-accent text-white"
                   : "bg-surface-muted text-text-primary"
@@ -169,8 +173,11 @@ export function ChatWidget() {
         )}
       </div>
 
-      <div className="border-t border-border p-3 md:p-4">
-        <div className="flex items-center gap-3">
+      <div
+        className="border-t border-border p-3 md:p-4"
+        style={{ paddingBottom: "max(0.75rem, env(safe-area-inset-bottom))" }}
+      >
+        <div className="flex items-center gap-2 sm:gap-3">
           <input
             type="text"
             value={input}
@@ -180,13 +187,14 @@ export function ChatWidget() {
             }}
             placeholder="Ask about Atul's work..."
             disabled={loading}
-            className="flex-1 rounded-2xl border border-border bg-canvas px-4 py-3 text-sm outline-none ring-accent/20 focus:ring-2"
+            enterKeyHint="send"
+            className="min-h-11 flex-1 rounded-2xl border border-border bg-canvas px-4 py-3 text-base outline-none ring-accent/20 focus:ring-2"
           />
           <button
             type="button"
             onClick={handleSend}
             disabled={loading}
-            className="flex h-11 w-11 items-center justify-center rounded-2xl bg-accent text-white disabled:opacity-60"
+            className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-accent text-white disabled:opacity-60"
             aria-label="Send message"
           >
             <Send className="h-4 w-4" />

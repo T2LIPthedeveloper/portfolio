@@ -12,7 +12,7 @@ interface FocusCarouselProps<T> {
 }
 
 /** Slot + spacer share of scrollport height — keeps prev/next cards visible while snapped. */
-const SLOT_RATIO = 0.36;
+const SLOT_RATIO = 0.42;
 const SPACER_RATIO = (1 - SLOT_RATIO) / 2;
 
 export function FocusCarousel<T>({
@@ -96,6 +96,10 @@ export function FocusCarousel<T>({
     return () => scroller.removeEventListener("scroll", updateFocus);
   }, [updateFocus]);
 
+  const scrollToIndex = useCallback((index: number) => {
+    itemRefs.current[index]?.scrollIntoView({ block: "center", behavior: "smooth" });
+  }, []);
+
   if (items.length === 0) return null;
 
   const slotHeight = portHeight > 0 ? portHeight * SLOT_RATIO : undefined;
@@ -104,8 +108,9 @@ export function FocusCarousel<T>({
   return (
     <div
       ref={scrollerRef}
+      data-cursor="scroll"
       className={cn(
-        "h-full min-h-0 overflow-y-auto overscroll-y-contain snap-y snap-mandatory thin-scrollbar",
+        "h-full min-h-0 touch-pan-y overflow-y-auto overscroll-y-contain snap-y snap-mandatory no-scrollbar",
         className
       )}
     >
@@ -139,7 +144,18 @@ export function FocusCarousel<T>({
                 isFocused ? "z-20 max-w-2xl" : "z-10 max-w-lg"
               )}
             >
-              {renderItem(item, index, isFocused)}
+              {isFocused ? (
+                renderItem(item, index, true)
+              ) : (
+                <button
+                  type="button"
+                  onClick={() => scrollToIndex(index)}
+                  className="block w-full appearance-none border-0 bg-transparent p-0 text-left"
+                  aria-label={`Show ${index + 1} of ${items.length}`}
+                >
+                  {renderItem(item, index, false)}
+                </button>
+              )}
             </motion.div>
           </div>
         );

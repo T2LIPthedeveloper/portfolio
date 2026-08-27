@@ -38,7 +38,7 @@ export function ThemeToggle({ className }: { className?: string }) {
       disabled={isPilotMode}
       onClick={cycleTheme}
       className={cn(
-        "flex h-10 w-10 items-center justify-center rounded-full border border-border text-text-secondary transition-colors hover:text-accent",
+        "flex h-11 w-11 items-center justify-center rounded-full border border-border text-text-secondary transition-colors hover:text-accent",
         isPilotMode && "cursor-not-allowed opacity-40 hover:text-text-secondary",
         className
       )}

@@ -24,14 +24,14 @@ export function AboutContent({ content }: AboutContentProps) {
           <div className="mt-5 flex flex-wrap gap-3">
             <Link
               href={`mailto:${general.socials.email}`}
-              className="rounded-full border border-border px-5 py-2.5 text-base transition-colors hover:bg-surface-muted"
+              className="inline-flex min-h-11 items-center rounded-full border border-border px-5 py-2.5 text-base transition-colors hover:bg-surface-muted"
             >
               Email
             </Link>
             <Link
               href="/resumes/Atul Parida.pdf"
               target="_blank"
-              className="rounded-full bg-accent px-5 py-2.5 text-base text-white"
+              className="inline-flex min-h-11 items-center rounded-full bg-accent px-5 py-2.5 text-base text-white"
             >
               Download CV
             </Link>

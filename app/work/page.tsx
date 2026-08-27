@@ -11,7 +11,7 @@ export default async function WorkPage() {
   const content = await getContent();
 
   return (
-    <PageShell className="flex h-[calc(100dvh-5rem)] flex-col overflow-hidden pb-4">
+    <PageShell className="flex h-[calc(100dvh-env(safe-area-inset-top)-env(safe-area-inset-bottom))] max-h-[100dvh] flex-col overflow-hidden pb-3 sm:pb-4">
       <WorkExperienceView experiences={content.experiences} />
     </PageShell>
   );

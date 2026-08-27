@@ -22,22 +22,22 @@ const TYPEWRITER_LINES = [
 
 export function HeroSection({ name, photoSrc = "/images/atul.jpg" }: HeroSectionProps) {
   return (
-    <section className="relative overflow-hidden py-6 md:py-10">
-      <div className="pointer-events-none absolute -left-20 top-10 h-72 w-72 rounded-full bg-accent/10 blur-3xl" />
-      <div className="pointer-events-none absolute -right-10 bottom-0 h-64 w-64 rounded-full bg-gold/10 blur-3xl" />
+    <section className="relative overflow-hidden py-4 sm:py-6 md:py-10">
+      <div className="pointer-events-none absolute -left-8 top-10 h-56 w-56 rounded-full bg-accent/10 blur-3xl sm:-left-16 sm:h-72 sm:w-72" />
+      <div className="pointer-events-none absolute -right-6 bottom-0 h-48 w-48 rounded-full bg-gold/10 blur-3xl sm:-right-10 sm:h-64 sm:w-64" />
 
-      <div className="relative flex flex-row items-center gap-5 sm:gap-8 md:gap-10">
+      <div className="relative flex flex-col items-start gap-6 sm:flex-row sm:items-center sm:gap-8 md:gap-10">
         <motion.div
           initial={{ opacity: 0, x: -16 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
-          className="min-w-0 flex-1"
+          className="min-w-0 flex-1 order-2 sm:order-1"
         >
-          <p className="font-mono text-sm uppercase tracking-[0.25em] text-text-muted">Portfolio</p>
+          <p className="font-mono text-xs uppercase tracking-[0.25em] text-text-muted sm:text-sm">Portfolio</p>
           <h1 className="mt-2 font-display text-4xl font-semibold leading-[1.05] text-text-primary sm:text-5xl md:text-6xl lg:text-7xl">
             {name}
           </h1>
-          <div className="mt-3 min-h-[2.25rem] text-lg text-text-secondary sm:text-xl md:text-2xl">
+          <div className="mt-3 min-h-[2.25rem] text-base text-text-secondary sm:text-xl md:text-2xl">
             <Typewriter
               options={{
                 strings: TYPEWRITER_LINES,
@@ -56,14 +56,14 @@ export function HeroSection({ name, photoSrc = "/images/atul.jpg" }: HeroSection
           >
             <Link
               href="/work"
-              className="inline-flex items-center gap-2 rounded-full bg-accent px-5 py-2.5 text-base font-medium text-white transition-transform duration-200 hover:scale-[1.03] active:scale-[0.98]"
+              className="inline-flex min-h-11 items-center gap-2 rounded-full bg-accent px-5 py-2.5 text-base font-medium text-white transition-transform duration-200 hover:scale-[1.03] active:scale-[0.98]"
             >
               View my work
               <ArrowRight className="h-4 w-4" />
             </Link>
             <Link
               href="/travel"
-              className="inline-flex items-center gap-2 rounded-full border border-border px-5 py-2.5 text-base font-medium text-text-primary transition-all duration-200 hover:bg-surface-muted active:scale-[0.98]"
+              className="inline-flex min-h-11 items-center gap-2 rounded-full border border-border px-5 py-2.5 text-base font-medium text-text-primary transition-all duration-200 hover:bg-surface-muted active:scale-[0.98]"
             >
               Where I&apos;ve been
             </Link>
@@ -74,7 +74,7 @@ export function HeroSection({ name, photoSrc = "/images/atul.jpg" }: HeroSection
           initial={{ opacity: 0, scale: 0.92 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.65, delay: 0.12, ease: [0.22, 1, 0.36, 1] }}
-          className={`relative ${PHOTO_SIZE} shrink-0`}
+          className={`relative order-1 mx-auto ${PHOTO_SIZE} shrink-0 sm:order-2 sm:mx-0`}
         >
           <div
             className={`relative ${PHOTO_SIZE} overflow-hidden rounded-full border-2 border-border`}

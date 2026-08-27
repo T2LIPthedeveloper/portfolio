@@ -39,14 +39,14 @@ export function ProjectsGrid({ projects }: ProjectsGridProps) {
           value={query}
           onChange={(event) => setQuery(event.target.value)}
           placeholder="Search projects..."
-          className="w-full rounded-2xl border border-border bg-surface px-4 py-3 text-base text-text-primary outline-none ring-accent/20 focus:ring-2 sm:max-w-md"
+          className="min-h-11 w-full rounded-2xl border border-border bg-surface px-4 py-3 text-base text-text-primary outline-none ring-accent/20 focus:ring-2 sm:max-w-md"
         />
         <div className="flex flex-wrap gap-2">
           <button
             type="button"
             onClick={() => setFramework(null)}
             className={cn(
-              "rounded-full border px-3 py-1.5 text-xs font-medium transition-colors",
+              "min-h-10 rounded-full border px-3.5 py-2 text-xs font-medium transition-colors",
               framework === null
                 ? "border-accent bg-accent/10 text-accent"
                 : "border-border text-text-secondary hover:border-accent/40"
@@ -60,7 +60,7 @@ export function ProjectsGrid({ projects }: ProjectsGridProps) {
               type="button"
               onClick={() => setFramework(item === framework ? null : item)}
               className={cn(
-                "rounded-full border px-3 py-1.5 text-xs font-medium transition-colors",
+                "min-h-10 rounded-full border px-3.5 py-2 text-xs font-medium transition-colors",
                 framework === item
                   ? "border-accent bg-accent/10 text-accent"
                   : "border-border text-text-secondary hover:border-accent/40"
