@@ -51,7 +51,6 @@ export interface Certification {
   credentialId: string;
   startDate: string;
   endDate: string;
-  description: string;
 }
 
 export interface Project {

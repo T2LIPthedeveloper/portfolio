@@ -23,7 +23,7 @@ export function buildPortfolioContext(content: Content): string {
   const certificationSummary = certifications
     .map(
       (item) =>
-        `- ${item.name} from ${item.issuer} (${item.startDate} to ${item.endDate}). Credential ID: ${item.credentialId}. ${item.description}`
+        `- ${item.name} from ${item.issuer} (${item.startDate} to ${item.endDate}). Credential ID: ${item.credentialId}`
     )
     .join("\n");
 
