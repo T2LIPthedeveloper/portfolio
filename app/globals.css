@@ -68,7 +68,12 @@
   h4,
   h5,
   h6 {
-    @apply font-display;
+    @apply font-display font-medium;
+    font-variation-settings: "SOFT" 0, "WONK" 0, "opsz" 72;
+  }
+
+  .font-display {
+    font-variation-settings: "SOFT" 0, "WONK" 0, "opsz" 72;
   }
 
   /* Fine-pointer custom cursor — never on touch / coarse devices */
