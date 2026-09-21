@@ -7,7 +7,7 @@ Personal portfolio site built with Next.js 15, featuring siloed routes for work,
 | Route | Description |
 |---|---|
 | `/` | Home hero and featured teasers |
-| `/about` | Bio, education, volunteering |
+| `/about` | Bio, education, certifications, volunteering |
 | `/work` | Experience timeline |
 | `/projects` | GitHub project grid with search |
 | `/travel` | Interactive 3D globe (flights + road trips) |
