@@ -5,7 +5,7 @@ import { getContent } from "@/lib/content";
 
 export const metadata = {
   title: "About | Atul Parida",
-  description: "Learn more about Atul Parida's background, education, and volunteering.",
+  description: "Learn more about Atul Parida's background, education, certifications, and volunteering.",
 };
 
 export default async function AboutPage() {

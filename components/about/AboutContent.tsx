@@ -3,11 +3,11 @@ import Link from "next/link";
 import type { Content } from "@/types/content";
 
 interface AboutContentProps {
-  content: Pick<Content, "general" | "education" | "volunteering">;
+  content: Pick<Content, "general" | "education" | "volunteering" | "certifications">;
 }
 
 export function AboutContent({ content }: AboutContentProps) {
-  const { general, education, volunteering } = content;
+  const { general, education, volunteering, certifications } = content;
 
   return (
     <div className="space-y-8">
@@ -103,6 +103,40 @@ export function AboutContent({ content }: AboutContentProps) {
           </div>
         )}
       </section>
+
+      {certifications.length > 0 && (
+        <section>
+          <p className="font-mono text-sm uppercase tracking-[0.25em] text-text-muted">Credentials</p>
+          <h2 className="mt-2 font-display text-2xl text-text-primary md:text-3xl">Certifications</h2>
+          <div className="mt-4 grid gap-4 md:grid-cols-2">
+            {certifications.map((item) => (
+              <article
+                key={item.credentialId}
+                className="rounded-2xl border border-border bg-surface p-5"
+              >
+                <h3 className="text-lg font-medium text-text-primary">{item.name}</h3>
+                <a
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-1 inline-block text-sm text-accent hover:underline"
+                >
+                  {item.issuer}
+                </a>
+                <p className="mt-0.5 font-mono text-xs text-text-muted">
+                  Credential ID: {item.credentialId}
+                </p>
+                <p className="mt-2 font-mono text-xs uppercase tracking-wider text-text-muted">
+                  {item.startDate} — {item.endDate}
+                </p>
+                <p className="mt-3 text-sm leading-relaxed text-text-secondary md:text-base">
+                  {item.description}
+                </p>
+              </article>
+            ))}
+          </div>
+        </section>
+      )}
     </div>
   );
 }
