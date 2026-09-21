@@ -8,6 +8,7 @@
     "build": "node scripts/run-next.js build",
     "start": "node scripts/run-next.js start",
     "lint": "next lint",
+    "fonts:embed": "node scripts/embed-fonts.cjs",
     "travel:import": "tsx scripts/travel-import.ts",
     "travel:import:dry": "tsx scripts/travel-import.ts --dry-run"
   },
