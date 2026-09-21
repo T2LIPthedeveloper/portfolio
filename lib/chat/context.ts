@@ -1,7 +1,7 @@
 import type { Content } from "@/types/content";
 
 export function buildPortfolioContext(content: Content): string {
-  const { general, experiences, projects } = content;
+  const { general, experiences, projects, certifications } = content;
 
   const about = general.about.join("\n");
   const experienceSummary = experiences
@@ -20,8 +20,15 @@ export function buildPortfolioContext(content: Content): string {
     )
     .join("\n");
 
+  const certificationSummary = certifications
+    .map(
+      (item) =>
+        `- ${item.name} from ${item.issuer} (${item.startDate} to ${item.endDate}). Credential ID: ${item.credentialId}`
+    )
+    .join("\n");
+
   return `You are a concise portfolio assistant for ${general.name}.
-Answer questions about Atul's background, work experience, projects, and skills using only the context below.
+Answer questions about Atul's background, work experience, projects, certifications, and skills using only the context below.
 If asked something outside this context, say you don't have that information.
 Keep answers brief and friendly.
 
@@ -32,6 +39,9 @@ ${about}
 
 Experience:
 ${experienceSummary}
+
+Certifications:
+${certificationSummary}
 
 Projects:
 ${projectSummary}

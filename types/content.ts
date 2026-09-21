@@ -44,6 +44,15 @@ export interface Volunteering {
   description: string;
 }
 
+export interface Certification {
+  name: string;
+  issuer: string;
+  href: string;
+  credentialId: string;
+  startDate: string;
+  endDate: string;
+}
+
 export interface Project {
   name: string;
   framework: string;
@@ -58,5 +67,6 @@ export interface Content {
   experiences: Experience[];
   education: Education[];
   volunteering: Volunteering[];
+  certifications: Certification[];
   projects: Project[];
 }

@@ -25,8 +25,8 @@ module.exports = {
       },
       fontFamily: {
         sans: ["var(--font-sans)", "system-ui", "sans-serif"],
-        display: ["var(--font-display)", "Georgia", "serif"],
-        mono: ["var(--font-mono)", "monospace"],
+        display: ["var(--font-display)", "Iowan Old Style", "Palatino Linotype", "Georgia", "serif"],
+        mono: ["var(--font-mono)", "ui-monospace", "monospace"],
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
