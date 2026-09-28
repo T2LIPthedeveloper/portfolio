@@ -178,6 +178,14 @@
   ],
   "certifications": [
     {
+      "name": "AWS Certified AI Practitioner",
+      "issuer": "Amazon Web Services",
+      "href": "https://www.credly.com/badges/ccace28c-ee2e-4bcf-95ba-62f45b79fa55/public_url",
+      "credentialId": "cef9d3bd4d1f4f11ae5c563a79c7ee82",
+      "startDate": "09/2026",
+      "endDate": "09/2029"
+    },
+    {
       "name": "AWS Certified Cloud Practitioner",
       "issuer": "Amazon Web Services",
       "href": "https://www.credly.com/badges/33662206-016c-4ed5-a489-1b7b6c93d997/public_url",
