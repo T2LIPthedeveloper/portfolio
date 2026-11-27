@@ -1,6 +1,16 @@
 import { promises as fs } from "fs";
 import path from "path";
-import type { RoadTrip, RoadTripPath, TravelManifest } from "@/types/travel";
+import { unstable_cache } from "next/cache";
+import { feature } from "topojson-client";
+import type { FeatureCollection, Geometry } from "geojson";
+import type { Topology, GeometryCollection } from "topojson-specification";
+import type {
+  RoadTrip,
+  RoadTripPath,
+  TravelDestinationsData,
+  TravelManifest,
+  TravelPilotData,
+} from "@/types/travel";
 import { parseFlightsCsv } from "./parse-flights";
 import { loadAirports, resolveAirport } from "./geocode";
 import { buildAirportPoints, groupRoutes } from "./group-routes";
@@ -13,8 +23,13 @@ import {
   seedDestinationsFromFlights,
 } from "./destinations";
 
-const MANIFEST_PATH = path.join(process.cwd(), "public/data/travel-manifest.json");
-const ROAD_TRIPS_PATH = path.join(process.cwd(), "public/data/road-trips.json");
+const DATA_DIR = path.join(process.cwd(), "public/data");
+const MANIFEST_PATH = path.join(DATA_DIR, "travel-manifest.json");
+const DESTINATIONS_PATH = path.join(DATA_DIR, "travel-destinations.json");
+const PILOT_PATH = path.join(DATA_DIR, "travel-pilot.json");
+const COUNTRIES_TOPO_PATH = path.join(DATA_DIR, "countries-110m.json");
+const COUNTRIES_GEO_PATH = path.join(DATA_DIR, "countries-110m.geojson");
+const ROAD_TRIPS_PATH = path.join(DATA_DIR, "road-trips.json");
 
 async function loadRoadTrips(): Promise<RoadTripPath[]> {
   try {
@@ -38,6 +53,70 @@ async function loadRoadTrips(): Promise<RoadTripPath[]> {
     return paths;
   } catch {
     return [];
+  }
+}
+
+function toDestinationsData(manifest: TravelManifest): TravelDestinationsData {
+  return {
+    generatedAt: manifest.generatedAt,
+    scopeNote: manifest.scopeNote,
+    destinations: manifest.destinations,
+    tripMappings: manifest.tripMappings,
+    tripArcs: manifest.tripArcs,
+    roadTrips: manifest.roadTrips,
+    destinationStats: manifest.destinationStats,
+  };
+}
+
+function toPilotData(manifest: TravelManifest): TravelPilotData {
+  return {
+    arcs: manifest.arcs,
+    points: manifest.points,
+    flights: manifest.flights,
+    pilotStats: manifest.pilotStats,
+    stats: manifest.stats,
+  };
+}
+
+function roundCoord(n: number) {
+  return Math.round(n * 100) / 100;
+}
+
+function quantizeCoords(coords: unknown): unknown {
+  if (!Array.isArray(coords)) return coords;
+  if (typeof coords[0] === "number") {
+    return [roundCoord(coords[0] as number), roundCoord(coords[1] as number)];
+  }
+  return coords.map(quantizeCoords);
+}
+
+/** Precompute TopoJSON → quantized GeoJSON so the browser never loads topojson-client. */
+async function writeCountriesGeoJson(): Promise<void> {
+  try {
+    const raw = await fs.readFile(COUNTRIES_TOPO_PATH, "utf-8");
+    const world = JSON.parse(raw) as Topology;
+    const collection = feature(
+      world,
+      world.objects.countries as GeometryCollection
+    ) as FeatureCollection<Geometry>;
+    const slim = {
+      type: "FeatureCollection" as const,
+      features: collection.features
+        .filter((f): f is typeof f & { geometry: Geometry } => Boolean(f.geometry))
+        .map((f) => ({
+          type: "Feature" as const,
+          properties: {},
+          geometry: {
+            ...f.geometry,
+            coordinates: quantizeCoords(
+              "coordinates" in f.geometry ? f.geometry.coordinates : []
+            ),
+          },
+        })),
+    };
+    await fs.writeFile(COUNTRIES_GEO_PATH, JSON.stringify(slim));
+  } catch (error) {
+    console.warn("Could not precompute countries GeoJSON:", error);
   }
 }
 
@@ -118,12 +197,15 @@ export async function writeTravelManifest(
 
   if (!options.dryRun) {
     await fs.writeFile(MANIFEST_PATH, JSON.stringify(manifest, null, 2));
+    await fs.writeFile(DESTINATIONS_PATH, JSON.stringify(toDestinationsData(manifest), null, 2));
+    await fs.writeFile(PILOT_PATH, JSON.stringify(toPilotData(manifest), null, 2));
+    await writeCountriesGeoJson();
   }
 
   return manifest;
 }
 
-export async function getTravelData(): Promise<TravelManifest> {
+async function readTravelManifest(): Promise<TravelManifest> {
   try {
     const raw = await fs.readFile(MANIFEST_PATH, "utf-8");
     const parsed = JSON.parse(raw) as TravelManifest;
@@ -132,4 +214,30 @@ export async function getTravelData(): Promise<TravelManifest> {
     // fall through to rebuild
   }
   return writeTravelManifest({ useNominatim: false });
+}
+
+export async function getTravelData(): Promise<TravelManifest> {
+  return unstable_cache(readTravelManifest, ["travel-manifest"], {
+    revalidate: 3600,
+    tags: ["travel"],
+  })();
+}
+
+async function readTravelDestinations(): Promise<TravelDestinationsData> {
+  try {
+    const raw = await fs.readFile(DESTINATIONS_PATH, "utf-8");
+    return JSON.parse(raw) as TravelDestinationsData;
+  } catch {
+    const manifest = await readTravelManifest();
+    const destinations = toDestinationsData(manifest);
+    await fs.writeFile(DESTINATIONS_PATH, JSON.stringify(destinations, null, 2)).catch(() => undefined);
+    return destinations;
+  }
+}
+
+export async function getTravelDestinationsData(): Promise<TravelDestinationsData> {
+  return unstable_cache(readTravelDestinations, ["travel-destinations"], {
+    revalidate: 3600,
+    tags: ["travel"],
+  })();
 }

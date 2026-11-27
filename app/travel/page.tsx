@@ -2,7 +2,9 @@ import { PageShell } from "@/components/layout/PageShell";
 import { Footer } from "@/components/layout/Footer";
 import { TravelPageContent } from "@/components/travel/TravelPageContent";
 import { getContent } from "@/lib/content";
-import { getTravelData } from "@/lib/travel";
+import { getTravelDestinationsData } from "@/lib/travel";
+
+export const revalidate = 3600;
 
 export const metadata = {
   title: "Travel | Atul Parida",
@@ -10,7 +12,7 @@ export const metadata = {
 };
 
 export default async function TravelPage() {
-  const [content, travelData] = await Promise.all([getContent(), getTravelData()]);
+  const [content, travelData] = await Promise.all([getContent(), getTravelDestinationsData()]);
 
   return (
     <>

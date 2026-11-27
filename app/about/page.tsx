@@ -3,6 +3,8 @@ import { Footer } from "@/components/layout/Footer";
 import { AboutContent } from "@/components/about/AboutContent";
 import { getContent } from "@/lib/content";
 
+export const revalidate = 3600;
+
 export const metadata = {
   title: "About | Atul Parida",
   description: "Learn more about Atul Parida's background, education, certifications, and volunteering.",

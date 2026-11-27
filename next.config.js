@@ -1,5 +1,8 @@
 const path = require("path");
 const { webpack } = require("next/dist/compiled/webpack/webpack");
+const withBundleAnalyzer = require("@next/bundle-analyzer")({
+  enabled: process.env.ANALYZE === "true",
+});
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -7,6 +10,9 @@ const nextConfig = {
   distDir: process.env.NEXT_DIST_DIR || ".next",
   transpilePackages: ["react-globe.gl"],
   outputFileTracingRoot: path.join(__dirname),
+  experimental: {
+    optimizePackageImports: ["lucide-react", "framer-motion"],
+  },
   webpack: (config, { isServer, dev }) => {
     if (!isServer) {
       config.resolve = {
@@ -45,4 +51,4 @@ const nextConfig = {
   },
 };
 
-module.exports = nextConfig;
+module.exports = withBundleAnalyzer(nextConfig);

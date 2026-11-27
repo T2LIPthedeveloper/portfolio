@@ -5,6 +5,8 @@ import { HeroSection } from "@/components/sections/HeroSection";
 import { TeaserSection } from "@/components/sections/TeaserSection";
 import { getContent, getProjectsWithGitHub } from "@/lib/content";
 
+export const revalidate = 3600;
+
 export default async function HomePage() {
   const content = await getContent();
   const projects = await getProjectsWithGitHub();

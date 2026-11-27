@@ -3,7 +3,7 @@ import "./fonts/embedded.css";
 import "./globals.css";
 import { ThemeProvider } from "@/components/layout/ThemeProvider";
 import { Navbar } from "@/components/layout/Navbar";
-import { CustomCursor } from "@/components/layout/CustomCursor";
+import { DeferredCustomCursor } from "@/components/layout/DeferredCustomCursor";
 import { PilotModeProvider } from "@/components/travel/PilotModeProvider";
 
 /**
@@ -37,7 +37,7 @@ export default function RootLayout({
       <body className="font-sans antialiased">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <PilotModeProvider>
-            <CustomCursor />
+            <DeferredCustomCursor />
             <Navbar />
             <main className="min-h-screen">{children}</main>
           </PilotModeProvider>

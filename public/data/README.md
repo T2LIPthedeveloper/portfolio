@@ -11,7 +11,7 @@ This folder feeds the `/travel` globe and Pilot Mode. Edit the source files belo
 npm run travel:import
 ```
 
-3. Restart (or refresh) the Next.js dev server so it picks up `travel-manifest.json`.
+3. Restart (or refresh) the Next.js dev server so it picks up the generated JSON files (`travel-manifest.json`, `travel-destinations.json`, `travel-pilot.json`, `countries-110m.geojson`).
 
 Dry-run (no write):
 

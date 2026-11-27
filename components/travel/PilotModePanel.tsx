@@ -1,23 +1,29 @@
 "use client";
 
-import type { TravelManifest } from "@/types/travel";
+import type { TravelPilotData } from "@/types/travel";
 import { BoundedList } from "@/components/ui/BoundedList";
 import { SolariBoard } from "./SolariBoard";
 
 interface PilotModePanelProps {
-  data: TravelManifest;
+  data: TravelPilotData;
 }
 
 export function PilotModePanel({ data }: PilotModePanelProps) {
-  const { pilotStats, flights } = data;
+  const { pilotStats, flights, stats } = data;
 
   return (
     <div className="flex h-full min-h-0 flex-col gap-3 overflow-hidden">
       <div className="shrink-0 rounded-xl border border-border bg-surface p-3">
-        <div className="grid grid-cols-2 gap-3">
-          <SolariBoard label="Miles" value={pilotStats.totalMiles} pad={6} compact />
-          <SolariBoard label="Flights" value={data.stats.totalFlights} pad={2} compact />
-          <SolariBoard label="Aircraft Types" value={pilotStats.uniqueAircraft} pad={2} compact />
+        <div className="grid grid-cols-3 gap-2 sm:gap-3">
+          <SolariBoard
+            label="Miles"
+            value={pilotStats.totalMiles}
+            pad={6}
+            compact
+            className="col-span-3"
+          />
+          <SolariBoard label="Flights" value={stats.totalFlights} pad={2} compact />
+          <SolariBoard label="Aircraft" value={pilotStats.uniqueAircraft} pad={2} compact />
           <SolariBoard label="Airlines" value={pilotStats.uniqueAirlines} pad={2} compact />
         </div>
       </div>
