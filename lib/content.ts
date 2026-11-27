@@ -1,13 +1,21 @@
 import { promises as fs } from "fs";
 import path from "path";
+import { unstable_cache } from "next/cache";
 import type { Content, Project } from "@/types/content";
 
 const CONTENT_PATH = path.join(process.cwd(), "public/translations/en.json");
 const GITHUB_USERNAME = "T2LIPthedeveloper";
 
-export async function getContent(): Promise<Content> {
+async function readContentFile(): Promise<Content> {
   const file = await fs.readFile(CONTENT_PATH, "utf-8");
   return JSON.parse(file) as Content;
+}
+
+export async function getContent(): Promise<Content> {
+  return unstable_cache(readContentFile, ["portfolio-content"], {
+    revalidate: 3600,
+    tags: ["content"],
+  })();
 }
 
 interface GitHubRepo {

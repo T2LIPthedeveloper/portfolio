@@ -12,10 +12,10 @@ const links = [
   { href: "/", label: "Home" },
   { href: "/work", label: "Work" },
   { href: "/projects", label: "Projects" },
-  { href: "/travel", label: "Travel" },
+  { href: "/travel", label: "Travel", prefetch: false },
   { href: "/about", label: "About" },
-  { href: "/chat", label: "Chat" },
-];
+  { href: "/chat", label: "Chat", prefetch: false },
+] as const;
 
 export function Navbar() {
   const pathname = usePathname();
@@ -77,6 +77,7 @@ export function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
+                prefetch={"prefetch" in link ? link.prefetch : undefined}
                 className={cn(
                   "rounded-full px-3 py-1.5 text-sm transition-colors",
                   pathname === link.href
@@ -118,6 +119,7 @@ export function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
+                prefetch={"prefetch" in link ? link.prefetch : undefined}
                 onClick={() => setOpen(false)}
                 className={cn(
                   "min-h-11 px-4 py-2 font-display text-2xl sm:text-3xl",

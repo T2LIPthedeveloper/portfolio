@@ -3,6 +3,8 @@ import { Footer } from "@/components/layout/Footer";
 import { ProjectsGrid } from "@/components/projects/ProjectsGrid";
 import { getContent, getProjectsWithGitHub } from "@/lib/content";
 
+export const revalidate = 3600;
+
 export const metadata = {
   title: "Projects | Atul Parida",
   description: "Selected projects and GitHub repositories by Atul Parida.",

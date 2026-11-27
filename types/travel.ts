@@ -135,6 +135,26 @@ export interface TravelManifest {
 
 export type GlobeMode = "destinations" | "pilot";
 
+/** Destinations view payload — excludes heavy flight-log arrays. */
+export interface TravelDestinationsData {
+  generatedAt: string;
+  scopeNote: string;
+  destinations: DestinationPlace[];
+  tripMappings: TripMapping[];
+  tripArcs: TripArc[];
+  roadTrips: RoadTripPath[];
+  destinationStats: DestinationStats;
+}
+
+/** Pilot Mode payload — flight arcs, airports, and log. */
+export interface TravelPilotData {
+  arcs: FlightArc[];
+  points: AirportPoint[];
+  flights: FlightDetail[];
+  pilotStats: PilotStats;
+  stats: TravelManifest["stats"];
+}
+
 export interface GlobeViewData {
   mode: GlobeMode;
   arcs: Array<FlightArc | TripArc>;

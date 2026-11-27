@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-23T23:03:51.406Z",
+  "generatedAt": "2026-11-27T22:21:18.738Z",
   "scopeNote": "Destination markers reflect lifetime visits. Flight arcs and Pilot Mode stats cover logged flights from 2017 onward. Add places you've visited outside the flight log below.",
   "stats": {
     "totalFlights": 61,
@@ -969,6 +969,7 @@
     {
       "id": "yosemite-2024",
       "name": "SF and Yosemite Visit",
+      "description": "Visited UC Berkeley and Yosemite National Park with my ex-girlfriend and her friends during an exchange program.",
       "coords": [
         [
           37.87159,
@@ -986,12 +987,12 @@
           37.87159,
           -122.27275
         ]
-      ],
-      "description": "Visited UC Berkeley and Yosemite National Park with my ex-girlfriend and her friends during an exchange program."
+      ]
     },
     {
       "id": "uiuc-2024",
       "name": "UIUC Visit",
+      "description": "Visited Chicago and University of Illinois at Urbana-Champaign to drop off my younger brother to college.",
       "coords": [
         [
           41.88372,
@@ -1005,12 +1006,12 @@
           41.88372,
           -87.63238
         ]
-      ],
-      "description": "Visited Chicago and University of Illinois at Urbana-Champaign to drop off my younger brother to college."
+      ]
     },
     {
       "id": "htx-2024",
       "name": "Houston and NASA Visit",
+      "description": "Visited Houston and NASA Johnson Space Center with relatives.",
       "coords": [
         [
           30.2672,
@@ -1024,12 +1025,12 @@
           30.2672,
           -97.7431
         ]
-      ],
-      "description": "Visited Houston and NASA Johnson Space Center with relatives."
+      ]
     },
     {
       "id": "satx-2025",
       "name": "San Antonio Visit",
+      "description": "Visited San Antonio to purchase my car.",
       "coords": [
         [
           30.2672,
@@ -1043,12 +1044,12 @@
           30.2672,
           -97.7431
         ]
-      ],
-      "description": "Visited San Antonio to purchase my car."
+      ]
     },
     {
       "id": "arkansas-2026",
       "name": "Arkansas Visit",
+      "description": "Visited Texarkana, Hot Springs and Little Rock with my friends.",
       "coords": [
         [
           30.2672,
@@ -1078,12 +1079,12 @@
           30.2672,
           -97.7431
         ]
-      ],
-      "description": "Visited Texarkana, Hot Springs and Little Rock with my friends."
+      ]
     },
     {
       "id": "wa-2026",
       "name": "Washington Visit",
+      "description": "Visited Seattle and the three surrounding national parks with my friends. Visited Olympia, Forks (Olympic National Park), Port Angeles, Port Townsend, Coupeville, Marblemount (North Cascades National Park), Paradise (Mount Rainier National Park) and Tacoma.",
       "coords": [
         [
           47.60621,
@@ -1125,12 +1126,12 @@
           47.60621,
           -122.33207
         ]
-      ],
-      "description": "Visited Seattle and the three surrounding national parks with my friends. Visited Olympia, Forks (Olympic National Park), Port Angeles, Port Townsend, Coupeville, Marblemount (North Cascades National Park), Paradise (Mount Rainier National Park) and Tacoma."
+      ]
     },
     {
       "id": "okc-2026",
       "name": "Oklahoma City and Tulsa Visit",
+      "description": "Visited Oklahoma City and Tulsa with my friends for the 4th of July. Hit up some casinos along the way.",
       "coords": [
         [
           30.2672,
@@ -1156,8 +1157,7 @@
           30.2672,
           -97.7431
         ]
-      ],
-      "description": "Visited Oklahoma City and Tulsa with my friends for the 4th of July. Hit up some casinos along the way."
+      ]
     }
   ],
   "flights": [

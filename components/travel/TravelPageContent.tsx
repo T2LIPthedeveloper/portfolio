@@ -1,16 +1,40 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import { AnimatePresence, motion } from "framer-motion";
 import { Plane } from "lucide-react";
-import type { TravelManifest } from "@/types/travel";
+import { useEffect, useState } from "react";
+import type { TravelDestinationsData, TravelPilotData } from "@/types/travel";
 import { BoundedList } from "@/components/ui/BoundedList";
 import { cn } from "@/lib/utils";
-import { TravelGlobe } from "./TravelGlobe";
-import { PilotModePanel } from "./PilotModePanel";
 import { usePilotMode } from "./PilotModeProvider";
 
+const TravelGlobe = dynamic(
+  () => import("./TravelGlobe").then((mod) => mod.TravelGlobe),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-full min-h-[280px] w-full items-center justify-center rounded-2xl border border-border bg-globe-base">
+        <p className="font-mono text-xs uppercase tracking-widest text-text-muted">Loading map</p>
+      </div>
+    ),
+  }
+);
+
+const PilotModePanel = dynamic(
+  () => import("./PilotModePanel").then((mod) => mod.PilotModePanel),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-full min-h-[280px] items-center justify-center rounded-xl border border-border bg-surface">
+        <p className="font-mono text-xs uppercase tracking-widest text-text-muted">Loading cockpit</p>
+      </div>
+    ),
+  }
+);
+
 interface TravelPageContentProps {
-  data: TravelManifest;
+  data: TravelDestinationsData;
 }
 
 const GLOBE_BOX =
@@ -21,6 +45,29 @@ const TRAVEL_SCOPE_NOTE =
 
 export function TravelPageContent({ data }: TravelPageContentProps) {
   const { isPilotMode, togglePilot } = usePilotMode();
+  const [pilotData, setPilotData] = useState<TravelPilotData | null>(null);
+  const [pilotError, setPilotError] = useState(false);
+
+  useEffect(() => {
+    if (!isPilotMode || pilotData) return;
+
+    let cancelled = false;
+    fetch("/data/travel-pilot.json")
+      .then((res) => {
+        if (!res.ok) throw new Error("Failed to load pilot data");
+        return res.json() as Promise<TravelPilotData>;
+      })
+      .then((payload) => {
+        if (!cancelled) setPilotData(payload);
+      })
+      .catch(() => {
+        if (!cancelled) setPilotError(true);
+      });
+
+    return () => {
+      cancelled = true;
+    };
+  }, [isPilotMode, pilotData]);
 
   const mappedJourneys = [
     ...data.tripMappings.map((trip) => ({
@@ -78,12 +125,31 @@ export function TravelPageContent({ data }: TravelPageContentProps) {
               </p>
               <span className="font-mono text-xs text-gold">LIVE</span>
             </div>
-            <div className="grid items-stretch gap-4 lg:grid-cols-[1.05fr_0.95fr]">
-              <TravelGlobe data={data} mode="pilot" className={GLOBE_BOX} />
-              <div className={cn(GLOBE_BOX, "min-h-0 overflow-hidden")}>
-                <PilotModePanel data={data} />
+            {pilotError ? (
+              <p className="rounded-xl border border-border bg-surface p-4 text-sm text-text-secondary">
+                Couldn&apos;t load pilot flight data. Try refreshing the page.
+              </p>
+            ) : (
+              <div className="grid items-stretch gap-4 lg:grid-cols-[1.05fr_0.95fr]">
+                <TravelGlobe
+                  destinations={data}
+                  pilot={pilotData}
+                  mode="pilot"
+                  className={GLOBE_BOX}
+                />
+                <div className={cn(GLOBE_BOX, "min-h-0 overflow-hidden")}>
+                  {pilotData ? (
+                    <PilotModePanel data={pilotData} />
+                  ) : (
+                    <div className="flex h-full items-center justify-center rounded-xl border border-border bg-surface">
+                      <p className="font-mono text-xs uppercase tracking-widest text-text-muted">
+                        Loading cockpit
+                      </p>
+                    </div>
+                  )}
+                </div>
               </div>
-            </div>
+            )}
           </motion.div>
         ) : (
           <motion.div
@@ -94,7 +160,7 @@ export function TravelPageContent({ data }: TravelPageContentProps) {
             transition={{ duration: 0.3 }}
             className="grid items-stretch gap-5 lg:grid-cols-[1.2fr_1fr] lg:min-h-[360px]"
           >
-            <TravelGlobe data={data} mode="destinations" className={GLOBE_BOX} />
+            <TravelGlobe destinations={data} mode="destinations" className={GLOBE_BOX} />
             <aside className="flex h-full min-h-0 flex-col gap-3 overflow-hidden">
               <div className="grid shrink-0 grid-cols-2 gap-2">
                 {[

@@ -6,6 +6,7 @@
     "clean": "rm -rf .next .next-dev .next-process.lock",
     "dev": "node scripts/run-next.js dev",
     "build": "node scripts/run-next.js build",
+    "analyze": "ANALYZE=true node scripts/run-next.js build",
     "start": "node scripts/run-next.js start",
     "lint": "next lint",
     "fonts:embed": "node scripts/embed-fonts.cjs",
@@ -15,7 +16,6 @@
   "dependencies": {
     "autoprefixer": "10.4.14",
     "clsx": "^2.1.1",
-    "devicons-react": "^1.4.0",
     "eslint": "8.42.0",
     "framer-motion": "^13.1.1",
     "lucide-react": "^1.33.0",
@@ -30,11 +30,11 @@
     "tailwind-merge": "^3.6.0",
     "tailwindcss": "3.3.2",
     "three": "^0.185.1",
-    "topojson-client": "^3.1.0",
     "tsx": "^4.23.12",
     "typewriter-effect": "^2.21.0"
   },
   "devDependencies": {
+    "@next/bundle-analyzer": "^16.4.6",
     "@types/geojson": "^7946.0.16",
     "@types/node": "^26.2.0",
     "@types/papaparse": "^5.5.2",
@@ -43,6 +43,7 @@
     "@types/three": "^0.185.4",
     "@types/topojson-client": "^3.1.5",
     "eslint-config-next": "^15.5.21",
+    "topojson-client": "^3.1.0",
     "typescript": "^6.0.3"
   }
 }

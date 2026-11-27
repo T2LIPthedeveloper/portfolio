@@ -22,6 +22,11 @@
   --color-pilot-text: #d6d3d1;
   --color-pilot-accent: #22d3ee;
   --color-pilot-amber: #fbbf24;
+  /* Paper atmosphere — keep quiet but readable */
+  --paper-grain-opacity: 0.055;
+  --paper-wash-a: color-mix(in srgb, #fffaf3 55%, transparent);
+  --paper-wash-b: color-mix(in srgb, #e8e0d4 40%, transparent);
+  --paper-wash-c: color-mix(in srgb, #d9d2c6 28%, transparent);
 }
 
 .dark {
@@ -39,6 +44,10 @@
   --color-arc: #2dd4bf;
   --color-point: #f59e0b;
   --color-circuit: #5eead4;
+  --paper-grain-opacity: 0.07;
+  --paper-wash-a: color-mix(in srgb, #171c16 50%, transparent);
+  --paper-wash-b: color-mix(in srgb, #080a07 45%, transparent);
+  --paper-wash-c: color-mix(in srgb, #121816 32%, transparent);
 }
 
 @layer base {
@@ -60,6 +69,31 @@
     @apply bg-canvas text-text-primary font-sans antialiased;
     overflow-x: clip;
     -webkit-tap-highlight-color: transparent;
+    isolation: isolate;
+    /* Soft value variation under the grain — less flat without looking patterned */
+    background-image:
+      radial-gradient(ellipse 90% 70% at 12% 8%, var(--paper-wash-a), transparent 58%),
+      radial-gradient(ellipse 80% 60% at 88% 18%, var(--paper-wash-b), transparent 52%),
+      radial-gradient(ellipse 70% 55% at 50% 100%, var(--paper-wash-c), transparent 55%);
+    background-color: var(--color-canvas);
+  }
+
+  /* Fine paper grain — SVG noise behind content, fixed so it doesn't scroll-jitter */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    opacity: var(--paper-grain-opacity);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-size: 180px 180px;
+    mix-blend-mode: multiply;
+  }
+
+  .dark body::before {
+    mix-blend-mode: soft-light;
   }
 
   h1,
@@ -239,10 +273,49 @@
     --cursor-ink-soft: rgba(103, 232, 249, 0.22);
     --cursor-ink-ring: rgba(103, 232, 249, 0.7);
     --cursor-ink-fill: rgba(103, 232, 249, 0.12);
+    --paper-grain-opacity: 0.055;
   }
 
+  /*
+   * Pilot Mode: keep the existing cockpit wash, then add quiet
+   * radar-range rings (matches LIVE / flight arcs better than topo).
+   */
   html.pilot-mode body {
-    background: radial-gradient(ellipse at top, #111827 0%, #070a0f 55%);
+    background-color: var(--color-pilot-bg);
+    background-image:
+      radial-gradient(circle at 50% 42%, transparent 18%, rgba(34, 211, 238, 0.035) 18.6%, transparent 19.2%),
+      radial-gradient(circle at 50% 42%, transparent 32%, rgba(34, 211, 238, 0.028) 32.6%, transparent 33.2%),
+      radial-gradient(circle at 50% 42%, transparent 46%, rgba(251, 191, 36, 0.02) 46.6%, transparent 47.2%),
+      radial-gradient(circle at 50% 42%, transparent 60%, rgba(34, 211, 238, 0.018) 60.5%, transparent 61%),
+      radial-gradient(ellipse 120% 80% at 50% -10%, #111827 0%, transparent 55%),
+      radial-gradient(ellipse at top, #111827 0%, #070a0f 55%);
+  }
+
+  html.pilot-mode body::before {
+    opacity: var(--paper-grain-opacity);
+    mix-blend-mode: soft-light;
+    /* Slightly coarser instrument-panel grain */
+    background-size: 220px 220px;
+  }
+
+  /* Quiet CRT/instrument scan — behind content with the grain */
+  html.pilot-mode body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    opacity: 0.35;
+    background:
+      linear-gradient(
+        180deg,
+        transparent 0%,
+        rgba(34, 211, 238, 0.014) 48%,
+        transparent 52%,
+        transparent 100%
+      );
+    background-size: 100% 8px;
+    mix-blend-mode: screen;
   }
 }
 

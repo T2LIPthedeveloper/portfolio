@@ -24,11 +24,16 @@ function SplitFlapDigit({ char, compact }: SplitFlapDigitProps & { compact?: boo
   }, [char, current]);
 
   return (
-    <div className={cn("flip-scene relative", compact ? "h-11 w-7" : "h-14 w-9 md:h-[4.5rem] md:w-11")}>
+    <div
+      className={cn(
+        "flip-scene relative",
+        compact ? "h-9 w-[1.35rem] sm:h-11 sm:w-7" : "h-14 w-9 md:h-[4.5rem] md:w-11"
+      )}
+    >
       <div
         className={cn(
           "flip-digit relative h-full w-full rounded-[3px] border border-[#374151] bg-[#111827] font-mono font-bold text-[#f5f5f4] shadow-[inset_0_-2px_0_rgba(0,0,0,0.55)]",
-          compact ? "text-lg" : "text-2xl md:text-3xl",
+          compact ? "text-sm sm:text-lg" : "text-2xl md:text-3xl",
           flipping && "is-flipping"
         )}
       >
@@ -93,18 +98,33 @@ interface SolariBoardProps {
 
 export function SolariBoard({ label, value, pad = 6, suffix, className, compact }: SolariBoardProps) {
   const animated = useAnimatedNumber(value);
-  const str = animated.toLocaleString().padStart(pad, " ");
+  const str = animated.toLocaleString("en-US");
+  const digitCount = str.replace(/,/g, "").length;
+  const padded =
+    digitCount < pad
+      ? `${" ".repeat(pad - digitCount)}${str}`
+      : str;
 
   return (
-    <div className={cn(compact ? "space-y-1" : "space-y-2", className)}>
-      <p className="font-mono text-xs uppercase tracking-[0.22em] text-[#67e8f9]/80">{label}</p>
-      <div className="flex items-end gap-1.5">
-        <div className="flex gap-0.5">
-          {str.split("").map((char, i) =>
+    <div className={cn(compact ? "space-y-1" : "space-y-2", "min-w-0", className)}>
+      <p
+        className={cn(
+          "font-mono uppercase text-[#67e8f9]/80",
+          compact ? "text-[10px] tracking-[0.18em] sm:text-xs sm:tracking-[0.22em]" : "text-xs tracking-[0.22em]"
+        )}
+      >
+        {label}
+      </p>
+      <div className="flex min-w-0 items-end gap-1 sm:gap-1.5">
+        <div className="flex min-w-0 flex-wrap items-end gap-px sm:gap-0.5">
+          {padded.split("").map((char, i) =>
             char === " " || char === "," ? (
               <span
                 key={`${label}-${i}`}
-                className={cn("font-mono text-[#67e8f9]", compact ? "w-1 text-sm" : "w-1.5 text-xl")}
+                className={cn(
+                  "shrink-0 font-mono text-[#67e8f9]",
+                  compact ? "w-1 text-xs sm:w-1.5 sm:text-sm" : "w-1.5 text-xl"
+                )}
               >
                 {char === "," ? "," : ""}
               </span>

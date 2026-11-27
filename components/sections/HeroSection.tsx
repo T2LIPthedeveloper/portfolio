@@ -1,10 +1,19 @@
 "use client";
 
 import Image from "next/image";
+import dynamic from "next/dynamic";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import Typewriter from "typewriter-effect";
+
+const Typewriter = dynamic(() => import("typewriter-effect"), {
+  ssr: false,
+  loading: () => (
+    <span className="text-base text-text-secondary sm:text-xl md:text-2xl">
+      I&apos;m a Software Engineer.
+    </span>
+  ),
+});
 
 interface HeroSectionProps {
   name: string;
@@ -63,6 +72,7 @@ export function HeroSection({ name, photoSrc = "/images/atul.jpg" }: HeroSection
             </Link>
             <Link
               href="/travel"
+              prefetch={false}
               className="inline-flex min-h-11 items-center gap-2 rounded-full border border-border px-5 py-2.5 text-base font-medium text-text-primary transition-all duration-200 hover:bg-surface-muted active:scale-[0.98]"
             >
               Where I&apos;ve been

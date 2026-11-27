@@ -3,11 +3,13 @@
 import dynamic from "next/dynamic";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useTheme } from "next-themes";
-import { feature } from "topojson-client";
 import type { GlobeMethods } from "react-globe.gl";
 import type { FeatureCollection, Geometry } from "geojson";
-import type { Topology, GeometryCollection } from "topojson-specification";
-import type { GlobeMode, TravelManifest } from "@/types/travel";
+import type {
+  GlobeMode,
+  TravelDestinationsData,
+  TravelPilotData,
+} from "@/types/travel";
 import { cn } from "@/lib/utils";
 import { GlobeErrorBoundary } from "./GlobeErrorBoundary";
 
@@ -22,6 +24,7 @@ const Globe = dynamic(() => import("react-globe.gl"), {
 
 const OCEAN_LIGHT = "/images/globe/ocean-light.png";
 const OCEAN_DARK = "/images/globe/ocean-dark.png";
+const COUNTRIES_GEOJSON = "/data/countries-110m.geojson";
 
 function canCreateWebGLContext() {
   if (typeof document === "undefined") return false;
@@ -49,7 +52,8 @@ function GlobeUnavailable() {
 }
 
 interface TravelGlobeProps {
-  data: TravelManifest;
+  destinations?: TravelDestinationsData;
+  pilot?: TravelPilotData | null;
   mode: GlobeMode;
   className?: string;
 }
@@ -76,11 +80,12 @@ function useContainerSize() {
   return { containerRef, size };
 }
 
-export function TravelGlobe({ data, mode, className }: TravelGlobeProps) {
+export function TravelGlobe({ destinations, pilot, mode, className }: TravelGlobeProps) {
   const globeRef = useRef<GlobeMethods | undefined>(undefined);
   const { containerRef, size } = useContainerSize();
   const { resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
+  const [idleReady, setIdleReady] = useState(false);
   const [countries, setCountries] = useState<object[]>([]);
   const [webglOk, setWebglOk] = useState(true);
 
@@ -92,30 +97,52 @@ export function TravelGlobe({ data, mode, className }: TravelGlobeProps) {
     setWebglOk(canCreateWebGLContext());
   }, []);
 
+  // Defer three.js chunk work until the destinations chrome can paint.
   useEffect(() => {
+    if (!mounted || size.width === 0 || size.height === 0) return;
+
     let cancelled = false;
-    fetch("/data/countries-110m.json")
+    const enable = () => {
+      if (!cancelled) setIdleReady(true);
+    };
+
+    if (typeof window.requestIdleCallback === "function") {
+      const id = window.requestIdleCallback(enable, { timeout: 1200 });
+      return () => {
+        cancelled = true;
+        window.cancelIdleCallback(id);
+      };
+    }
+
+    const timer = window.setTimeout(enable, 200);
+    return () => {
+      cancelled = true;
+      window.clearTimeout(timer);
+    };
+  }, [mounted, size.width, size.height]);
+
+  useEffect(() => {
+    if (!idleReady) return;
+
+    let cancelled = false;
+    fetch(COUNTRIES_GEOJSON)
       .then((res) => res.json())
-      .then((world: Topology) => {
-        if (cancelled) return;
-        const collection = feature(
-          world,
-          world.objects.countries as GeometryCollection
-        ) as FeatureCollection<Geometry>;
-        setCountries(collection.features);
+      .then((collection: FeatureCollection<Geometry>) => {
+        if (!cancelled) setCountries(collection.features ?? []);
       })
       .catch(() => {
         if (!cancelled) setCountries([]);
       });
+
     return () => {
       cancelled = true;
     };
-  }, []);
+  }, [idleReady]);
 
   const arcsData = useMemo(() => {
-    if (mode === "destinations") return [];
-    return data.arcs.map((arc) => ({ ...arc }));
-  }, [data.arcs, mode]);
+    if (mode === "destinations" || !pilot) return [];
+    return pilot.arcs.map((arc) => ({ ...arc }));
+  }, [pilot, mode]);
 
   const pilotArcAltitude = useCallback((arc: { startLat: number; endLat: number; startLng: number; endLng: number }) => {
     const span = Math.max(
@@ -127,7 +154,7 @@ export function TravelGlobe({ data, mode, className }: TravelGlobeProps) {
 
   const pointsData = useMemo(() => {
     if (mode === "destinations") {
-      return data.destinations.map((place) => ({
+      return (destinations?.destinations ?? []).map((place) => ({
         lat: place.lat,
         lng: place.lng,
         name: place.name,
@@ -136,31 +163,31 @@ export function TravelGlobe({ data, mode, className }: TravelGlobeProps) {
         kind: "destination",
       }));
     }
-    return data.points.map((point) => ({
+    return (pilot?.points ?? []).map((point) => ({
       ...point,
       kind: "airport",
       size: Math.min(0.28, 0.08 + point.visitCount * 0.02),
     }));
-  }, [data.destinations, data.points, mode]);
+  }, [destinations?.destinations, pilot?.points, mode]);
 
   const pathsData = useMemo(() => {
-    if (mode !== "destinations") return [];
+    if (mode !== "destinations" || !destinations) return [];
     return [
-      ...data.tripArcs.map((trip) => ({ name: trip.name, coords: trip.coords, color: trip.color })),
-      ...data.roadTrips.map((trip) => ({ name: trip.name, coords: trip.coords, color: "#b45309" })),
+      ...destinations.tripArcs.map((trip) => ({ name: trip.name, coords: trip.coords, color: trip.color })),
+      ...destinations.roadTrips.map((trip) => ({ name: trip.name, coords: trip.coords, color: "#b45309" })),
     ];
-  }, [data.tripArcs, data.roadTrips, mode]);
+  }, [destinations, mode]);
 
   const ringsData = useMemo(() => {
     if (mode !== "destinations") return [];
-    return data.destinations.map((place) => ({
+    return (destinations?.destinations ?? []).map((place) => ({
       lat: place.lat,
       lng: place.lng,
       maxR: 2.5,
       propagationSpeed: 1.5,
       repeatPeriod: 1400,
     }));
-  }, [data.destinations, mode]);
+  }, [destinations?.destinations, mode]);
 
   const onGlobeReady = useCallback(() => {
     const globe = globeRef.current;
@@ -173,7 +200,8 @@ export function TravelGlobe({ data, mode, className }: TravelGlobeProps) {
     controls.dampingFactor = 0.08;
   }, []);
 
-  const ready = mounted && size.width > 0 && size.height > 0;
+  const sized = mounted && size.width > 0 && size.height > 0;
+  const ready = sized && idleReady;
 
   return (
     <div
